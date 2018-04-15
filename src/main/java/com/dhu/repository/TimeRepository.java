@@ -15,5 +15,5 @@ import java.util.List;
 @Repository
 public interface TimeRepository extends JpaRepository<TimeEntity,Integer> {
     @Query(value = "select hall.number,start_time,cost,begin_time,movie.end_time from time,hall,movie,cinema where time.movie_id=movie.id and time.hall_id=hall.id and hall.cinema_id=cinema.id and movie_id=?1 and cinema_id=?2 and ?3>=begin_time and ?3<=movie.end_time",nativeQuery = true)
-    List<Object> findByMidCidDate(Integer mid, Integer cid, java.util.Date date1);
+    List<Object> findByMidCidDate(Integer mid, Integer cid,Date date1);
 }
