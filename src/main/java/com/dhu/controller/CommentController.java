@@ -18,13 +18,16 @@ import java.util.Map;
 @RestController
 @RequestMapping("/comment")
 public class CommentController {
-    @Autowired
-    CommentService commentService;
+    private CommentService commentService;
+    private ResultGenerator resultGenerator;
 
     @Autowired
-    ResultGenerator resultGenerator;
+    public CommentController(CommentService commentService,ResultGenerator resultGenerator){
+        this.commentService=commentService;
+        this.resultGenerator=resultGenerator;
+    }
 
-    @RequestMapping(value = "getByMid",method = RequestMethod.POST)
+    @RequestMapping(value = "/getByMid",method = RequestMethod.POST)
     public ResponseData getByMid(@RequestBody Map map){
         Integer mid=Integer.valueOf(map.get("mid").toString());
         return resultGenerator.getSuccessResult(commentService.findByMovieId(mid));

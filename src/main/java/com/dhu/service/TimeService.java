@@ -10,5 +10,5 @@ import java.util.List;
  */
 @Service
 public interface TimeService {
-    List<Object> findByMidCidDate(Integer mid, Integer cid, Date date1);
+    List<Object> findByMidCidDate(Integer mid, Integer cid,Date date);
 }

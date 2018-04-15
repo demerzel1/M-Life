@@ -2,6 +2,7 @@ package com.dhu.controller;
 
 import com.dhu.model.ResponseData;
 import com.dhu.service.TimeService;
+import com.dhu.utils.CommonUtils;
 import com.dhu.utils.ResultGenerator;
 import org.apache.commons.lang3.ObjectUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.sql.Date;
 import java.text.DateFormat;
@@ -19,14 +21,20 @@ import java.util.Map;
 /**
  * Created by demerzel on 2018/4/14.
  */
-@Controller
+
+@RestController
 @RequestMapping("/Time")
 public class TimeController {
-    @Autowired
-    TimeService timeService;
+
+    private TimeService timeService;
+
+    private ResultGenerator resultGenerator;
 
     @Autowired
-    ResultGenerator resultGenerator;
+    public TimeController(TimeService timeService,ResultGenerator resultGenerator){
+        this.timeService=timeService;
+        this.resultGenerator=resultGenerator;
+    }
 
     @RequestMapping(value = "/getTime",method = RequestMethod.POST)
     public ResponseData getTime(@RequestBody Map map){
@@ -42,7 +50,6 @@ public class TimeController {
         }
         long l=date.getTime();
         date1=new Date(l);
-        System.out.println(date1.toString());
         return resultGenerator.getSuccessResult(timeService.findByMidCidDate(mid,cid,date1));
     }
 }

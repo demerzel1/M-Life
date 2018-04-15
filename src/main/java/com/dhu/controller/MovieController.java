@@ -20,8 +20,8 @@ import java.util.Map;
 @RequestMapping("/movie")
 
 public class MovieController {
-    MovieService movieService;
-    ResultGenerator resultGenerator;
+    private MovieService movieService;
+    private ResultGenerator resultGenerator;
 
     @Autowired
     public MovieController(MovieService movieService,ResultGenerator resultGenerator){

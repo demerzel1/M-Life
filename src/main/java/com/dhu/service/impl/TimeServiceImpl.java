@@ -2,6 +2,7 @@ package com.dhu.service.impl;
 
 import com.dhu.repository.TimeRepository;
 import com.dhu.service.TimeService;
+import com.dhu.utils.CommonUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,11 +14,18 @@ import java.util.List;
  */
 @Service
 public class TimeServiceImpl implements TimeService {
-    @Autowired
+    private CommonUtils commonUtils;
+
     TimeRepository timeRepository;
 
+    @Autowired
+    public TimeServiceImpl(TimeRepository timeRepository) {
+        this.timeRepository = timeRepository;
+    }
+
     @Override
-    public List<Object> findByMidCidDate(Integer mid, Integer cid, Date date1){
-        return timeRepository.findByMidCidDate(mid,cid,date1);
+    public List<Object> findByMidCidDate(Integer mid, Integer cid,Date date){
+        Date date2=commonUtils.getNextDay(date);
+        return timeRepository.findByMCD(mid,cid,date,date2);
     }
 }
