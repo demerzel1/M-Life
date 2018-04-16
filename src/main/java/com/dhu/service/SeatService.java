@@ -9,4 +9,5 @@ import org.springframework.stereotype.Service;
 @Service
 public interface SeatService {
     SeatEntity addSeat(Integer hall,Integer row,Integer col);
+    SeatEntity findSeat(Integer hall,Integer row,Integer col);
 }

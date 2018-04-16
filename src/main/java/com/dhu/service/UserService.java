@@ -11,4 +11,6 @@ public interface UserService {
     UserEntity saveUser(UserEntity userEntity);
     UserEntity checkLogin(String name,String password);
     UserEntity findUserByEmail(String email);
+    UserEntity findUserById(Integer id);
+    UserEntity setMoney(UserEntity userEntity,Double money);
 }

@@ -16,6 +16,7 @@ import java.sql.Date;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -23,10 +24,10 @@ import java.util.Map;
  */
 
 @RestController
-@RequestMapping("/Time")
+@RequestMapping("/time")
 public class TimeController {
 
-    private TimeService timeService;
+     TimeService timeService;
 
     private ResultGenerator resultGenerator;
 
@@ -38,6 +39,7 @@ public class TimeController {
 
     @RequestMapping(value = "/getTime",method = RequestMethod.POST)
     public ResponseData getTime(@RequestBody Map map){
+        System.out.println(11111);
         DateFormat format1 = new SimpleDateFormat("yyyy-MM-dd");
         Date date1;
         java.util.Date date=null;
@@ -50,6 +52,8 @@ public class TimeController {
         }
         long l=date.getTime();
         date1=new Date(l);
-        return resultGenerator.getSuccessResult(timeService.findByMidCidDate(mid,cid,date1));
+        System.out.println(date1.toString());
+        List<Object> list=timeService.findByMidCidDate(mid,cid,date1);
+        return resultGenerator.getSuccessResult(list);
     }
 }

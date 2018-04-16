@@ -10,4 +10,5 @@ import org.springframework.web.bind.annotation.RequestBody;
  */
 @Repository
 public interface OrderRepository extends JpaRepository<OrderEntity,Integer> {
+    OrderEntity findFirstByTimeIdAndSeatId(Integer time_id,Integer seat_id);
 }

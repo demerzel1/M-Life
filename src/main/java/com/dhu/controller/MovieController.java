@@ -20,7 +20,6 @@ import java.util.Map;
  */
 @RestController
 @RequestMapping("/movie")
-
 public class MovieController {
     private MovieService movieService;
     private ResultGenerator resultGenerator;

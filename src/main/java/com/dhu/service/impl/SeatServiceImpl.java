@@ -27,4 +27,9 @@ public class SeatServiceImpl implements SeatService {
 
         return seatRepository.saveAndFlush(seatEntity);
     }
+
+    @Override
+    public SeatEntity findSeat(Integer hall, Integer row, Integer col) {
+        return seatRepository.findFirstByHallIdAndRowAndCol(hall,row,col);
+    }
 }

@@ -28,4 +28,16 @@ public class UserServiceImpl implements UserService {
     public UserEntity findUserByEmail(String email) {
         return userRepository.findFirstByEmail(email);
     }
+
+    @Override
+    public UserEntity findUserById(Integer id) {
+        return userRepository.findFirstById(id);
+    }
+
+    @Override
+    public UserEntity setMoney(UserEntity userEntity, Double money) {
+        userEntity.setMoney(money);
+        return userRepository.saveAndFlush(userEntity);
+    }
+
 }

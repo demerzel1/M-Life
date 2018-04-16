@@ -10,5 +10,5 @@ import org.springframework.web.bind.annotation.RequestBody;
  */
 @Repository
 public interface SeatRepository extends JpaRepository<SeatEntity,Integer> {
-
+    SeatEntity findFirstByHallIdAndRowAndCol(Integer hall_id,Integer row,Integer col);
 }
