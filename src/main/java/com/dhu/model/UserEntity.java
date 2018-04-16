@@ -94,7 +94,6 @@ public class UserEntity {
 
     @Override
     public int hashCode() {
-
         return Objects.hash(id, name, password, tel, money, isAdmin);
     }
 

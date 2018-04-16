@@ -6,79 +6,32 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9556ce2d-4a4e-4c2e-b590-285687b5c2fb" name="Default" comment="add updateMovie">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_beust_jcommander_1_27.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_10.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_beanshell_bsh_2_0b4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_testng_testng_6_8_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dhu/controller/SeatController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dhu/repository/SeatRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dhu/service/SeatService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dhu/service/impl/SeatServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/testSeat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/MCMS_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/MCMS_war_exploded.xml" afterDir="false" />
+    <list default="true" id="9556ce2d-4a4e-4c2e-b590-285687b5c2fb" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dhu/repository/OrderRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dhu/service/OrderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dhu/service/impl/OrderServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/12c38048-8583-47d1-95c3-ac7f08c9aa28.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/12c38048-8583-47d1-95c3-ac7f08c9aa28.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MCMS.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MCMS.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dhu/controller/CinemaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dhu/controller/CinemaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dhu/controller/MovieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dhu/controller/MovieController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dhu/model/CityEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dhu/model/CityEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dhu/model/CommentEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dhu/model/CommentEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dhu/model/HallEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dhu/model/HallEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dhu/controller/SeatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dhu/controller/SeatController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dhu/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dhu/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/dhu/model/MovieEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dhu/model/MovieEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dhu/model/OrderEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dhu/model/OrderEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dhu/model/SeatEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dhu/model/SeatEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dhu/model/TimeEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dhu/model/TimeEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/dhu/model/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dhu/model/UserEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dhu/repository/CinemaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dhu/repository/CinemaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dhu/repository/MovieRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dhu/repository/MovieRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dhu/repository/TimeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dhu/repository/TimeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dhu/service/CinemaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dhu/service/CinemaService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dhu/service/MovieService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dhu/service/MovieService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dhu/service/impl/CinemaServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dhu/service/impl/CinemaServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dhu/service/impl/MovieServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dhu/service/impl/MovieServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dhu/service/impl/TimeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dhu/service/impl/TimeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/controller/CinemaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/controller/CinemaController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/controller/CommentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/controller/CommentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/controller/MovieController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/controller/MovieController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/controller/TimeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/controller/TimeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/model/CinemaEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/model/CinemaEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/model/CityEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/model/CityEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/model/CommentEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/model/CommentEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/model/HallEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/model/HallEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dhu/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dhu/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dhu/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dhu/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dhu/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dhu/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/controller/UserController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/model/MovieEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/model/MovieEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/model/OrderEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/model/OrderEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/model/SeatEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/model/SeatEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/model/TimeEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/model/TimeEntity.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/model/UserEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/model/UserEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/repository/CinemaRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/repository/CinemaRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/repository/TimeRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/repository/TimeRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/service/CinemaService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/service/CinemaService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/service/MovieService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/service/MovieService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/service/impl/CinemaServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/service/impl/CinemaServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/service/impl/MovieServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/service/impl/MovieServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/service/impl/TimeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/service/impl/TimeServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dhu/controller/CinemaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dhu/controller/CinemaController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dhu/controller/MovieController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dhu/controller/MovieController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dhu/model/CinemaEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dhu/model/CinemaEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dhu/model/CityEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dhu/model/CityEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dhu/model/CommentEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dhu/model/CommentEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dhu/model/HallEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dhu/model/HallEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/repository/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/service/impl/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dhu/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dhu/controller/UserController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/dhu/model/MovieEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dhu/model/MovieEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dhu/model/OrderEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dhu/model/OrderEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dhu/model/SeatEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dhu/model/SeatEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dhu/model/TimeEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dhu/model/TimeEntity.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/dhu/model/UserEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dhu/model/UserEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dhu/repository/CinemaRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dhu/repository/CinemaRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dhu/repository/TimeRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dhu/repository/TimeRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dhu/service/CinemaService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dhu/service/CinemaService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dhu/service/MovieService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dhu/service/MovieService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dhu/service/impl/CinemaServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dhu/service/impl/CinemaServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dhu/service/impl/MovieServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dhu/service/impl/MovieServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dhu/service/impl/TimeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dhu/service/impl/TimeServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dhu/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dhu/repository/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dhu/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dhu/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dhu/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dhu/service/impl/UserServiceImpl.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -114,115 +67,120 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/controller/UserController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="415">
+              <caret line="63" column="39" selection-start-line="63" selection-start-column="39" selection-end-line="63" selection-end-column="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OrderRepository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/repository/OrderRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="11" lean-forward="true" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OrderService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/service/OrderService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OrderServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/service/impl/OrderServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserEntity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/model/UserEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="18" column="26" lean-forward="true" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+              <folding>
+                <element signature="e#1420#1421#0" expanded="true" />
+                <element signature="e#1454#1455#0" expanded="true" />
+                <element signature="e#2195#2196#0" expanded="true" />
+                <element signature="e#2271#2272#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserRepository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/repository/UserRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="46" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/service/UserService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserServiceImpl.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/service/impl/UserServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="28" column="54" selection-start-line="28" selection-start-column="54" selection-end-line="28" selection-end-column="54" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#479#480#0" expanded="true" />
+                <element signature="e#541#542#0" expanded="true" />
+                <element signature="e#772#773#0" expanded="true" />
+                <element signature="e#838#839#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TimeServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/service/impl/TimeServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="MovieController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/controller/MovieController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
+            <state relative-caret-position="333">
               <caret line="46" column="35" selection-start-line="46" selection-start-column="35" selection-end-line="46" selection-end-column="35" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HallRepositoryImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/repository/HallRepositoryImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MovieRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/repository/MovieRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="59" selection-start-line="13" selection-start-column="59" selection-end-line="13" selection-end-column="59" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SeatRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/repository/SeatRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CinemaServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/service/impl/CinemaServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="30" column="50" selection-start-line="30" selection-start-column="50" selection-end-line="30" selection-end-column="50" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#764#765#0" expanded="true" />
-                <element signature="e#821#822#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MovieServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/service/impl/MovieServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="35" column="34" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="34" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CinemaEntity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/model/CinemaEntity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TimeService.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/service/TimeService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="22" lean-forward="true" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HallRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/repository/HallRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SeatController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/controller/SeatController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="303">
-              <caret line="33" column="31" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -249,18 +207,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/dhu/controller/MainController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dhu/model/RestResult.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dhu/model/ResultCode.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/admin/addUser.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dhu/service/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dhu/model/ResponseData.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dhu/controller/RestUserController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dhu/utils/Jacksons/Jacksons.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/api_test.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dhu/repository/UserRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dhu/service/impl/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dhu/controller/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dhu/utils/ResultGenerator.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/dhu/controller/AuthenticateAPIController.java" />
@@ -282,7 +233,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/dhu/repository/SeatRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dhu/service/SeatService.java" />
         <option value="$PROJECT_DIR$/src/test/java/testSeat.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dhu/controller/SeatController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dhu/model/SeatEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dhu/service/impl/SeatServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dhu/repository/CinemaRepository.java" />
@@ -296,10 +246,18 @@
         <option value="$PROJECT_DIR$/src/main/java/com/dhu/model/MovieEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dhu/model/OrderEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dhu/model/TimeEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dhu/model/UserEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dhu/service/MovieService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dhu/service/impl/MovieServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dhu/controller/MovieController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dhu/controller/SeatController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dhu/model/UserEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dhu/repository/UserRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dhu/service/UserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dhu/service/impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dhu/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dhu/repository/OrderRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dhu/service/OrderService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dhu/service/impl/OrderServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -785,7 +743,7 @@
       <workItem from="1523328477715" duration="10889000" />
       <workItem from="1523380359709" duration="10188000" />
       <workItem from="1523497478611" duration="21529000" />
-      <workItem from="1523598465665" duration="32674000" />
+      <workItem from="1523598465665" duration="35177000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1523794522715</created>
@@ -815,7 +773,14 @@
       <option name="project" value="LOCAL" />
       <updated>1523848660112</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add updateMovie">
+      <created>1523848764074</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1523848764074</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -833,10 +798,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109253000" />
+    <option name="totallyTimeSpent" value="111756000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50069445" side_tool="true" weight="0.22523585" />
@@ -851,18 +817,18 @@
       <window_info id="UI Designer" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39976415" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info active="true" anchor="bottom" id="Messages" order="7" visible="true" weight="0.32900944" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32900944" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="bottom" id="Java Enterprise" order="7" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32900944" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49930555" weight="0.4186321" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49930555" visible="true" weight="0.4186321" />
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info id="Persistence" order="3" sideWeight="0.50087875" side_tool="true" visible="true" weight="0.25" />
+      <window_info id="Persistence" order="3" sideWeight="0.5010142" side_tool="true" visible="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Console" weight="0.32900944" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49912128" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4989858" visible="true" weight="0.25" />
       <window_info anchor="right" id="Bean Validation" order="4" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="3" />
@@ -887,24 +853,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="add updateMovie" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" selection-start-line="9" selection-end-line="9" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="40" column="30" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/model/RestResult.java" />
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1152">
@@ -933,16 +881,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/utils/ResultGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -959,18 +897,6 @@
           <caret line="17" column="14" lean-forward="true" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/service/impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#479#480#0" expanded="true" />
-            <element signature="e#541#542#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1007,40 +933,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/repository/CommentRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/controller/AuthenticateAPIController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/repository/UserRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="73" selection-start-line="12" selection-start-column="73" selection-end-line="12" selection-end-column="73" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/controller/TimeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="46" column="12" selection-start-line="46" selection-start-column="12" selection-end-line="46" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1067,36 +963,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/model/ResultCode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
-          <folding>
-            <element signature="e#294#295#0" expanded="true" />
-            <element signature="e#326#327#0" expanded="true" />
-            <element signature="e#354#355#0" expanded="true" />
-            <element signature="e#386#387#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/repository/CinemaRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="43" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/model/SeatEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/model/CityEntity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="101">
@@ -1108,57 +974,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
           <caret line="24" column="53" selection-start-line="24" selection-start-column="53" selection-end-line="24" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/model/MovieEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="24" column="53" selection-start-line="24" selection-start-column="53" selection-end-line="24" selection-end-column="53" />
-          <folding>
-            <element signature="e#1358#1359#0" expanded="true" />
-            <element signature="e#1392#1393#0" expanded="true" />
-            <element signature="e#1446#1447#0" expanded="true" />
-            <element signature="e#1492#1493#0" expanded="true" />
-            <element signature="e#1599#1600#0" expanded="true" />
-            <element signature="e#1630#1631#0" expanded="true" />
-            <element signature="e#1678#1679#0" expanded="true" />
-            <element signature="e#1718#1719#0" expanded="true" />
-            <element signature="e#1818#1819#0" expanded="true" />
-            <element signature="e#1845#1846#0" expanded="true" />
-            <element signature="e#1885#1886#0" expanded="true" />
-            <element signature="e#1917#1918#0" expanded="true" />
-            <element signature="e#2032#2033#0" expanded="true" />
-            <element signature="e#2066#2067#0" expanded="true" />
-            <element signature="e#2120#2121#0" expanded="true" />
-            <element signature="e#2166#2167#0" expanded="true" />
-            <element signature="e#2269#2270#0" expanded="true" />
-            <element signature="e#2298#2299#0" expanded="true" />
-            <element signature="e#2342#2343#0" expanded="true" />
-            <element signature="e#2378#2379#0" expanded="true" />
-            <element signature="e#2473#2474#0" expanded="true" />
-            <element signature="e#2505#2506#0" expanded="true" />
-            <element signature="e#2553#2554#0" expanded="true" />
-            <element signature="e#2595#2596#0" expanded="true" />
-            <element signature="e#2686#2687#0" expanded="true" />
-            <element signature="e#2716#2717#0" expanded="true" />
-            <element signature="e#2760#2761#0" expanded="true" />
-            <element signature="e#2798#2799#0" expanded="true" />
-            <element signature="e#2909#2910#0" expanded="true" />
-            <element signature="e#2941#2942#0" expanded="true" />
-            <element signature="e#2991#2992#0" expanded="true" />
-            <element signature="e#3033#3034#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/model/OrderEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="22" column="53" selection-start-line="22" selection-start-column="53" selection-end-line="22" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1178,37 +993,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/model/TimeEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="20" column="53" selection-start-line="20" selection-start-column="53" selection-end-line="20" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/model/UserEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="21" column="53" selection-start-line="21" selection-start-column="53" selection-end-line="21" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/service/CinemaService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/service/impl/TimeServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1229,16 +1017,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/service/MovieService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1275,16 +1053,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="42" column="42" selection-start-line="42" selection-start-column="42" selection-end-line="42" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/controller/CinemaController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -1302,57 +1070,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/controller/SeatController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="33" column="31" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/controller/MovieController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="46" column="35" selection-start-line="46" selection-start-column="35" selection-end-line="46" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/repository/HallRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/repository/HallRepositoryImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/repository/MovieRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="13" column="59" selection-start-line="13" selection-start-column="59" selection-end-line="13" selection-end-column="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/repository/SeatRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1394,6 +1115,231 @@
           <caret line="12" column="22" lean-forward="true" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/service/MovieService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="8" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/repository/SeatRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/model/OrderEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="22" column="53" selection-start-line="22" selection-start-column="53" selection-end-line="22" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/model/SeatEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/repository/CinemaRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="43" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/repository/HallRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/repository/HallRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/repository/CommentRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/controller/SeatController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="35">
+          <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/model/TimeEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-210">
+          <caret line="20" column="53" selection-start-line="20" selection-start-column="53" selection-end-line="20" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/model/MovieEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="141" column="19" selection-start-line="141" selection-start-column="19" selection-end-line="141" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/model/ResultCode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+          <folding>
+            <element signature="e#294#295#0" expanded="true" />
+            <element signature="e#326#327#0" expanded="true" />
+            <element signature="e#354#355#0" expanded="true" />
+            <element signature="e#386#387#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/controller/TimeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="46" column="12" selection-start-line="46" selection-start-column="12" selection-end-line="46" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/controller/MovieController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="46" column="35" selection-start-line="46" selection-start-column="35" selection-end-line="46" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/model/UserEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="18" column="26" lean-forward="true" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+          <folding>
+            <element signature="e#1420#1421#0" expanded="true" />
+            <element signature="e#1454#1455#0" expanded="true" />
+            <element signature="e#2195#2196#0" expanded="true" />
+            <element signature="e#2271#2272#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/repository/UserRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="46" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="63" column="39" selection-start-line="63" selection-start-column="39" selection-end-line="63" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/repository/OrderRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="11" lean-forward="true" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/service/OrderService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/service/impl/TimeServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/service/impl/OrderServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="54" selection-start-line="28" selection-start-column="54" selection-end-line="28" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#479#480#0" expanded="true" />
+            <element signature="e#541#542#0" expanded="true" />
+            <element signature="e#772#773#0" expanded="true" />
+            <element signature="e#838#839#0" expanded="true" />
           </folding>
         </state>
       </provider>

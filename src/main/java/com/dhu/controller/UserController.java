@@ -38,8 +38,12 @@ public class UserController {
         this.resultGenerator = resultGenerator;
     }
 
-    @RequestMapping("/register")
-    public ResponseData register(@Valid UserEntity userEntity) {
+    @RequestMapping(value = "/register", method = RequestMethod.POST)
+    public ResponseData register(@Valid @RequestBody UserEntity userEntity) {
+        UserEntity userEntity1=userService.findUserByEmail(userEntity.getEmail());
+        if(userEntity1!=null){
+            return resultGenerator.getFailResult("违反主键/唯一约束条件");
+        }
         return resultGenerator.getSuccessResult("用户注册成功",userService.saveUser(userEntity));
     }
 

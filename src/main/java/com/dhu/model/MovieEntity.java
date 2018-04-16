@@ -20,6 +20,7 @@ public class MovieEntity {
     private Date beginTime;
     private Date endTime;
     private String movieType;
+    private Integer duration;
 
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -135,5 +136,15 @@ public class MovieEntity {
 
     public void setMovieType(String movieType) {
         this.movieType = movieType;
+    }
+
+    @Basic
+    @Column(name = "duration", nullable = true)
+    public Integer getDuration() {
+        return duration;
+    }
+
+    public void setDuration(Integer duration) {
+        this.duration = duration;
     }
 }

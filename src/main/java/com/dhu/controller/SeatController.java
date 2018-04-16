@@ -34,5 +34,4 @@ public class SeatController {
         System.out.println(row);
         return resultGenerator.getSuccessResult(seatService.addSeat(hall,row,col));
     }
-
 }

@@ -23,4 +23,9 @@ public class UserServiceImpl implements UserService {
     public UserEntity checkLogin(String email,String password) {
         return userRepository.findFirstByEmailAndPassword(email, password);
     }
+
+    @Override
+    public UserEntity findUserByEmail(String email) {
+        return userRepository.findFirstByEmail(email);
+    }
 }

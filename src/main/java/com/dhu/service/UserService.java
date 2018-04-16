@@ -10,4 +10,5 @@ import org.springframework.stereotype.Service;
 public interface UserService {
     UserEntity saveUser(UserEntity userEntity);
     UserEntity checkLogin(String name,String password);
+    UserEntity findUserByEmail(String email);
 }
