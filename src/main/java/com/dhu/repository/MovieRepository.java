@@ -12,5 +12,4 @@ public interface MovieRepository extends JpaRepository<MovieEntity,Integer> {
     MovieEntity findFirstById(Integer Id);
     MovieEntity findFirstByName(String Name);
     MovieEntity findFirstByEnglishname(String Englishname);
-
 }

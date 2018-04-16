@@ -19,8 +19,10 @@ public class CommentEntity {
 
     @ManyToOne
     private MovieEntity movieEntity;
+    private Integer grade;
 
     @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     public int getId() {
         return id;
@@ -75,5 +77,15 @@ public class CommentEntity {
     public int hashCode() {
 
         return Objects.hash(id, userId, movieId, content);
+    }
+
+    @Basic
+    @Column(name = "grade", nullable = true)
+    public Integer getGrade() {
+        return grade;
+    }
+
+    public void setGrade(Integer grade) {
+        this.grade = grade;
     }
 }

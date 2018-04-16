@@ -20,4 +20,14 @@ public class CinemaServiceImpl implements CinemaService {
     public List<CinemaEntity> findAllCinema(){
         return cinemaRepository.findAll();
     }
+
+    @Override
+    public List<CinemaEntity> findCinemaByCity(Integer city_id){
+        return cinemaRepository.findAllByCityId(city_id);
+    }
+
+    @Override
+    public CinemaEntity findById(Integer id) {
+        return cinemaRepository.findFirstById(id);
+    }
 }

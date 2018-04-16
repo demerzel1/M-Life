@@ -12,4 +12,6 @@ import java.util.List;
 @Service
 public interface CinemaService {
     List<CinemaEntity> findAllCinema();
+    List<CinemaEntity> findCinemaByCity(Integer city_id);
+    CinemaEntity findById(Integer id);
 }

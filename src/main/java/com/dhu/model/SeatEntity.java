@@ -11,11 +11,11 @@ import java.util.Objects;
 public class SeatEntity {
     private int id;
     private int row;
-    private int column;
-    private byte isSaled;
+    private int col;
     private int hallId;
 
     @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     public int getId() {
         return id;
@@ -36,23 +36,13 @@ public class SeatEntity {
     }
 
     @Basic
-    @Column(name = "column", nullable = false)
-    public int getColumn() {
-        return column;
+    @Column(name = "col", nullable = false)
+    public int getCol() {
+        return col;
     }
 
-    public void setColumn(int column) {
-        this.column = column;
-    }
-
-    @Basic
-    @Column(name = "is_saled", nullable = false)
-    public byte getIsSaled() {
-        return isSaled;
-    }
-
-    public void setIsSaled(byte isSaled) {
-        this.isSaled = isSaled;
+    public void setCol(int column) {
+        this.col = column;
     }
 
     @Override
@@ -62,14 +52,13 @@ public class SeatEntity {
         SeatEntity that = (SeatEntity) o;
         return id == that.id &&
                 row == that.row &&
-                column == that.column &&
-                isSaled == that.isSaled;
+                col == that.col;
     }
 
     @Override
     public int hashCode() {
 
-        return Objects.hash(id, row, column, isSaled);
+        return Objects.hash(id, row, col);
     }
 
     @Basic

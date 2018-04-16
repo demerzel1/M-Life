@@ -13,4 +13,5 @@ public interface MovieService {
     List<MovieEntity> findAllMovie();
     MovieEntity findMovieByName(String name);
     MovieEntity findMovieById(Integer id);
+    MovieEntity updateMovie(MovieEntity movieEntity);
 }
