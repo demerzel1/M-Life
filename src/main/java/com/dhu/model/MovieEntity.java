@@ -21,6 +21,7 @@ public class MovieEntity {
     private Date endTime;
     private String movieType;
     private Integer duration;
+    private String country;
 
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -146,5 +147,15 @@ public class MovieEntity {
 
     public void setDuration(Integer duration) {
         this.duration = duration;
+    }
+
+    @Basic
+    @Column(name = "country", nullable = true, length = 50)
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
     }
 }

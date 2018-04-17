@@ -1141,243 +1141,249 @@
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="277" parent="235" name="PRIMARY">
+    <column id="277" parent="235" name="country">
+      <Position>12</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="278" parent="235" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="278" parent="236" name="id">
+    <column id="279" parent="236" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="279" parent="236" name="order_time">
+    <column id="280" parent="236" name="order_time">
       <Position>2</Position>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="280" parent="236" name="watch_time">
+    <column id="281" parent="236" name="watch_time">
       <Position>3</Position>
       <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="281" parent="236" name="cost">
+    <column id="282" parent="236" name="cost">
       <Position>4</Position>
       <DataType>double|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="282" parent="236" name="user_id">
+    <column id="283" parent="236" name="user_id">
       <Position>5</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="283" parent="236" name="time_id">
+    <column id="284" parent="236" name="time_id">
       <Position>6</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="284" parent="236" name="seat_id">
+    <column id="285" parent="236" name="seat_id">
       <Position>7</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="285" parent="236" name="order_user_id_fk">
+    <index id="286" parent="236" name="order_user_id_fk">
       <ColNames>user_id</ColNames>
     </index>
-    <index id="286" parent="236" name="order_time_id_fk">
+    <index id="287" parent="236" name="order_time_id_fk">
       <ColNames>time_id</ColNames>
     </index>
-    <index id="287" parent="236" name="order_seat_id_fk">
+    <index id="288" parent="236" name="order_seat_id_fk">
       <ColNames>seat_id</ColNames>
     </index>
-    <key id="288" parent="236" name="PRIMARY">
+    <key id="289" parent="236" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="289" parent="236" name="order_user_id_fk">
+    <foreign-key id="290" parent="236" name="order_user_id_fk">
       <ColNames>user_id</ColNames>
       <RefSchemaName>mcms</RefSchemaName>
       <RefTableName>user</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="290" parent="236" name="order_time_id_fk">
+    <foreign-key id="291" parent="236" name="order_time_id_fk">
       <ColNames>time_id</ColNames>
       <RefSchemaName>mcms</RefSchemaName>
       <RefTableName>time</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="291" parent="236" name="order_seat_id_fk">
+    <foreign-key id="292" parent="236" name="order_seat_id_fk">
       <ColNames>seat_id</ColNames>
       <RefSchemaName>mcms</RefSchemaName>
       <RefTableName>seat</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="292" parent="237" name="id">
+    <column id="293" parent="237" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="293" parent="237" name="row">
+    <column id="294" parent="237" name="row">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="294" parent="237" name="col">
+    <column id="295" parent="237" name="col">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="295" parent="237" name="hall_id">
+    <column id="296" parent="237" name="hall_id">
       <Position>4</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="296" parent="237" name="seat_hall_id_fk">
+    <index id="297" parent="237" name="seat_hall_id_fk">
       <ColNames>hall_id</ColNames>
     </index>
-    <key id="297" parent="237" name="PRIMARY">
+    <key id="298" parent="237" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="298" parent="237" name="seat_hall_id_fk">
+    <foreign-key id="299" parent="237" name="seat_hall_id_fk">
       <ColNames>hall_id</ColNames>
       <RefSchemaName>mcms</RefSchemaName>
       <RefTableName>hall</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="299" parent="238" name="id">
+    <column id="300" parent="238" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="300" parent="238" name="start_time">
+    <column id="301" parent="238" name="start_time">
       <Position>2</Position>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="301" parent="238" name="end_time">
+    <column id="302" parent="238" name="end_time">
       <Position>3</Position>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="302" parent="238" name="cost">
+    <column id="303" parent="238" name="cost">
       <Position>4</Position>
       <DataType>double|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="303" parent="238" name="movie_id">
+    <column id="304" parent="238" name="movie_id">
       <Position>5</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="304" parent="238" name="hall_id">
+    <column id="305" parent="238" name="hall_id">
       <Position>6</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="305" parent="238" name="time_movie_id_fk">
+    <index id="306" parent="238" name="time_movie_id_fk">
       <ColNames>movie_id</ColNames>
     </index>
-    <index id="306" parent="238" name="time_hall_id_fk">
+    <index id="307" parent="238" name="time_hall_id_fk">
       <ColNames>hall_id</ColNames>
     </index>
-    <key id="307" parent="238" name="PRIMARY">
+    <key id="308" parent="238" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="308" parent="238" name="time_movie_id_fk">
+    <foreign-key id="309" parent="238" name="time_movie_id_fk">
       <ColNames>movie_id</ColNames>
       <RefSchemaName>mcms</RefSchemaName>
       <RefTableName>movie</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="309" parent="238" name="time_hall_id_fk">
+    <foreign-key id="310" parent="238" name="time_hall_id_fk">
       <ColNames>hall_id</ColNames>
       <RefSchemaName>mcms</RefSchemaName>
       <RefTableName>hall</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="310" parent="239" name="id">
+    <column id="311" parent="239" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="311" parent="239" name="name">
+    <column id="312" parent="239" name="name">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="312" parent="239" name="password">
+    <column id="313" parent="239" name="password">
       <Position>3</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="313" parent="239" name="tel">
+    <column id="314" parent="239" name="tel">
       <Position>4</Position>
       <DataType>varchar(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="314" parent="239" name="money">
+    <column id="315" parent="239" name="money">
       <Position>5</Position>
       <DataType>double|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="315" parent="239" name="is_admin">
+    <column id="316" parent="239" name="is_admin">
       <Position>6</Position>
       <DataType>tinyint(1)|0s</DataType>
       <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="316" parent="239" name="email">
+    <column id="317" parent="239" name="email">
       <Position>7</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="317" parent="239" name="avatar">
+    <column id="318" parent="239" name="avatar">
       <Position>8</Position>
       <DataType>varchar(50)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="318" parent="239" name="user_email_uindex">
+    <index id="319" parent="239" name="user_email_uindex">
       <ColNames>email</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="319" parent="239" name="PRIMARY">
+    <key id="320" parent="239" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="320" parent="239" name="user_email_uindex">
+    <key id="321" parent="239" name="user_email_uindex">
       <ColNames>email</ColNames>
       <UnderlyingIndexName>user_email_uindex</UnderlyingIndexName>
     </key>

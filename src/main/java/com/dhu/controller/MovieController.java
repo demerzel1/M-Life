@@ -41,8 +41,12 @@ public class MovieController {
 
     @RequestMapping(value = "/getById",method = RequestMethod.POST)
     public ResponseData getById(@RequestBody Map map){
+        System.out.println(Jacksons.me().readAsString(map));
         Integer mid=Integer.valueOf(map.get("mid").toString());
-        return resultGenerator.getSuccessResult(movieService.findMovieById(mid));
+        System.out.println(mid);
+       ResponseData responseData= resultGenerator.getSuccessResult(movieService.findMovieById(mid));
+        System.out.println(Jacksons.me().readAsString(responseData));
+        return responseData;
     }
 
     @RequestMapping(value = "/getByDate",method = RequestMethod.POST)
@@ -71,7 +75,7 @@ public class MovieController {
         return resultGenerator.getSuccessResult(movieService.updateMovie(movieEntity));
     }
 
-    @RequestMapping(value = "/delete",method = RequestMethod.POST)
+    @RequestMapping(value = "/dedlete",method = RequestMethod.POST)
     public ResponseData delete(@RequestBody Map map){
         Integer mid=Integer.valueOf(map.get("mid").toString());
         if(movieService.findMovieById(mid)==null)

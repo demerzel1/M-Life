@@ -4,6 +4,7 @@ import com.dhu.service.MovieService;
 import com.dhu.service.SeatService;
 import com.dhu.service.UserService;
 import com.dhu.utils.Jacksons.Jacksons;
+import com.dhu.utils.ResultGenerator;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,12 +34,14 @@ public class testSeat {
     @Autowired
     SeatService seatService;
 
+    @Autowired
+    MovieService movieService;
+
+    @Autowired
+    ResultGenerator resultGenerator;
     @Test
     public void main() {
         System.out.println("111");
-        Map<List<Integer>, Integer> checkMap = new HashMap<List<Integer>, Integer>();
-        List<Integer> list=new ArrayList<>();
-        list.add(1);
-        System.out.println(checkMap.get(list));
+        System.out.println(Jacksons.me().readAsString(resultGenerator.getSuccessResult( movieService.findMovieById(1)) ));
     }
 }

@@ -85,7 +85,6 @@ public class TimeServiceImpl implements TimeService {
 
             List<TimeEntity> listTime = timeRepository.findByMovieIdAndHallIdInAndStartTimeGreaterThanEqualAndStartTimeLessThan(movie_id, lstHallId, date, date1);
 
-
         }
         return null;
     }
