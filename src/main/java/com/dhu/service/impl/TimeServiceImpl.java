@@ -8,6 +8,7 @@ import com.dhu.repository.TimeRepository;
 import com.dhu.service.MovieService;
 import com.dhu.service.TimeService;
 import com.dhu.utils.CommonUtils;
+import com.dhu.utils.Jacksons.Jacksons;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -69,7 +70,7 @@ public class TimeServiceImpl implements TimeService {
     }
 
     @Override
-    public List<TimeEntity> findByCidAndDate(Integer cinema_id, Date date) {
+    public Map findByCidAndDate(Integer cinema_id, Date date) {
         List<MovieEntity> lstMovie=movieService.findAllMovieByDate(date);
         List<HallEntity> lstHall=hallRepository.findAllByCinemaId(cinema_id);
         List<Integer> lstHallId=new ArrayList<>();
@@ -78,14 +79,18 @@ public class TimeServiceImpl implements TimeService {
         }
         Date date1=commonUtils.getNextDay(date);
 
-        List<Map> lstMap=new ArrayList<>();
+        System.out.println(Jacksons.me().readAsString(lstMovie));
 
+        System.out.println(Jacksons.me().readAsString(lstHallId));
+
+        Map<Integer,List> map=new HashMap<>();
         for(int i=0;i<lstMovie.size();++i) {
             Integer movie_id = lstMovie.get(i).getId();
 
             List<TimeEntity> listTime = timeRepository.findByMovieIdAndHallIdInAndStartTimeGreaterThanEqualAndStartTimeLessThan(movie_id, lstHallId, date, date1);
-
+            System.out.println(Jacksons.me().readAsString(listTime));
+            map.put(movie_id,listTime);
         }
-        return null;
+        return map;
     }
 }

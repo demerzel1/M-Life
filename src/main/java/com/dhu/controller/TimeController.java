@@ -35,6 +35,8 @@ public class TimeController {
 
     private ResultGenerator resultGenerator;
 
+    private CommonUtils commonUtils=new CommonUtils();
+
     @Autowired
     public TimeController(TimeService timeService,ResultGenerator resultGenerator){
         this.timeService=timeService;
@@ -44,18 +46,10 @@ public class TimeController {
     @RequestMapping(value = "/getTime",method = RequestMethod.POST)
     public ResponseData getTime(@RequestBody Map map){
         System.out.println(11111);
-        DateFormat format1 = new SimpleDateFormat("yyyy-MM-dd");
-        Date date1;
-        java.util.Date date=null;
         Integer mid=Integer.valueOf(map.get("mid").toString());
         Integer cid=Integer.valueOf(map.get("cid").toString());
         String str=map.get("day").toString();
-        try{
-            date=format1.parse(str);
-        }catch (ParseException e){
-        }
-        long l=date.getTime();
-        date1=new Date(l);
+        Date date1=commonUtils.String2Date(str);
         System.out.println(date1.toString());
         List<Object> list=timeService.findByMidCidDate(mid,cid,date1);
         List<Map> reslist=new ArrayList<>();
@@ -76,5 +70,13 @@ public class TimeController {
     public ResponseData getSaledSeat(@RequestBody Map map){
         Integer time_id=Integer.valueOf(map.get("tid").toString());
         return resultGenerator.getSuccessResult(timeService.findSeatById(time_id));
+    }
+
+    @RequestMapping(value = "/getByCidAndDate",method = RequestMethod.POST)
+    public ResponseData getByCinemaAndDate(@RequestBody Map map){
+        Integer cid=Integer.valueOf(map.get("cid").toString());
+        String str=map.get("day").toString();
+        Date date=commonUtils.String2Date(str);
+        return resultGenerator.getSuccessResult(timeService.findByCidAndDate(cid,date));
     }
 }

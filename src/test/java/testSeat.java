@@ -2,6 +2,7 @@ import com.dhu.model.MovieEntity;
 import com.dhu.model.UserEntity;
 import com.dhu.service.MovieService;
 import com.dhu.service.SeatService;
+import com.dhu.service.TimeService;
 import com.dhu.service.UserService;
 import com.dhu.utils.Jacksons.Jacksons;
 import com.dhu.utils.ResultGenerator;
@@ -14,6 +15,10 @@ import org.springframework.test.context.transaction.TransactionConfiguration;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.criteria.CriteriaBuilder;
+import java.sql.Date;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -39,9 +44,22 @@ public class testSeat {
 
     @Autowired
     ResultGenerator resultGenerator;
+
+    @Autowired
+    TimeService timeService;
+
     @Test
     public void main() {
-        System.out.println("111");
-        System.out.println(Jacksons.me().readAsString(resultGenerator.getSuccessResult( movieService.findMovieById(1)) ));
+        DateFormat format1 = new SimpleDateFormat("yyyy-MM-dd");
+        Date date1;
+        java.util.Date date=null;
+        String str="2018-02-14";
+        try{
+            date=format1.parse(str);
+        }catch (ParseException e){
+        }
+        long l=date.getTime();
+        date1=new Date(l);
+        System.out.println(Jacksons.me().readAsString(timeService.findByCidAndDate(1,date1)));
     }
 }

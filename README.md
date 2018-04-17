@@ -203,6 +203,49 @@ POST `/time/getSaledSeat`  {“tid”:1}
 }
 ```
 
+#### 根据影院、日期返回当日该影院所有电影的场次
+POST  `/time/getByCidAndDate`
+传入
+```
+{
+"cid":1,
+"day":"2018-02-14"
+}
+```
+
+返回：
+```
+{
+    "message": "success",
+    "code": 200,
+    "data": {
+        "data": {
+            "1": [
+                {
+                    "id": 3,
+                    "startTime": 1518611833000,
+                    "endTime": 1523651835000,
+                    "cost": 50,
+                    "movieId": 1,
+                    "hallId": 1
+                },
+                {
+                    "id": 6,
+                    "startTime": 1518580867000,
+                    "endTime": 1523851264000,
+                    "cost": 100,
+                    "movieId": 1,
+                    "hallId": 1
+                }
+            ],
+            "3": []
+        }
+    }
+}
+```
+第二层data中为一个map
+key值为电影id，value为一个list，为date对应的日期当天的电影场次
+
 ## user
 #### 注册
 POST `/user/register` 
@@ -277,3 +320,6 @@ POST `/user/login`  {“email”:”xx”,”password”:”xx”}
     "data": {}
 }
 ```
+
+
+

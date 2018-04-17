@@ -16,5 +16,5 @@ public interface TimeService {
     List<Object> findByMidCidDate(Integer mid, Integer cid, Date date);
     TimeEntity findById(Integer id);
     List<SeatEntity> findSeatById(Integer id);
-    List<TimeEntity> findByCidAndDate(Integer cinema_id,Date date);
+    Map findByCidAndDate(Integer cinema_id,Date date);
 }
