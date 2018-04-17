@@ -3,6 +3,7 @@ package com.dhu.service;
 import com.dhu.model.MovieEntity;
 import org.springframework.stereotype.Service;
 
+import javax.lang.model.type.IntersectionType;
 import java.sql.Date;
 import java.util.List;
 
@@ -18,4 +19,5 @@ public interface MovieService {
     Boolean deleteMovieById(Integer id);
     MovieEntity addMovie(MovieEntity movieEntity);
     List<MovieEntity> findAllMovieByDate(Date date);
+    List<MovieEntity> findByUserId(Integer user_id);
 }

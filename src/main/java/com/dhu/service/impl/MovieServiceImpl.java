@@ -1,7 +1,10 @@
 package com.dhu.service.impl;
 
 import com.dhu.model.MovieEntity;
+import com.dhu.model.OrderEntity;
+import com.dhu.model.TimeEntity;
 import com.dhu.repository.MovieRepository;
+import com.dhu.repository.OrderRepository;
 import com.dhu.service.MovieService;
 import com.mchange.util.MEnumeration;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +21,9 @@ import java.util.Map;
 public class MovieServiceImpl implements MovieService {
    @Autowired
     MovieRepository movieRepository;
+
+   @Autowired
+    OrderRepository orderRepository;
 
     @Override
     public List<MovieEntity> findAllMovie(){
@@ -55,5 +61,11 @@ public class MovieServiceImpl implements MovieService {
     @Override
     public List<MovieEntity> findAllMovieByDate(Date date) {
         return movieRepository.findAllByBeginTimeLessThanEqualAndEndTimeGreaterThanEqual(date,date);
+    }
+
+    @Override
+    public List<MovieEntity> findByUserId(Integer user_id) {
+        List<OrderEntity> lstOrder=orderRepository.findAllByUserId(user_id);
+        return null;
     }
 }
