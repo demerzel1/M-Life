@@ -7,6 +7,7 @@ import com.mchange.util.MEnumeration;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.sql.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -35,5 +36,24 @@ public class MovieServiceImpl implements MovieService {
     @Override
     public MovieEntity updateMovie(MovieEntity movieEntity) {
         return movieRepository.saveAndFlush(movieEntity);
+    }
+
+    @Override
+    public Boolean deleteMovieById(Integer id) {
+        MovieEntity movieEntity=movieRepository.findFirstById(id);
+        movieRepository.delete(movieEntity);
+        if(movieRepository.findFirstById(id)==null)
+            return true;
+        return false;
+    }
+
+    @Override
+    public MovieEntity addMovie(MovieEntity movieEntity) {
+        return movieRepository.saveAndFlush(movieEntity);
+    }
+
+    @Override
+    public List<MovieEntity> findAllMovieByDate(Date date) {
+        return movieRepository.findAllByBeginTimeLessThanEqualAndEndTimeGreaterThanEqual(date,date);
     }
 }

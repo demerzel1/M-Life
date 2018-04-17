@@ -5,6 +5,7 @@ import com.dhu.model.ResponseData;
 import com.dhu.service.MovieService;
 import com.dhu.utils.Jacksons.Jacksons;
 import com.dhu.utils.ResultGenerator;
+import javafx.geometry.Pos;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,6 +13,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
+import java.sql.Date;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.List;
 import java.util.Map;
 
@@ -40,9 +45,40 @@ public class MovieController {
         return resultGenerator.getSuccessResult(movieService.findMovieById(mid));
     }
 
+    @RequestMapping(value = "/getByDate",method = RequestMethod.POST)
+    public ResponseData getByDate(@RequestBody Map map){
+        DateFormat format1 = new SimpleDateFormat("yyyy-MM-dd");
+        Date date1;
+        java.util.Date date=null;
+        String str=map.get("day").toString();
+        try{
+            date=format1.parse(str);
+        }catch (ParseException e){
+        }
+        long l=date.getTime();
+        date1=new Date(l);
+        return resultGenerator.getSuccessResult(movieService.findAllMovieByDate(date1));
+    }
+
+    @RequestMapping(value = "/add",method = RequestMethod.POST)
+    public ResponseData addMovie(@RequestBody MovieEntity movieEntity){
+        return resultGenerator.getSuccessResult( movieService.addMovie(movieEntity));
+    }
+
     @RequestMapping(value = "/update",method = RequestMethod.POST)
     public ResponseData updateMovie(@RequestBody MovieEntity movieEntity){
         System.out.println(Jacksons.me().readAsString(movieEntity));
         return resultGenerator.getSuccessResult(movieService.updateMovie(movieEntity));
+    }
+
+    @RequestMapping(value = "/delete",method = RequestMethod.POST)
+    public ResponseData delete(@RequestBody Map map){
+        Integer mid=Integer.valueOf(map.get("mid").toString());
+        if(movieService.findMovieById(mid)==null)
+            return resultGenerator.getFailResult("电影不存在");
+        if(movieService.deleteMovieById(mid)==true)
+            return resultGenerator.getSuccessResult();
+        else
+            return resultGenerator.getFailResult("删除失败");
     }
 }
