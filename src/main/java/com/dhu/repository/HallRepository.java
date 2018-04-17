@@ -12,4 +12,5 @@ import java.util.List;
 @Repository
 public interface HallRepository extends JpaRepository<HallEntity,Integer> {
     List<HallEntity> findAllByCinemaId(Integer cinema_id);
+    HallEntity findFirstById(Integer id);
 }

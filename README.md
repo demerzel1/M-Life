@@ -6,6 +6,7 @@
 `[api test](http://localhost:8080/api_test.html)`
 来测试返回的格式
 
+添加了jwt支持（jjwt实现）
 
 ## cinema
 #### 获取全部影院信息
@@ -39,6 +40,13 @@ POST `/cinema/getByCity`  {“cid”:1}
 #### 根据影院id返回信息
 POST  `/cinema/getById` {“cid”:1}
 
+#### 通过影片，城市，日期查询影院
+POST `/movie/getByMovieCityDate`
+输入json属性为 `mid,cityid,day`
+返回影院list
+
+
+
 ## comment
 #### 根据电影返回评论
 POST `/comment/getByMid` {“mid”:1}
@@ -66,6 +74,7 @@ POST `/movie/update` 传入参数和添加影片相同，但要包含id（保证
 POST `/movie/delete` {“mid”:1}
 
 会返回删除成功/删除失败/电影不存在（message内）
+
 
 ## order
 #### 买票

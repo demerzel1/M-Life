@@ -1,5 +1,6 @@
 import com.dhu.model.MovieEntity;
 import com.dhu.repository.MovieRepository;
+import com.dhu.service.CinemaService;
 import com.dhu.service.OrderService;
 import com.dhu.service.TimeService;
 import com.dhu.utils.Jacksons.Jacksons;
@@ -36,6 +37,9 @@ public class orderTest {
     @Autowired
     MovieRepository movieRepository;
 
+    @Autowired
+    CinemaService cinemaService;
+
     @Test
     public void main() {
         DateFormat dateFormat1 = new SimpleDateFormat("yyyy-MM-dd");
@@ -46,7 +50,6 @@ public class orderTest {
             e.printStackTrace();
         }
         Date date=new Date(date1.getTime());
-        List<MovieEntity> list=movieRepository.findAllByBeginTimeLessThanEqualAndEndTimeGreaterThanEqual(date,date);
-        System.out.println(Jacksons.me().readAsString(list));
+        System.out.println(Jacksons.me().readAsString(cinemaService.findByMovieAndDateAndCity(1,date,1)));
     }
 }

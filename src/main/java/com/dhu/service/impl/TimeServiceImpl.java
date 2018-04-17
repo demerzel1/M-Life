@@ -86,11 +86,18 @@ public class TimeServiceImpl implements TimeService {
         Map<Integer,List> map=new HashMap<>();
         for(int i=0;i<lstMovie.size();++i) {
             Integer movie_id = lstMovie.get(i).getId();
-
             List<TimeEntity> listTime = timeRepository.findByMovieIdAndHallIdInAndStartTimeGreaterThanEqualAndStartTimeLessThan(movie_id, lstHallId, date, date1);
             System.out.println(Jacksons.me().readAsString(listTime));
             map.put(movie_id,listTime);
         }
         return map;
     }
+
+    @Override
+    public List<TimeEntity> findByMovieAndDate(Integer movie_id, Date date) {
+        Date date1=CommonUtils.me().getNextDay(date);
+        return timeRepository.findAllByMovieIdAndStartTimeGreaterThanEqualAndStartTimeLessThan(movie_id,date,date1);
+    }
+
+
 }

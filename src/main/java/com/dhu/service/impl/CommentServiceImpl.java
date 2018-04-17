@@ -30,6 +30,7 @@ public class CommentServiceImpl implements CommentService {
             map.put("avatar",(String)obj[0]);
             map.put("name",obj[1]);
             map.put("comment",obj[2]);
+            map.put("grade",obj[3]);
             reslst.add(map);
         }
         return reslst;

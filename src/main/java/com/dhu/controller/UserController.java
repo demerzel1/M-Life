@@ -3,6 +3,7 @@ package com.dhu.controller;
 import com.dhu.model.ResponseData;
 import com.dhu.model.UserEntity;
 import com.dhu.service.UserService;
+import com.dhu.utils.JWTUtils;
 import com.dhu.utils.ResultGenerator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -54,7 +55,10 @@ public class UserController {
         String password=map.get("password").toString();
         UserEntity userEntity = userService.checkLogin(email,password);
         if(userEntity!=null){
-            return resultGenerator.getSuccessResult("success",userEntity);
+            String str=JWTUtils.getToken(((Integer)userEntity.getId()).toString());
+            ResponseData responseData=resultGenerator.getSuccessResult("success",userEntity);
+            responseData.putDataValue("token",str);
+            return responseData;
         }
         return resultGenerator.getFailResult("用户名/密码错误");
     }

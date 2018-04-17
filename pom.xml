@@ -109,13 +109,6 @@
       <artifactId>json</artifactId>
       <version>20140107</version>
     </dependency>
-    <!-- jwt -->
-    <!-- https://mvnrepository.com/artifact/com.auth0/java-jwt -->
-    <dependency>
-      <groupId>com.auth0</groupId>
-      <artifactId>java-jwt</artifactId>
-      <version>3.3.0</version>
-    </dependency>
     <dependency>
           <groupId>junit</groupId>
           <artifactId>junit</artifactId>
@@ -138,6 +131,12 @@
       <artifactId>commons-fileupload</artifactId>
       <version>1.3.2</version>
     </dependency>
+      <!-- JWT -->
+      <dependency>
+          <groupId>io.jsonwebtoken</groupId>
+          <artifactId>jjwt</artifactId>
+          <version>0.9.0</version>
+      </dependency>
   </dependencies>
 
   <build>

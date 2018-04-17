@@ -17,4 +17,5 @@ public interface TimeService {
     TimeEntity findById(Integer id);
     List<SeatEntity> findSeatById(Integer id);
     Map findByCidAndDate(Integer cinema_id,Date date);
+    List<TimeEntity> findByMovieAndDate(Integer movie_id,Date date);
 }

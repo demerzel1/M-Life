@@ -22,6 +22,7 @@ public class MovieEntity {
     private String movieType;
     private Integer duration;
     private String country;
+    private Double score;
 
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -157,5 +158,15 @@ public class MovieEntity {
 
     public void setCountry(String country) {
         this.country = country;
+    }
+
+    @Basic
+    @Column(name = "score", nullable = true, precision = 0)
+    public Double getScore() {
+        return score;
+    }
+
+    public void setScore(Double score) {
+        this.score = score;
     }
 }

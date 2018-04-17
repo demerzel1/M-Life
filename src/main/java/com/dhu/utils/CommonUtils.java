@@ -11,6 +11,10 @@ import java.util.GregorianCalendar;
  * Created by demerzel on 2018/4/15.
  */
 public class CommonUtils {
+    public static CommonUtils me(){
+        return new CommonUtils();
+    }
+
     public Date getNextDay(Date date){
         Calendar calendar = new GregorianCalendar();
         calendar.setTime(date);
