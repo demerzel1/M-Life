@@ -7,10 +7,7 @@ import com.dhu.utils.Jacksons.Jacksons;
 import com.dhu.utils.ResultGenerator;
 import javafx.geometry.Pos;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.sql.Date;
@@ -24,6 +21,7 @@ import java.util.Map;
  * Created by demerzel on 2018/4/12.
  */
 @RestController
+@CrossOrigin
 @RequestMapping("/movie")
 public class MovieController {
     private MovieService movieService;

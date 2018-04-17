@@ -4,10 +4,7 @@ import com.dhu.model.ResponseData;
 import com.dhu.service.SeatService;
 import com.dhu.utils.ResultGenerator;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
 
@@ -15,6 +12,7 @@ import java.util.Map;
  * Created by demerzel on 2018/4/16.
  */
 @RestController
+@CrossOrigin
 @RequestMapping("/seat")
 public class SeatController {
     private SeatService seatService;

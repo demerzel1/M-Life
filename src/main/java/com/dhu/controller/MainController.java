@@ -14,6 +14,7 @@ import java.util.List;
  * Created by demerzel on 2018/3/28.
  */
 @Controller
+
 public class MainController {
 
     @RequestMapping(value = "/",method = RequestMethod.GET)
