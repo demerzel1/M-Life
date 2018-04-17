@@ -5,7 +5,6 @@ import com.dhu.service.CinemaService;
 import com.dhu.utils.ResultGenerator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.client.support.RestGatewaySupport;
 
 import java.util.Map;
 

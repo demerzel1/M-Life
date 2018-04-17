@@ -5,16 +5,13 @@ import com.dhu.model.ResponseData;
 import com.dhu.service.MovieService;
 import com.dhu.utils.Jacksons.Jacksons;
 import com.dhu.utils.ResultGenerator;
-import javafx.geometry.Pos;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
 import java.sql.Date;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -73,7 +70,7 @@ public class MovieController {
         return resultGenerator.getSuccessResult(movieService.updateMovie(movieEntity));
     }
 
-    @RequestMapping(value = "/dedlete",method = RequestMethod.POST)
+    @RequestMapping(value = "/delete",method = RequestMethod.POST)
     public ResponseData delete(@RequestBody Map map){
         Integer mid=Integer.valueOf(map.get("mid").toString());
         if(movieService.findMovieById(mid)==null)

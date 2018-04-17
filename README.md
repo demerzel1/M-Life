@@ -321,5 +321,20 @@ POST `/user/login`  {“email”:”xx”,”password”:”xx”}
 }
 ```
 
+#### 更改信息
+POST `/user/update`
+同注册
 
+## picture
+#### 上传海报
+POST `/pic/uploadPost` 
+返回url
+```
+“{"message":"success","code":200,"data":{"data”:”/static/images/posts/d2fa22e624d34f8ca6227807ef6fd522.jpeg"}}”
+```
 
+在返回的url前加localhost:8080 就可以访问
+`localhost:8080/static/images/posts/d2fa22e624d34f8ca6227807ef6fd522.jpeg`
+
+#### 上传头像
+POST `/pic/uploadAvatar`

@@ -1,14 +1,12 @@
 package com.dhu.repository;
 
 import com.dhu.model.TimeEntity;
-import org.jboss.logging.annotations.Param;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import java.sql.Date;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Created by demerzel on 2018/4/14.

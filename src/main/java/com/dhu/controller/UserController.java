@@ -59,6 +59,16 @@ public class UserController {
         return resultGenerator.getFailResult("用户名/密码错误");
     }
 
+    @RequestMapping(value = "/update",method = RequestMethod.POST)
+    public ResponseData updateUser(@RequestBody UserEntity userEntity){
+        UserEntity userEntity1=userService.findUserByEmail(userEntity.getEmail());
+        if(userEntity1!=null){
+            return resultGenerator.getFailResult("违反主键/唯一约束条件");
+        }
+        return resultGenerator.getSuccessResult("用户更新成功",userService.saveUser(userEntity));
+    }
+
+
     @ExceptionHandler(ConstraintViolationException.class)
     public ResponseData handleConstraintViolationException(ConstraintViolationException cve) {
         String errorMessage = cve.getConstraintViolations().iterator().next().getMessage();
@@ -73,4 +83,5 @@ public class UserController {
         //如果注册两个相同的用户名到报这个异常
         return resultGenerator.getFailResult("违反主键/唯一约束条件");
     }
+
 }
