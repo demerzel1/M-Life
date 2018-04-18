@@ -6,6 +6,7 @@ import com.dhu.service.OrderService;
 import com.dhu.service.UserService;
 import com.dhu.utils.Jacksons.Jacksons;
 import com.dhu.utils.ResultGenerator;
+import org.omg.PortableServer.POA;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -82,5 +83,17 @@ public class OrderController {
             responseData.putDataValue(i.toString(),orderService.addOrder(time_id,row,col,user_id));
         }
         return responseData;
+    }
+
+    @RequestMapping(value = "/getByUserId",method = RequestMethod.POST)
+    public ResponseData getByUserId(@RequestBody Map map){
+        Integer uid=Integer.valueOf(map.get("uid").toString());
+        return resultGenerator.getSuccessResult(orderService.findByUserId(uid));
+    }
+
+    @RequestMapping(value = "/getNotWatch",method = RequestMethod.POST)
+    public ResponseData getNotWatchByUserId(@RequestBody Map map){
+        Integer uid=Integer.valueOf(map.get("uid").toString());
+        return resultGenerator.getSuccessResult(orderService.findNotWatchByUserId(uid));
     }
 }

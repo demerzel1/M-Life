@@ -6,6 +6,7 @@ import org.springframework.stereotype.Repository;
 
 import java.sql.Date;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by demerzel on 2018/4/12.
@@ -16,4 +17,6 @@ public interface MovieRepository extends JpaRepository<MovieEntity,Integer> {
     MovieEntity findFirstByName(String Name);
     MovieEntity findFirstByEnglishname(String Englishname);
     List<MovieEntity> findAllByBeginTimeLessThanEqualAndEndTimeGreaterThanEqual(Date date1,Date date2);
+    List<MovieEntity> findAllByIdIn(Set set);
+    List<MovieEntity> findAllByBeginTimeGreaterThan(Date date);
 }

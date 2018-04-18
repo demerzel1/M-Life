@@ -11,10 +11,11 @@ import com.dhu.service.TimeService;
 import com.dhu.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import sun.tools.tree.OrExpression;
 
-import javax.jws.soap.SOAPBinding;
 import java.sql.Date;
 import java.sql.Timestamp;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -38,7 +39,7 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public OrderEntity addOrder(Integer tid, Integer row, Integer col, Integer user_id) {
         TimeEntity timeEntity=timeService.findById(tid);
-        Date date=new Date(timeEntity.getStartTime().getTime());
+        Timestamp date=new Timestamp(timeEntity.getStartTime().getTime());
         Double cost=timeEntity.getCost();
         Integer hall_id=timeEntity.getHallId();
         SeatEntity seatEntity=seatService.findSeat(hall_id,row,col);
@@ -71,8 +72,13 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public List<Object> findSeatByTime(Integer time_id) {
-        //TODO
-        return null;
+    public List<OrderEntity> findByUserId(Integer userId) {
+        return orderRepository.findAllByUserIdOrderByOrderTimeDesc(userId);
+    }
+
+    @Override
+    public List<OrderEntity> findNotWatchByUserId(Integer userId) {
+        Timestamp timestamp=new Timestamp(System.currentTimeMillis());
+        return orderRepository.findAllByUserIdAndWatchTimeGreaterThanEqualOrderByOrderTimeDesc(userId,timestamp);
     }
 }

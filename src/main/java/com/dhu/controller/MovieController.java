@@ -80,4 +80,15 @@ public class MovieController {
         else
             return resultGenerator.getFailResult("删除失败");
     }
+
+    @RequestMapping(value = "/getWatched",method = RequestMethod.POST)
+    public ResponseData findByUserId(@RequestBody Map map){
+        Integer uid=Integer.valueOf(map.get("uid").toString());
+        return resultGenerator.getSuccessResult( movieService.findWatchedByUserId(uid));
+    }
+
+    @RequestMapping(value = "/getNotOn",method = RequestMethod.GET)
+    public ResponseData getNotOn(){
+        return resultGenerator.getSuccessResult(movieService.findNotOn());
+    }
 }

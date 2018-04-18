@@ -5,16 +5,16 @@ import com.dhu.model.OrderEntity;
 import com.dhu.model.TimeEntity;
 import com.dhu.repository.MovieRepository;
 import com.dhu.repository.OrderRepository;
+import com.dhu.repository.TimeRepository;
 import com.dhu.service.MovieService;
-import com.mchange.util.MEnumeration;
+import com.dhu.utils.CommonUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import sun.tools.tree.OrExpression;
 
 import java.sql.Date;
+import java.sql.Timestamp;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Map;
 import java.util.Set;
 
 /**
@@ -27,6 +27,9 @@ public class MovieServiceImpl implements MovieService {
 
    @Autowired
     OrderRepository orderRepository;
+
+   @Autowired
+    TimeRepository timeRepository;
 
     @Override
     public List<MovieEntity> findAllMovie(){
@@ -68,14 +71,25 @@ public class MovieServiceImpl implements MovieService {
     }
 
     @Override
-    public List<MovieEntity> findByUserId(Integer user_id) {
+    public List<MovieEntity> findWatchedByUserId(Integer user_id) {
         List<OrderEntity> lstOrder=orderRepository.findAllByUserId(user_id);
         Set<Integer> setTime=new HashSet<>();
         for(OrderEntity orderEntity:lstOrder){
             setTime.add(orderEntity.getTimeId());
         }
+        Timestamp timestamp=new Timestamp(System.currentTimeMillis());
+        List<TimeEntity> timeEntityList=timeRepository.findAllByIdInAndStartTimeLessThan(setTime,timestamp);
+        Set<Integer> movieSet=new HashSet<>();
+        for(TimeEntity timeEntity:timeEntityList){
+            movieSet.add(timeEntity.getMovieId());
+        }
+        List<MovieEntity> movieEntityList=movieRepository.findAllByIdIn(movieSet);
+        return movieEntityList;
+    }
 
-        //TODO
-        return null;
+    @Override
+    public List<MovieEntity> findNotOn() {
+        Date date=new Date(System.currentTimeMillis());
+        return movieRepository.findAllByBeginTimeGreaterThan(date);
     }
 }

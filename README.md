@@ -11,6 +11,25 @@
 前台也应该做验证，比如对仅有管理员可访问的api，在请求前检查是否是管理员访问。
 页面跳转，后续会提供专门的验证api，会返回token是否正常和此用户的个人信息，由前端验证是否允许跳转。
 
+### update list
+
+增加了：
+根据用户id获取已经看过的电影
+根据用户id获取全部订单（票号）(订票时间降序）
+根据用户id获取未上映的订单 （订票时间降序）
+返回未上映的电影
+
+更新了数据库属性 需要重新导入数据库
+新的数据库中 测试管理员账户为
+```
+email: admin@admin
+password : admin
+```
+测试用户账户为
+```
+email:user@user
+password: user
+```
 
 [cinema](https://github.com/demerzel1/MCMS/blob/master/README.md#cinema)
 [comment](https://github.com/demerzel1/MCMS/blob/master/README.md#comment)
@@ -103,6 +122,13 @@ POST `/movie/delete` {“mid”:1}
 
 会返回删除成功/删除失败/电影不存在（message内）
 
+#### 获取用户看过的电影
+POST `/movie/getWatched` {“uid”:1}
+返回列表 内为电影实体
+
+#### 获取未上映的电影
+GET `/getNotOn`
+返回未上映的电影列表
 
 ## order
 #### 买票
@@ -163,6 +189,18 @@ id为票编号，ordertime为毫秒数表示的时间，watchtime为电影上映
     "data": {}
 }
 ```
+
+#### 返回用户的全部订单（订票时间降序）
+POST `/order/getByUserId`
+{“uid”:1}
+返回格式如
+![](README/EA19FF1C-F5A4-4638-809E-B04DBD8B5521.png)
+
+
+#### 返回用户未观看的订单（订票时间降序）
+POST `/order/getNotWatch`
+{“uid”:1}
+
 
 ## time
 #### 根据电影id,影院id,日期，返回此日电影场次信息

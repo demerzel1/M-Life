@@ -19,5 +19,6 @@ public interface MovieService {
     Boolean deleteMovieById(Integer id);
     MovieEntity addMovie(MovieEntity movieEntity);
     List<MovieEntity> findAllMovieByDate(Date date);
-    List<MovieEntity> findByUserId(Integer user_id);
+    List<MovieEntity> findWatchedByUserId(Integer user_id);
+    List<MovieEntity> findNotOn();
 }

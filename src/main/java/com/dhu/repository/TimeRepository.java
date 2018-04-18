@@ -1,11 +1,13 @@
 package com.dhu.repository;
 
 import com.dhu.model.TimeEntity;
+import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import java.sql.Date;
+import java.sql.Timestamp;
 import java.util.List;
 import java.util.Set;
 
@@ -23,5 +25,7 @@ public interface TimeRepository extends JpaRepository<TimeEntity,Integer> {
 
     List<TimeEntity> findAllByMovieIdAndStartTimeGreaterThanEqualAndStartTimeLessThan(Integer movie_id,Date date1,Date date2);
 
-    List<TimeEntity> findAllByIdIn(Set<Integer> set);
+    List<TimeEntity> findAllByIdInAndStartTimeLessThan(Set<Integer> set, Timestamp timestamp);
+
+    
 }

@@ -50,6 +50,6 @@ public class orderTest {
             e.printStackTrace();
         }
         Date date=new Date(date1.getTime());
-        System.out.println(Jacksons.me().readAsString(cinemaService.findByMovieAndDateAndCity(1,date,1)));
+        System.out.println(Jacksons.me().readAsString(orderService.findNotWatchByUserId(1)));
     }
 }

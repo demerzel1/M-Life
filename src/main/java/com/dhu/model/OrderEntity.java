@@ -13,7 +13,7 @@ import java.util.Objects;
 public class OrderEntity {
     private int id;
     private Timestamp orderTime;
-    private Date watchTime;
+    private Timestamp watchTime;
     private double cost;
     private int userId;
     private int timeId;
@@ -42,11 +42,11 @@ public class OrderEntity {
 
     @Basic
     @Column(name = "watch_time", nullable = false)
-    public Date getWatchTime() {
+    public Timestamp getWatchTime() {
         return watchTime;
     }
 
-    public void setWatchTime(Date watchTime) {
+    public void setWatchTime(Timestamp watchTime) {
         this.watchTime = watchTime;
     }
 

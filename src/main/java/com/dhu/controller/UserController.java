@@ -54,11 +54,14 @@ public class UserController {
     public ResponseData login(@RequestBody Map map) {
         String email=map.get("email").toString();
         String password=map.get("password").toString();
+        System.out.println(email);
+        System.out.println(password);
         UserEntity userEntity = userService.checkLogin(email,password);
         if(userEntity!=null){
             String str=JWTUtils.getToken(((Integer)userEntity.getId()).toString());
             ResponseData responseData=resultGenerator.getSuccessResult("success",userEntity);
             responseData.putDataValue("token",str);
+            System.out.println(Jacksons.me().readAsString(responseData));
             return responseData;
         }
         return resultGenerator.getFailResult("邮箱/密码错误");
