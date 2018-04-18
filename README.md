@@ -6,7 +6,19 @@
 `[api test](http://localhost:8080/api_test.html)`
 来测试返回的格式
 
-添加了jwt支持（jjwt实现）
+**添加了jwt支持（jjwt实现）**
+在login时服务器返回token，只需要在每次的请求中在head里包含此token，服务器会在需要验证的api做验证。
+前台也应该做验证，比如对仅有管理员可访问的api，在请求前检查是否是管理员访问。
+页面跳转，后续会提供专门的验证api，会返回token是否正常和此用户的个人信息，由前端验证是否允许跳转。
+
+
+[cinema](https://github.com/demerzel1/MCMS/blob/master/README.md#cinema)
+[comment](https://github.com/demerzel1/MCMS/blob/master/README.md#comment)
+[movie](https://github.com/demerzel1/MCMS/blob/master/README.md#movie)
+[order](https://github.com/demerzel1/MCMS/blob/master/README.md#order)
+[time](https://github.com/demerzel1/MCMS/blob/master/README.md#time)
+[user](https://github.com/demerzel1/MCMS/blob/master/README.md#user)
+[picture](https://github.com/demerzel1/MCMS/blob/master/README.md#picture)
 ## cinema
 #### 获取全部影院信息
 GET  `/cinema/getAll`  

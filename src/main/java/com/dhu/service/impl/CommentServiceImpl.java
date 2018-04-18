@@ -62,6 +62,7 @@ public class CommentServiceImpl implements CommentService {
     public Boolean delete(CommentEntity commentEntity) {
         Integer id=commentEntity.getId();
         commentRepository.delete(commentEntity);
+        commentRepository.flush();
         if(commentRepository.findFirstById(id)==null)
             return true;
         return false;

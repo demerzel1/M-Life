@@ -51,6 +51,7 @@ public class MovieServiceImpl implements MovieService {
     public Boolean deleteMovieById(Integer id) {
         MovieEntity movieEntity=movieRepository.findFirstById(id);
         movieRepository.delete(movieEntity);
+        movieRepository.flush();
         if(movieRepository.findFirstById(id)==null)
             return true;
         return false;
