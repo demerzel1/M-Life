@@ -1172,7 +1172,7 @@
     </column>
     <column id="282" parent="236" name="watch_time">
       <Position>3</Position>
-      <DataType>date|0s</DataType>
+      <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
@@ -1378,6 +1378,7 @@
     <column id="319" parent="239" name="avatar">
       <Position>8</Position>
       <DataType>varchar(50)|0s</DataType>
+      <DefaultExpression>&apos;/static/images/avatars/avatar.jpeg&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
     <index id="320" parent="239" name="user_email_uindex">
