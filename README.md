@@ -317,6 +317,7 @@ POST `/user/login`  {“email”:”xx”,”password”:”xx”}
             "isAdmin": 0,
             "email": "11111",
             "avatar": null
+            "token":"xxx.xxx.xxx"
         }
     }
 }
