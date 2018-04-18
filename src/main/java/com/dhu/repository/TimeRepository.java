@@ -7,6 +7,7 @@ import org.springframework.stereotype.Repository;
 
 import java.sql.Date;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by demerzel on 2018/4/14.
@@ -21,4 +22,6 @@ public interface TimeRepository extends JpaRepository<TimeEntity,Integer> {
     List<TimeEntity> findByMovieIdAndHallIdInAndStartTimeGreaterThanEqualAndStartTimeLessThan(Integer movie_id,List<Integer> lst,Date date1,Date date2);
 
     List<TimeEntity> findAllByMovieIdAndStartTimeGreaterThanEqualAndStartTimeLessThan(Integer movie_id,Date date1,Date date2);
+
+    List<TimeEntity> findAllByIdIn(Set<Integer> set);
 }

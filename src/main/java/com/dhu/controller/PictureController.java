@@ -1,9 +1,12 @@
 package com.dhu.controller;
 
 import com.dhu.model.ResponseData;
+import com.dhu.utils.Jacksons.Jacksons;
 import com.dhu.utils.ResultGenerator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
@@ -24,7 +27,7 @@ public class PictureController {
         this.resultGenerator = resultGenerator;
     }
 
-    @RequestMapping(value = "/uploadPost",method = RequestMethod.POST)
+    @RequestMapping(value = "/uploadPost")
     public ResponseData uploadPost(@RequestParam(value = "img") MultipartFile img, HttpServletRequest request) throws Exception{
         //获得物理路径webapp所在路径
         String pathRoot = request.getSession().getServletContext().getRealPath("");

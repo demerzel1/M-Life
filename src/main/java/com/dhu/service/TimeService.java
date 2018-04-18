@@ -1,5 +1,6 @@
 package com.dhu.service;
 
+import com.dhu.model.MovieEntity;
 import com.dhu.model.SeatEntity;
 import com.dhu.model.TimeEntity;
 import org.springframework.stereotype.Service;
@@ -18,4 +19,5 @@ public interface TimeService {
     List<SeatEntity> findSeatById(Integer id);
     Map findByCidAndDate(Integer cinema_id,Date date);
     List<TimeEntity> findByMovieAndDate(Integer movie_id,Date date);
+    MovieEntity findMovieById(Integer id);
 }

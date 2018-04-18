@@ -5,12 +5,11 @@ import com.dhu.service.CinemaService;
 import com.dhu.utils.CommonUtils;
 import com.dhu.utils.JWTResult;
 import com.dhu.utils.JWTUtils;
+import com.dhu.utils.Jacksons.Jacksons;
 import com.dhu.utils.ResultGenerator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.servlet.http.HttpServletRequest;
 import java.sql.Date;
 import java.util.Map;
 
@@ -34,20 +33,22 @@ public class CinemaController {
     }
 
     @RequestMapping(value = "/getAll",method = RequestMethod.GET)
-    public ResponseData getAllCinema(@RequestHeader("uid") String uid,@RequestHeader("token") String token){
+    public ResponseData getAllCinema(@RequestHeader("access-token") String token){
         JWTResult jwtResult=JWTUtils.checkToken(token);
-        if(jwtResult.isStatus()){
-            if(jwtResult.getUid()!=uid){
-                return resultGenerator.getFailResult("伪造token");
-            }
-        }else{
+        System.out.println(Jacksons.me().readAsString(jwtResult));
+        if (!jwtResult.isStatus()) {
             return resultGenerator.getFailResult(jwtResult.getMsg());
         }
         return resultGenerator.getSuccessResult(cinemaService.findAllCinema());
     }
 
     @RequestMapping(value = "/getByCity",method = RequestMethod.POST)
-    public ResponseData getByCity(@RequestBody Map map){
+    public ResponseData getByCity(@RequestBody Map map,@RequestHeader("Access-Token") String token){
+        JWTResult jwtResult=JWTUtils.checkToken(token);
+        System.out.println(Jacksons.me().readAsString(jwtResult));
+        if (!jwtResult.isStatus()) {
+            return resultGenerator.getFailResult(jwtResult.getMsg());
+        }
         Integer city=Integer.valueOf(map.get("cid").toString());
         return resultGenerator.getSuccessResult(cinemaService.findCinemaByCity(city));
     }

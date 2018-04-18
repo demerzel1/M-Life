@@ -9,10 +9,13 @@ import com.dhu.service.MovieService;
 import com.mchange.util.MEnumeration;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import sun.tools.tree.OrExpression;
 
 import java.sql.Date;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * Created by demerzel on 2018/4/12.
@@ -66,6 +69,12 @@ public class MovieServiceImpl implements MovieService {
     @Override
     public List<MovieEntity> findByUserId(Integer user_id) {
         List<OrderEntity> lstOrder=orderRepository.findAllByUserId(user_id);
+        Set<Integer> setTime=new HashSet<>();
+        for(OrderEntity orderEntity:lstOrder){
+            setTime.add(orderEntity.getTimeId());
+        }
+
+        //TODO
         return null;
     }
 }

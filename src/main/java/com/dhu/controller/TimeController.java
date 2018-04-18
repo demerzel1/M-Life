@@ -36,7 +36,7 @@ public class TimeController {
     }
 
     @RequestMapping(value = "/getTime",method = RequestMethod.POST)
-    public ResponseData getTime(@RequestBody Map map){
+    public ResponseData getTimeByCinemaMovieDate(@RequestBody Map map){
         System.out.println(11111);
         Integer mid=Integer.valueOf(map.get("mid").toString());
         Integer cid=Integer.valueOf(map.get("cid").toString());
@@ -70,5 +70,11 @@ public class TimeController {
         String str=map.get("day").toString();
         Date date=commonUtils.String2Date(str);
         return resultGenerator.getSuccessResult(timeService.findByCidAndDate(cid,date));
+    }
+
+    @RequestMapping(value = "/getMovieByTimeId",method = RequestMethod.POST)
+    public ResponseData getMovieByTimeId(@RequestBody Map map){
+        Integer tid=Integer.valueOf(map.get("tid").toString());
+        return resultGenerator.getSuccessResult(timeService.findMovieById(tid));
     }
 }

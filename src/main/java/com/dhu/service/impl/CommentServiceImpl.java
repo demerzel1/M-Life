@@ -35,4 +35,35 @@ public class CommentServiceImpl implements CommentService {
         }
         return reslst;
     }
+
+    @Override
+    public CommentEntity findById(Integer id) {
+        return commentRepository.findFirstById(id);
+    }
+
+
+    @Override
+    public CommentEntity add(CommentEntity commentEntity) {
+
+        return commentRepository.saveAndFlush(commentEntity);
+    }
+
+    @Override
+    public CommentEntity findByMovieAndUser(Integer movie_id, Integer user_id) {
+        return commentRepository.findFirstByMovieIdAndUserId(movie_id,user_id);
+    }
+
+    @Override
+    public CommentEntity update(CommentEntity commentEntity) {
+        return commentRepository.saveAndFlush(commentEntity);
+    }
+
+    @Override
+    public Boolean delete(CommentEntity commentEntity) {
+        Integer id=commentEntity.getId();
+        commentRepository.delete(commentEntity);
+        if(commentRepository.findFirstById(id)==null)
+            return true;
+        return false;
+    }
 }

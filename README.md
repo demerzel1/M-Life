@@ -7,7 +7,6 @@
 来测试返回的格式
 
 添加了jwt支持（jjwt实现）
-
 ## cinema
 #### 获取全部影院信息
 GET  `/cinema/getAll`  
@@ -50,6 +49,23 @@ POST `/movie/getByMovieCityDate`
 ## comment
 #### 根据电影返回评论
 POST `/comment/getByMid` {“mid”:1}
+
+#### 添加评论
+POST `/comment/add`
+```
+{
+"userId":1,
+"movieId":3,
+"content":"123123",
+"grade":10
+}
+```
+如果该用户已评论过此电影，则返回失败。
+
+#### 更改
+#### 删除
+传入参数为添加评论的参数加上评论id（评论id会在查询时返回）
+
 
 ## movie
 #### 获取全部电影信息
@@ -255,6 +271,12 @@ POST  `/time/getByCidAndDate`
 第二层data中为一个map
 key值为电影id，value为一个list，为date对应的日期当天的电影场次
 
+#### 根据场次id返回电影信息
+POST `/time/getMovieByTimeId`
+{“tid”:1}
+
+
+
 ## user
 #### 注册
 POST `/user/register` 
@@ -317,7 +339,6 @@ POST `/user/login`  {“email”:”xx”,”password”:”xx”}
             "isAdmin": 0,
             "email": "11111",
             "avatar": null
-            "token":"xxx.xxx.xxx"
         }
     }
 }

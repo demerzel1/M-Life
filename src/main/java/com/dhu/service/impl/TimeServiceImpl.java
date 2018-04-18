@@ -99,5 +99,11 @@ public class TimeServiceImpl implements TimeService {
         return timeRepository.findAllByMovieIdAndStartTimeGreaterThanEqualAndStartTimeLessThan(movie_id,date,date1);
     }
 
+    @Override
+    public MovieEntity findMovieById(Integer id) {
+        TimeEntity timeEntity=timeRepository.findFirstById(id);
+        return movieService.findMovieById(timeEntity.getMovieId());
+    }
+
 
 }

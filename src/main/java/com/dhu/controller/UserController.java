@@ -4,6 +4,7 @@ import com.dhu.model.ResponseData;
 import com.dhu.model.UserEntity;
 import com.dhu.service.UserService;
 import com.dhu.utils.JWTUtils;
+import com.dhu.utils.Jacksons.Jacksons;
 import com.dhu.utils.ResultGenerator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -60,7 +61,7 @@ public class UserController {
             responseData.putDataValue("token",str);
             return responseData;
         }
-        return resultGenerator.getFailResult("用户名/密码错误");
+        return resultGenerator.getFailResult("邮箱/密码错误");
     }
 
     @RequestMapping(value = "/update",method = RequestMethod.POST)
@@ -69,7 +70,9 @@ public class UserController {
         if(userEntity1!=null){
             return resultGenerator.getFailResult("违反主键/唯一约束条件");
         }
-        return resultGenerator.getSuccessResult("用户更新成功",userService.saveUser(userEntity));
+        ResponseData responseData=resultGenerator.getSuccessResult("用户更新成功",userService.saveUser(userEntity));
+        System.out.println(Jacksons.me().readAsString(responseData));
+        return responseData;
     }
 
 

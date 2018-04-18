@@ -15,4 +15,8 @@ import java.util.List;
 public interface CommentRepository extends JpaRepository<CommentEntity,Integer> {
     @Query(value="select avatar,user.name,content,grade from user,comment,movie where movie.id=comment.movie_id and user.id=comment.user_id and movie.id=?1",nativeQuery = true)
     List<Object> findByMovie(Integer mid);
+
+    CommentEntity findFirstByMovieIdAndUserId(Integer movie_id,Integer user_id);
+
+    CommentEntity findFirstById(Integer id);
 }
