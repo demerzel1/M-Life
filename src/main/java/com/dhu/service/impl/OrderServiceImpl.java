@@ -114,7 +114,7 @@ public class OrderServiceImpl implements OrderService {
             map.put("cost",orderEntity.getCost());
             map.put("cinema",cinemaEntity.getName());
             map.put("movieName",movieEntity.getName());
-            map.put("movieEnglishName",movieEntity.getEndTime());
+            map.put("movieEnglishName",movieEntity.getEnglishname());
             map.put("hall",hallEntity.getNumber());
             map.put("row",seatEntity.getRow());
             map.put("col",seatEntity.getCol());
