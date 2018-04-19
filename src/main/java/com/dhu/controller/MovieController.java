@@ -61,6 +61,7 @@ public class MovieController {
 
     @RequestMapping(value = "/add",method = RequestMethod.POST)
     public ResponseData addMovie(@RequestBody MovieEntity movieEntity){
+        System.out.println();
         return resultGenerator.getSuccessResult( movieService.addMovie(movieEntity));
     }
 
@@ -73,10 +74,14 @@ public class MovieController {
     @RequestMapping(value = "/delete",method = RequestMethod.POST)
     public ResponseData delete(@RequestBody Map map){
         Integer mid=Integer.valueOf(map.get("mid").toString());
-        if(movieService.findMovieById(mid)==null)
+        if(movieService.findMovieById(mid)==null){
             return resultGenerator.getFailResult("电影不存在");
-        if(movieService.deleteMovieById(mid)==true)
+        }
+           System.out.println(111);
+        if(movieService.deleteMovieById(mid)==true){
+            System.out.println("true");
             return resultGenerator.getSuccessResult();
+        }
         else
             return resultGenerator.getFailResult("删除失败");
     }

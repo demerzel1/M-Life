@@ -15,6 +15,6 @@ import java.util.Map;
 public interface OrderService {
     OrderEntity addOrder(Integer tid,Integer row,Integer col,Integer user_id);
     Boolean checkSaled(Integer tid, Integer row,Integer col);
-    List<OrderEntity> findByUserId(Integer userId);
-    List<OrderEntity> findNotWatchByUserId(Integer userId);
+    List<Map> findByUserId(Integer userId);
+    List<Map> findNotWatchByUserId(Integer userId);
 }

@@ -8,6 +8,7 @@ import com.dhu.repository.OrderRepository;
 import com.dhu.repository.TimeRepository;
 import com.dhu.service.MovieService;
 import com.dhu.utils.CommonUtils;
+import com.dhu.utils.Jacksons.Jacksons;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -53,10 +54,14 @@ public class MovieServiceImpl implements MovieService {
     @Override
     public Boolean deleteMovieById(Integer id) {
         MovieEntity movieEntity=movieRepository.findFirstById(id);
+        System.out.println(Jacksons.me().readAsString(movieEntity));
         movieRepository.delete(movieEntity);
         movieRepository.flush();
-        if(movieRepository.findFirstById(id)==null)
+        if(movieRepository.findFirstById(id)==null){
+            System.out.println(3333);
             return true;
+        }
+        System.out.println(2222);
         return false;
     }
 

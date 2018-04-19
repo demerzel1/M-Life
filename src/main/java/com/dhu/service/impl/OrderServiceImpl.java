@@ -1,10 +1,10 @@
 package com.dhu.service.impl;
 
-import com.dhu.model.OrderEntity;
-import com.dhu.model.SeatEntity;
-import com.dhu.model.TimeEntity;
-import com.dhu.model.UserEntity;
+import com.dhu.model.*;
+import com.dhu.repository.CinemaRepository;
+import com.dhu.repository.HallRepository;
 import com.dhu.repository.OrderRepository;
+import com.dhu.repository.SeatRepository;
 import com.dhu.service.OrderService;
 import com.dhu.service.SeatService;
 import com.dhu.service.TimeService;
@@ -16,6 +16,7 @@ import sun.tools.tree.OrExpression;
 import java.sql.Date;
 import java.sql.Timestamp;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -35,6 +36,15 @@ public class OrderServiceImpl implements OrderService {
 
     @Autowired
     UserService userService;
+
+    @Autowired
+    SeatRepository seatRepository;
+
+    @Autowired
+    HallRepository hallRepository;
+
+    @Autowired
+    CinemaRepository cinemaRepository;
 
     @Override
     public OrderEntity addOrder(Integer tid, Integer row, Integer col, Integer user_id) {
@@ -72,13 +82,47 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public List<OrderEntity> findByUserId(Integer userId) {
-        return orderRepository.findAllByUserIdOrderByOrderTimeDesc(userId);
+    public List<Map> findByUserId(Integer userId) {
+        List<OrderEntity> orderEntityList= orderRepository.findAllByUserIdOrderByOrderTimeDesc(userId);
+        List<Map> list=new ArrayList<>();
+        list=getFullOrder(orderEntityList, list);
+        return list;
     }
 
+
     @Override
-    public List<OrderEntity> findNotWatchByUserId(Integer userId) {
+    public List<Map> findNotWatchByUserId(Integer userId) {
         Timestamp timestamp=new Timestamp(System.currentTimeMillis());
-        return orderRepository.findAllByUserIdAndWatchTimeGreaterThanEqualOrderByOrderTimeDesc(userId,timestamp);
+        List<OrderEntity> orderEntityList=  orderRepository.findAllByUserIdAndWatchTimeGreaterThanEqualOrderByOrderTimeDesc(userId,timestamp);
+        List<Map> list=new ArrayList<>();
+        list=getFullOrder(orderEntityList, list);
+        return list;
     }
+
+    private List<Map> getFullOrder(List<OrderEntity> orderEntityList, List<Map> list) {
+        for(OrderEntity orderEntity:orderEntityList){
+            MovieEntity movieEntity=timeService.findMovieById(orderEntity.getTimeId());
+            TimeEntity timeEntity=timeService.findById(orderEntity.getTimeId());
+            SeatEntity seatEntity=seatRepository.findFirstById(orderEntity.getSeatId());
+            HallEntity hallEntity=hallRepository.findFirstById(seatEntity.getHallId());
+            CinemaEntity cinemaEntity=cinemaRepository.findFirstById(hallEntity.getCinemaId());
+            Map<String,Object> map=new HashMap<>();
+            map.put("orderId",orderEntity.getId());
+            map.put("orderTime",orderEntity.getOrderTime());
+            map.put("watchTime",orderEntity.getWatchTime());
+            map.put("endTime",timeEntity.getEndTime());
+            map.put("cost",orderEntity.getCost());
+            map.put("cinema",cinemaEntity.getName());
+            map.put("movieName",movieEntity.getName());
+            map.put("movieEnglishName",movieEntity.getEndTime());
+            map.put("hall",hallEntity.getNumber());
+            map.put("row",seatEntity.getRow());
+            map.put("col",seatEntity.getCol());
+            map.put("post",movieEntity.getPoster());
+            list.add(map);
+        }
+        return list;
+    }
+
 }
+

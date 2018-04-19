@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
+import sun.security.x509.RDN;
 
 import javax.validation.ConstraintViolationException;
 import javax.validation.Valid;
@@ -78,6 +79,11 @@ public class UserController {
         return responseData;
     }
 
+    @RequestMapping(value = "/getById",method = RequestMethod.POST)
+    public ResponseData getById(@RequestBody Map map){
+        Integer uid=Integer.valueOf(map.get("uid").toString());
+        return resultGenerator.getSuccessResult(userService.findUserById(uid));
+    }
 
     @ExceptionHandler(ConstraintViolationException.class)
     public ResponseData handleConstraintViolationException(ConstraintViolationException cve) {
