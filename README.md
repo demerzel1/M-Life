@@ -31,6 +31,11 @@ email:user@user
 password: user
 ```
 
+- - - -
+添加了用id获取用户信息
+更新了用户id获取订单的格式
+
+
 [cinema](https://github.com/demerzel1/MCMS/blob/master/README.md#cinema)
 [comment](https://github.com/demerzel1/MCMS/blob/master/README.md#comment)
 [movie](https://github.com/demerzel1/MCMS/blob/master/README.md#movie)
@@ -194,12 +199,14 @@ id为票编号，ordertime为毫秒数表示的时间，watchtime为电影上映
 POST `/order/getByUserId`
 {“uid”:1}
 返回格式如
-![](README/EA19FF1C-F5A4-4638-809E-B04DBD8B5521.png)
+![](README/00726660-6DD8-4A60-833E-FF471086BD81.png)
+key值就是上面的字符串
 
 
 #### 返回用户未观看的订单（订票时间降序）
 POST `/order/getNotWatch`
 {“uid”:1}
+同上
 
 
 ## time
