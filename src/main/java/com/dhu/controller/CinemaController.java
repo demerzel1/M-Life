@@ -33,12 +33,7 @@ public class CinemaController {
     }
 
     @RequestMapping(value = "/getAll",method = RequestMethod.GET)
-    public ResponseData getAllCinema(@RequestHeader("access-token") String token){
-        JWTResult jwtResult=JWTUtils.checkToken(token);
-        System.out.println(Jacksons.me().readAsString(jwtResult));
-        if (!jwtResult.isStatus()) {
-            return resultGenerator.getFailResult(jwtResult.getMsg());
-        }
+    public ResponseData getAllCinema(){
         return resultGenerator.getSuccessResult(cinemaService.findAllCinema());
     }
 
