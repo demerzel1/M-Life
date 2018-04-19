@@ -42,14 +42,6 @@ public class orderTest {
 
     @Test
     public void main() {
-        DateFormat dateFormat1 = new SimpleDateFormat("yyyy-MM-dd");
-        java.util.Date date1 = null;
-        try {
-            date1 = dateFormat1.parse("2018-02-14");
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-        Date date=new Date(date1.getTime());
-        System.out.println(Jacksons.me().readAsString(orderService.findNotWatchByUserId(1)));
+       System.out.println(Jacksons.me().readAsString(orderService.findByUserId(1)));
     }
 }

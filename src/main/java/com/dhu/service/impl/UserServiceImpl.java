@@ -3,6 +3,7 @@ package com.dhu.service.impl;
 import com.dhu.model.UserEntity;
 import com.dhu.repository.UserRepository;
 import com.dhu.service.UserService;
+import com.dhu.utils.Jacksons.Jacksons;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,6 +17,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public UserEntity saveUser(UserEntity userEntity){
+        System.out.println(Jacksons.me().readAsString(userEntity));
         return userRepository.saveAndFlush(userEntity);
     }
 

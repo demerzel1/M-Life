@@ -71,7 +71,7 @@ public class UserController {
     @RequestMapping(value = "/update",method = RequestMethod.POST)
     public ResponseData updateUser(@RequestBody UserEntity userEntity){
         UserEntity userEntity1=userService.findUserByEmail(userEntity.getEmail());
-        if(userEntity1!=null){
+        if(userEntity1==null){
             return resultGenerator.getFailResult("违反主键/唯一约束条件");
         }
         ResponseData responseData=resultGenerator.getSuccessResult("用户更新成功",userService.saveUser(userEntity));

@@ -43,12 +43,7 @@ public class CinemaController {
     }
 
     @RequestMapping(value = "/getByCity",method = RequestMethod.POST)
-    public ResponseData getByCity(@RequestBody Map map,@RequestHeader("Access-Token") String token){
-        JWTResult jwtResult=JWTUtils.checkToken(token);
-        System.out.println(Jacksons.me().readAsString(jwtResult));
-        if (!jwtResult.isStatus()) {
-            return resultGenerator.getFailResult(jwtResult.getMsg());
-        }
+    public ResponseData getByCity(@RequestBody Map map){
         Integer city=Integer.valueOf(map.get("cid").toString());
         return resultGenerator.getSuccessResult(cinemaService.findCinemaByCity(city));
     }

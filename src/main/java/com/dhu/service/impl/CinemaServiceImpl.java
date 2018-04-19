@@ -54,11 +54,16 @@ public class CinemaServiceImpl implements CinemaService {
             set.add(t.getHallId());
         }
         Set<Integer> setCinema=new HashSet<>();
-        System.out.println(Jacksons.me().readAsString(setCinema));
+
         for(Integer t:set){
             HallEntity hallEntity=hallRepository.findFirstById(t);
             setCinema.add(hallEntity.getCinemaId());
         }
-        return cinemaRepository.findAllByIdInAndCityId(setCinema,city_id);
+        System.out.println(Jacksons.me().readAsString(setCinema));
+        if(setCinema.size()==0)
+            return null;
+        List<CinemaEntity> cinemaEntityList= cinemaRepository.findAllByIdInAndCityId(setCinema,city_id);
+        System.out.println(Jacksons.me().readAsString(cinemaEntityList));
+        return cinemaEntityList;
     }
 }
