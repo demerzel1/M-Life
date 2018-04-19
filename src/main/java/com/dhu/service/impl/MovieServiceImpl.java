@@ -8,9 +8,11 @@ import com.dhu.repository.OrderRepository;
 import com.dhu.repository.TimeRepository;
 import com.dhu.service.MovieService;
 import com.dhu.utils.CommonUtils;
+import com.dhu.utils.ExcelUtils;
 import com.dhu.utils.Jacksons.Jacksons;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.sql.Date;
 import java.sql.Timestamp;
@@ -96,5 +98,16 @@ public class MovieServiceImpl implements MovieService {
     public List<MovieEntity> findNotOn() {
         Date date=new Date(System.currentTimeMillis());
         return movieRepository.findAllByBeginTimeGreaterThan(date);
+    }
+
+    @Override
+    public List<MovieEntity> addFromExcel(MultipartFile file) {
+        ExcelUtils excelUtils=new ExcelUtils();
+        List<MovieEntity> movieEntityList=excelUtils.getExcelInfo(file);
+        System.out.println(Jacksons.me().readAsString(movieEntityList));
+        for(MovieEntity movieEntity:movieEntityList){
+            movieRepository.saveAndFlush(movieEntity);
+        }
+        return movieEntityList;
     }
 }

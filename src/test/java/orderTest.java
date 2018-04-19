@@ -1,8 +1,7 @@
+import com.dhu.model.HallEntity;
 import com.dhu.model.MovieEntity;
 import com.dhu.repository.MovieRepository;
-import com.dhu.service.CinemaService;
-import com.dhu.service.OrderService;
-import com.dhu.service.TimeService;
+import com.dhu.service.*;
 import com.dhu.utils.Jacksons.Jacksons;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -25,8 +24,8 @@ import java.util.List;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = {"file:src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml"})
-@Transactional
-@TransactionConfiguration(transactionManager = "transactionManager", defaultRollback = true)
+//@Transactional
+//@TransactionConfiguration(transactionManager = "transactionManager", defaultRollback = true)
 public class orderTest {
     @Autowired
     OrderService orderService;
@@ -40,8 +39,25 @@ public class orderTest {
     @Autowired
     CinemaService cinemaService;
 
+    @Autowired
+    MovieService movieService;
+
+    @Autowired
+    HallService hallService;
+
     @Test
     public void main() {
-       System.out.println(Jacksons.me().readAsString(orderService.findByUserId(1)));
+        HallEntity hallEntity=new HallEntity();
+        hallEntity.setCinemaId(2);
+        hallEntity.setNumber(3);
+        hallService.add(hallEntity);
+        for(int i=3;i<=9;++i){
+            for(int j=1;j<=3;++j){
+                HallEntity hallEntity1=new HallEntity();
+                hallEntity1.setCinemaId(i);
+                hallEntity1.setNumber(j);
+                hallService.add(hallEntity1);
+            }
+        }
     }
 }

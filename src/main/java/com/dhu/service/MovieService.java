@@ -2,6 +2,7 @@ package com.dhu.service;
 
 import com.dhu.model.MovieEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.lang.model.type.IntersectionType;
 import java.sql.Date;
@@ -21,4 +22,5 @@ public interface MovieService {
     List<MovieEntity> findAllMovieByDate(Date date);
     List<MovieEntity> findWatchedByUserId(Integer user_id);
     List<MovieEntity> findNotOn();
+    List<MovieEntity> addFromExcel(MultipartFile file);
 }
