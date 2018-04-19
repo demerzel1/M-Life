@@ -119,6 +119,12 @@ public class OrderServiceImpl implements OrderService {
             map.put("row",seatEntity.getRow());
             map.put("col",seatEntity.getCol());
             map.put("post",movieEntity.getPoster());
+            Timestamp timestamp=new Timestamp(System.currentTimeMillis());
+            if(orderEntity.getWatchTime().before(timestamp)){
+                map.put("watched",1);
+            }else{
+                map.put("watched",0);
+            }
             list.add(map);
         }
         return list;
