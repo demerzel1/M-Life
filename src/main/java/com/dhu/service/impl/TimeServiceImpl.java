@@ -13,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.sql.Date;
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -70,7 +71,7 @@ public class TimeServiceImpl implements TimeService {
     }
 
     @Override
-    public Map findByCidAndDate(Integer cinema_id, Date date) {
+    public List findByCidAndDate(Integer cinema_id, Date date) {
         List<MovieEntity> lstMovie=movieService.findAllMovieByDate(date);
         List<HallEntity> lstHall=hallRepository.findAllByCinemaId(cinema_id);
         List<Integer> lstHallId=new ArrayList<>();
@@ -83,14 +84,19 @@ public class TimeServiceImpl implements TimeService {
 
         System.out.println(Jacksons.me().readAsString(lstHallId));
 
-        Map<Integer,List> map=new HashMap<>();
+        List<Map> list=new ArrayList<>();
+
+        Map<String,Object> map=new HashMap<>();
         for(int i=0;i<lstMovie.size();++i) {
             Integer movie_id = lstMovie.get(i).getId();
+            map.put("mid",movie_id);
+            map.put("name",lstMovie.get(i).getName());
             List<TimeEntity> listTime = timeRepository.findByMovieIdAndHallIdInAndStartTimeGreaterThanEqualAndStartTimeLessThan(movie_id, lstHallId, date, date1);
             System.out.println(Jacksons.me().readAsString(listTime));
-            map.put(movie_id,listTime);
+            map.put("timelist",listTime);
+            list.add(map);
         }
-        return map;
+        return list;
     }
 
     @Override
@@ -103,6 +109,17 @@ public class TimeServiceImpl implements TimeService {
     public MovieEntity findMovieById(Integer id) {
         TimeEntity timeEntity=timeRepository.findFirstById(id);
         return movieService.findMovieById(timeEntity.getMovieId());
+    }
+
+    @Override
+    public TimeEntity addTime(TimeEntity timeEntity) {
+        return null;
+    }
+
+    @Override
+    public List<TimeEntity> autoAyDateMoiveHall(Date date, Integer movieId, Integer hallId) {
+       // Timestamp timestamp=new Timestamp()
+        return null;
     }
 
 

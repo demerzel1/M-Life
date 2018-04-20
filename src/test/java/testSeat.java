@@ -29,8 +29,8 @@ import java.util.Map;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = {"file:src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml"})
-@Transactional
-@TransactionConfiguration(transactionManager = "transactionManager", defaultRollback = true)
+//@Transactional
+//@TransactionConfiguration(transactionManager = "transactionManager", defaultRollback = true)
 public class testSeat {
 
     @Autowired
@@ -50,16 +50,13 @@ public class testSeat {
 
     @Test
     public void main() {
-        DateFormat format1 = new SimpleDateFormat("yyyy-MM-dd");
-        Date date1;
-        java.util.Date date=null;
-        String str="2018-02-14";
-        try{
-            date=format1.parse(str);
-        }catch (ParseException e){
+        for(int hall=2;hall<=27;hall++){
+            for(int i=1;i<=7;++i){
+                for(int j=1;j<=10;++j){
+                    seatService.addSeat(hall,i,j);
+                }
+            }
         }
-        long l=date.getTime();
-        date1=new Date(l);
-        System.out.println(Jacksons.me().readAsString(timeService.findByCidAndDate(1,date1)));
+
     }
 }
