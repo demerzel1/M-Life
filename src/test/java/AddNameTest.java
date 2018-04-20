@@ -15,8 +15,8 @@ import java.util.Random;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = {"file:src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml"})
-//@Transactional
-//@TransactionConfiguration(transactionManager = "transactionManager", defaultRollback = true)
+@Transactional
+@TransactionConfiguration(transactionManager = "transactionManager", defaultRollback = true)
 public class AddNameTest {
     @Autowired
     UserService userService;

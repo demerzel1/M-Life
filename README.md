@@ -35,7 +35,14 @@ password: user
 添加了用id获取用户信息
 更新了用户id获取订单的格式
 
+- - - -
+添加了获取全部用户的接口
+自动排片的接口
+检查能否自动排片的接口
+更新了数据库
+根据场次id返回电影信息和影院信息
 
+- - - -
 [cinema](https://github.com/demerzel1/MCMS/blob/master/README.md#cinema)
 [comment](https://github.com/demerzel1/MCMS/blob/master/README.md#comment)
 [movie](https://github.com/demerzel1/MCMS/blob/master/README.md#movie)
@@ -76,7 +83,7 @@ POST `/cinema/getByCity`  {“cid”:1}
 POST  `/cinema/getById` {“cid”:1}
 
 #### 通过影片，城市，日期查询影院
-POST `/movie/getByMovieCityDate`
+POST `/cinema/getByMovieCityDate`
 输入json属性为 `mid,cityid,day`
 返回影院list
 
@@ -132,7 +139,7 @@ POST `/movie/getWatched` {“uid”:1}
 返回列表 内为电影实体
 
 #### 获取未上映的电影
-GET `/getNotOn`
+GET `movie/getNotOn`
 返回未上映的电影列表
 
 ## order
@@ -328,11 +335,37 @@ POST  `/time/getByCidAndDate`
 第二层data中为一个map
 key值为电影id，value为一个list，为date对应的日期当天的电影场次
 
-#### 根据场次id返回电影信息
+#### 根据场次id返回电影信息和影院信息
 POST `/time/getMovieByTimeId`
 {“tid”:1}
 
+返回信息为
+![](README/20177F5B-D3F7-40E6-A6C1-B7D04F374422.png)
 
+
+#### 自动排片
+POST `/time/autoAdd`
+```
+{
+"day":"",
+"mid":,  //电影id
+"hid":,  //厅id
+"cost":
+}
+```
+
+返回对此厅的排片list
+每个厅每天自动排片只能排3场
+排片前需先调用checkauto检查能否自动排片
+#### 检查能否自动排片
+POST  `/time/checkAuto`
+```
+{
+"day":,
+"hid":
+}
+```
+会返回true/false 
 
 ## user
 #### 注册
@@ -412,6 +445,10 @@ POST `/user/login`  {“email”:”xx”,”password”:”xx”}
 #### 更改信息
 POST `/user/update`
 同注册
+
+#### 获取全部用户
+GET `/user/getAll`
+返回list 包含所有用户信息
 
 ## picture
 #### 上传海报

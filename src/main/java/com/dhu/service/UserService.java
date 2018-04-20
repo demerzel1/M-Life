@@ -3,6 +3,8 @@ package com.dhu.service;
 import com.dhu.model.UserEntity;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * Created by demerzel on 2018/4/8.
  */
@@ -13,4 +15,6 @@ public interface UserService {
     UserEntity findUserByEmail(String email);
     UserEntity findUserById(Integer id);
     UserEntity setMoney(UserEntity userEntity,Double money);
+    List<UserEntity> getAll();
 }
+

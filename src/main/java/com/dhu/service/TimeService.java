@@ -5,6 +5,7 @@ import com.dhu.model.SeatEntity;
 import com.dhu.model.TimeEntity;
 import org.springframework.stereotype.Service;
 
+import javax.swing.text.StyledEditorKit;
 import java.sql.Date;
 import java.sql.Time;
 import java.sql.Timestamp;
@@ -26,9 +27,13 @@ public interface TimeService {
 
     List<TimeEntity> findByMovieAndDate(Integer movie_id, Date date);
 
-    MovieEntity findMovieById(Integer id);
+    Map findMovieAndCinemaById(Integer id);
 
     TimeEntity addTime(TimeEntity timeEntity);
 
-    List<TimeEntity> autoAyDateMoiveHall(Date date, Integer movieId, Integer hallId);
+    List<TimeEntity> autoAddByDateMoiveHall(Date date, Integer movieId, Integer hallId,Double cost);
+
+    Boolean checkCanAuto(Date date,Integer hallId);
+
+    MovieEntity findMovieById(Integer id);
 }

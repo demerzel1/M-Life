@@ -49,12 +49,13 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public OrderEntity addOrder(Integer tid, Integer row, Integer col, Integer user_id) {
         TimeEntity timeEntity=timeService.findById(tid);
+      //  System.out.println(timeEntity.getStartTime());
         Timestamp date=new Timestamp(timeEntity.getStartTime().getTime());
         Double cost=timeEntity.getCost();
         Integer hall_id=timeEntity.getHallId();
         SeatEntity seatEntity=seatService.findSeat(hall_id,row,col);
         Integer seat_id=seatEntity.getId();
-        Timestamp order_time=new Timestamp(System.currentTimeMillis());
+        Timestamp order_time=new Timestamp(date.getTime()-1*24*60*1000);
 
         UserEntity userEntity=userService.findUserById(user_id);
         userService.setMoney(userEntity,userEntity.getMoney()-cost);

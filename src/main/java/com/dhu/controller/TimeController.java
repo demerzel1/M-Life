@@ -6,6 +6,7 @@ import com.dhu.utils.CommonUtils;
 import com.dhu.utils.ResultGenerator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import sun.security.x509.RDN;
 
 import java.sql.Date;
 import java.sql.Timestamp;
@@ -75,6 +76,22 @@ public class TimeController {
     @RequestMapping(value = "/getMovieByTimeId",method = RequestMethod.POST)
     public ResponseData getMovieByTimeId(@RequestBody Map map){
         Integer tid=Integer.valueOf(map.get("tid").toString());
-        return resultGenerator.getSuccessResult(timeService.findMovieById(tid));
+        return resultGenerator.getSuccessResult(timeService.findMovieAndCinemaById(tid));
+    }
+
+    @RequestMapping(value = "/autoAdd",method = RequestMethod.POST)
+    public ResponseData autoAdd(@RequestBody Map map){
+        Date date=CommonUtils.me().String2Date(map.get("day").toString());
+        Integer mid=Integer.valueOf(map.get("mid").toString());
+        Integer hid=Integer.valueOf(map.get("hid").toString());
+        Double cost=Double.valueOf(map.get("cost").toString());
+        return resultGenerator.getSuccessResult(timeService.autoAddByDateMoiveHall(date,mid,hid,cost));
+    }
+
+    @RequestMapping(value = "/checkAuto",method = RequestMethod.POST)
+    public ResponseData checkAuto(@RequestBody Map map){
+        Date date=CommonUtils.me().String2Date(map.get("day").toString());
+        Integer hid=Integer.valueOf(map.get("hid").toString());
+        return resultGenerator.getSuccessResult(timeService.checkCanAuto(date,hid));
     }
 }

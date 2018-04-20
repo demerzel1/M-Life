@@ -100,4 +100,8 @@ public class UserController {
         return resultGenerator.getFailResult("违反主键/唯一约束条件");
     }
 
+    @RequestMapping(value = "/getAll",method = RequestMethod.GET)
+    public ResponseData getAll(){
+        return resultGenerator.getSuccessResult(userService.getAll());
+    }
 }

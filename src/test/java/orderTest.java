@@ -18,6 +18,7 @@ import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.List;
+import java.util.Random;
 
 /**
  * Created by demerzel on 2018/4/16.
@@ -47,16 +48,17 @@ public class orderTest {
 
     @Test
     public void main() {
-        HallEntity hallEntity=new HallEntity();
-        hallEntity.setCinemaId(2);
-        hallEntity.setNumber(3);
-        hallService.add(hallEntity);
-        for(int i=3;i<=9;++i){
-            for(int j=1;j<=3;++j){
-                HallEntity hallEntity1=new HallEntity();
-                hallEntity1.setCinemaId(i);
-                hallEntity1.setNumber(j);
-                hallService.add(hallEntity1);
+        Random random=new Random();
+        for(int uid=82;uid<=131;++uid){
+            for(int i=1;i<=10;++i){
+                Integer t=random.nextInt(1200);
+                t+=6220;
+                Integer row=random.nextInt(6);
+                row+=1;
+                Integer col=random.nextInt(9);
+                col+=1;
+                System.out.printf("%d %d %d\n",t,row,col);
+                orderService.addOrder(t,row,col,uid);
             }
         }
     }
