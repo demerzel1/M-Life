@@ -94,4 +94,7 @@ public class TimeController {
         Integer hid=Integer.valueOf(map.get("hid").toString());
         return resultGenerator.getSuccessResult(timeService.checkCanAuto(date,hid));
     }
+
+   // @RequestMapping(value = "/add",method = RequestMethod.POST)
+    //public
 }

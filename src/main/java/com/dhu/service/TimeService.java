@@ -36,4 +36,6 @@ public interface TimeService {
     Boolean checkCanAuto(Date date,Integer hallId);
 
     MovieEntity findMovieById(Integer id);
+
+    TimeEntity manualAddTime(Timestamp beginTime,Timestamp endTime,Integer movieId,Integer hallId,Double cost);
 }

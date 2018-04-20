@@ -88,15 +88,17 @@ public class TimeServiceImpl implements TimeService {
 
         List<Map> list=new ArrayList<>();
 
-        Map<String,Object> map=new HashMap<>();
+
         for(int i=0;i<lstMovie.size();++i) {
+            Map<String,Object> map=new HashMap<>();
             Integer movie_id = lstMovie.get(i).getId();
             map.put("mid",movie_id);
             map.put("name",lstMovie.get(i).getName());
             List<TimeEntity> listTime = timeRepository.findByMovieIdAndHallIdInAndStartTimeGreaterThanEqualAndStartTimeLessThan(movie_id, lstHallId, date, date1);
             System.out.println(Jacksons.me().readAsString(listTime));
             map.put("timelist",listTime);
-            list.add(map);
+            if(listTime.size()>0)
+                list.add(map);
         }
         return list;
     }
@@ -222,6 +224,21 @@ public class TimeServiceImpl implements TimeService {
         TimeEntity timeEntity=timeRepository.findFirstById(id);
         MovieEntity movieEntity= movieService.findMovieById(timeEntity.getMovieId());
         return movieEntity;
+    }
+
+    @Override
+    public TimeEntity manualAddTime(Timestamp beginTime, Timestamp endTime, Integer movieId, Integer hallId, Double cost) {
+        if(timeRepository.findAllByHallIdAndStartTimeLessThanEqualAndEndTimeGreaterThanEqual(hallId,beginTime,beginTime).size()>0)
+            return null;
+        if(timeRepository.findAllByHallIdAndStartTimeLessThanEqualAndEndTimeGreaterThanEqual(hallId,endTime,endTime).size()>0)
+            return null;
+        TimeEntity timeEntity=new TimeEntity();
+        timeEntity.setStartTime(beginTime);
+        timeEntity.setEndTime(endTime);
+        timeEntity.setHallId(hallId);
+        timeEntity.setMovieId(movieId);
+        timeEntity.setCost(cost);
+        return timeRepository.saveAndFlush(timeEntity);
     }
 
 

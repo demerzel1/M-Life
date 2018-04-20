@@ -96,6 +96,7 @@ public class MovieServiceImpl implements MovieService {
         if(movieSet.size()==0)
             return null;
         List<MovieEntity> movieEntityList=movieRepository.findAllByIdIn(movieSet);
+
         return movieEntityList;
     }
 
