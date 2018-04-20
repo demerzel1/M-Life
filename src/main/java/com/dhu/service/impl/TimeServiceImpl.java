@@ -115,10 +115,12 @@ public class TimeServiceImpl implements TimeService {
         Integer hallId=timeEntity.getHallId();
         HallEntity hallEntity=hallRepository.findFirstById(hallId);
         CinemaEntity cinemaEntity=cinemaRepository.findFirstById(hallEntity.getCinemaId());
+        Double cost=timeEntity.getCost();
         map.put("cinema",cinemaEntity);
         map.put("movie",movieEntity);
         map.put("hallNumber",hallEntity.getNumber());
         map.put("startTime",timeEntity.getStartTime());
+        map.put("cost",cost);
         return map;
     }
 

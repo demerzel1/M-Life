@@ -85,11 +85,16 @@ public class MovieServiceImpl implements MovieService {
             setTime.add(orderEntity.getTimeId());
         }
         Timestamp timestamp=new Timestamp(System.currentTimeMillis());
+        if(setTime.size()==0){
+            return null;
+        }
         List<TimeEntity> timeEntityList=timeRepository.findAllByIdInAndStartTimeLessThan(setTime,timestamp);
         Set<Integer> movieSet=new HashSet<>();
         for(TimeEntity timeEntity:timeEntityList){
             movieSet.add(timeEntity.getMovieId());
         }
+        if(movieSet.size()==0)
+            return null;
         List<MovieEntity> movieEntityList=movieRepository.findAllByIdIn(movieSet);
         return movieEntityList;
     }
