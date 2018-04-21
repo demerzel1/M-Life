@@ -62,4 +62,17 @@ public class UserServiceImpl implements UserService {
         return true;
     }
 
+    @Override
+    public List<UserEntity> findByString(String str, Integer type) {
+        Byte b=0;
+        if(type==1){
+            return userRepository.findAllByNameContainingAndIsAdmin(str,b);
+        }else if(type==2){
+            return userRepository.findAllByEmailContainingAndIsAdmin(str,b);
+        }else if(type==3){
+            return userRepository.findAllByTelContainingAndIsAdmin(str,b);
+        }
+        return null;
+    }
+
 }

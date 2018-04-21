@@ -19,4 +19,5 @@ public interface MovieRepository extends JpaRepository<MovieEntity,Integer> {
     List<MovieEntity> findAllByBeginTimeLessThanEqualAndEndTimeGreaterThanEqual(Date date1,Date date2);
     List<MovieEntity> findAllByIdIn(Set set);
     List<MovieEntity> findAllByBeginTimeGreaterThan(Date date);
+    List<MovieEntity> findAllByNameContaining(String name);
 }

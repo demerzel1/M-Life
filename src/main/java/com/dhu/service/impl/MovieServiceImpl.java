@@ -116,4 +116,9 @@ public class MovieServiceImpl implements MovieService {
         }
         return movieEntityList;
     }
+
+    @Override
+    public List<MovieEntity> findByStrName(String str) {
+        return movieRepository.findAllByNameContaining(str);
+    }
 }

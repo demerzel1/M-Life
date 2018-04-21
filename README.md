@@ -48,6 +48,8 @@ password: user
 添加了删除用户
 更改了获取所有用户的内容
 - - - -
+添加了模糊查询（用户/电影）
+- - - -
 [cinema](https://github.com/demerzel1/MCMS/blob/master/README.md#cinema)
 [comment](https://github.com/demerzel1/MCMS/blob/master/README.md#comment)
 [movie](https://github.com/demerzel1/MCMS/blob/master/README.md#movie)
@@ -159,13 +161,21 @@ POST `/movie/getWatched` {“uid”:1}
 GET `movie/getNotOn`
 返回未上映的电影列表
 
+#### 模糊查询名字/搜索
+POST `/movie/getByStr`
+`{"str":""}`
+返回模糊查询得到的结果
+查询 “心”
+![](README/1A6F5302-2A6F-434B-AF91-927652FEDEAD.png)
+
+
 ## order
 #### 买票
 POST `/order/add`.
 传入： 
 tid :场次id
 cnt : 购买票数
-seat  座位列表 内为[{"row":2,"col":3},{"row":2,"col”:4}] 格式
+seat  座位列表 内为[{“row”:2,”col”:3},{“row”:2,”col”:4}] 格式
 money :总金额
 uid：购买用户
 
@@ -498,6 +508,23 @@ POST `/user/delete`
 }
 ```
 返回成功或失败
+
+#### 模糊查询用户
+POST `/user/getByStr`
+
+```
+{
+"str":"",
+"type":
+}
+```
+type 
+1 名称
+2 邮箱
+3 电话
+
+![](README/F5B09ACE-40E3-4226-88EE-C74175BEF571.png)
+
 
 ## picture
 #### 上传海报

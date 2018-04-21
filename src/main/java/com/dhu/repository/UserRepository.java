@@ -16,4 +16,7 @@ public interface UserRepository extends JpaRepository<UserEntity,Integer> {
     UserEntity findFirstByEmail(String email);
     UserEntity findFirstById(Integer id);
     List<UserEntity> findAllByIsAdmin(Byte isAdmin);
+    List<UserEntity> findAllByNameContainingAndIsAdmin(String name,Byte isAdmin);
+    List<UserEntity> findAllByEmailContainingAndIsAdmin(String email,Byte isAdmin);
+    List<UserEntity> findAllByTelContainingAndIsAdmin(String tel,Byte isAdmin);
 }

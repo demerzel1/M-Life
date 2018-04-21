@@ -23,4 +23,5 @@ public interface MovieService {
     List<MovieEntity> findWatchedByUserId(Integer user_id);
     List<MovieEntity> findNotOn();
     List<MovieEntity> addFromExcel(MultipartFile file);
+    List<MovieEntity> findByStrName(String str);
 }

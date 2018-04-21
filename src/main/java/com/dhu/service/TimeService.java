@@ -5,9 +5,7 @@ import com.dhu.model.SeatEntity;
 import com.dhu.model.TimeEntity;
 import org.springframework.stereotype.Service;
 
-import javax.swing.text.StyledEditorKit;
 import java.sql.Date;
-import java.sql.Time;
 import java.sql.Timestamp;
 import java.util.List;
 import java.util.Map;

@@ -1,10 +1,8 @@
 package com.dhu.service;
 
 import com.dhu.model.OrderEntity;
-import org.springframework.orm.ObjectRetrievalFailureException;
 import org.springframework.stereotype.Service;
 
-import javax.persistence.criteria.CriteriaBuilder;
 import java.util.List;
 import java.util.Map;
 

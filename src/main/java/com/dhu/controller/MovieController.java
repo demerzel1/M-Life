@@ -61,7 +61,7 @@ public class MovieController {
 
     @RequestMapping(value = "/add",method = RequestMethod.POST)
     public ResponseData addMovie(@RequestBody MovieEntity movieEntity){
-        System.out.println();
+        movieEntity.setPoster("/static/images/posts/post.jpg");
         return resultGenerator.getSuccessResult( movieService.addMovie(movieEntity));
     }
 
@@ -95,5 +95,11 @@ public class MovieController {
     @RequestMapping(value = "/getNotOn",method = RequestMethod.GET)
     public ResponseData getNotOn(){
         return resultGenerator.getSuccessResult(movieService.findNotOn());
+    }
+
+    @RequestMapping(value = "/getByStr",method = RequestMethod.POST)
+    public ResponseData getByStr(@RequestBody Map map){
+        String str=map.get("str").toString();
+        return resultGenerator.getSuccessResult(movieService.findByStrName(str));
     }
 }

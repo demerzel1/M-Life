@@ -17,5 +17,6 @@ public interface UserService {
     UserEntity setMoney(UserEntity userEntity,Double money);
     List<UserEntity> getAll();
     Boolean deleteById(Integer id);
+    List<UserEntity> findByString(String str,Integer type);
 }
 

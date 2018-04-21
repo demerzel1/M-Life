@@ -48,6 +48,7 @@ public class UserController {
         if(userEntity1!=null){
             return resultGenerator.getFailResult("违反主键/唯一约束条件");
         }
+        userEntity.setAvatar("/static/images/avatars/avatar.jpeg");
         return resultGenerator.getSuccessResult("用户注册成功",userService.saveUser(userEntity));
     }
 
@@ -112,5 +113,15 @@ public class UserController {
             return resultGenerator.getSuccessResult();
         else
             return resultGenerator.getFailResult("删除失败/用户不存在");
+    }
+
+    @RequestMapping(value = "/getByStr",method = RequestMethod.POST)
+    public ResponseData getByStr(@RequestBody Map map){
+        //1 name
+        //2 email
+        //3 tel
+        Integer type=Integer.valueOf(map.get("type").toString());
+        String str=map.get("str").toString();
+        return  resultGenerator.getSuccessResult(userService.findByString(str,type));
     }
 }
