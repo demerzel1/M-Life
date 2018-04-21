@@ -1,17 +1,15 @@
 package com.dhu.controller;
 
+import com.dhu.model.MovieEntity;
 import com.dhu.model.ResponseData;
+import com.dhu.service.MovieService;
 import com.dhu.service.TimeService;
 import com.dhu.utils.CommonUtils;
 import com.dhu.utils.ResultGenerator;
-import com.sun.tools.corba.se.idl.constExpr.Times;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import sun.security.x509.RDN;
 
-import javax.persistence.criteria.CriteriaBuilder;
 import java.sql.Date;
-import java.sql.Time;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -31,12 +29,15 @@ public class TimeController {
 
     private ResultGenerator resultGenerator;
 
+    private MovieService movieService;
+
     private CommonUtils commonUtils=new CommonUtils();
 
     @Autowired
-    public TimeController(TimeService timeService,ResultGenerator resultGenerator){
+    public TimeController(TimeService timeService, ResultGenerator resultGenerator, MovieService movieService){
         this.timeService=timeService;
         this.resultGenerator=resultGenerator;
+        this.movieService = movieService;
     }
 
     @RequestMapping(value = "/getTime",method = RequestMethod.POST)
@@ -103,10 +104,15 @@ public class TimeController {
     @RequestMapping(value = "/add",method = RequestMethod.POST)
     public ResponseData manualAdd(@RequestBody Map map){
         Timestamp beginTime=Timestamp.valueOf(map.get("beginTime").toString());
-        Timestamp endTime=Timestamp.valueOf(map.get("endTime").toString());
+        //Timestamp endTime=Timestamp.valueOf(map.get("endTime").toString());
         Integer movieId=Integer.valueOf(map.get("mid").toString());
         Integer hallId=Integer.valueOf(map.get("hid").toString());
         Double cost=Double.valueOf(map.get("cost").toString());
+        MovieEntity movieEntity=movieService.findMovieById(movieId);
+        if(movieEntity==null)
+            return null;
+        Integer length=movieEntity.getDuration();
+        Timestamp endTime=new Timestamp((long)beginTime.getTime()+(long)length*60*1000);
         return resultGenerator.getSuccessResult(timeService.manualAddTime(beginTime,endTime,movieId,hallId,cost));
     }
 }
