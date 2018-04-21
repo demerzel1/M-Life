@@ -41,6 +41,9 @@ password: user
 检查能否自动排片的接口
 更新了数据库
 根据场次id返回电影信息和影院信息
+- - - -
+更新了自动排片的方式
+添加了手动排片
 
 - - - -
 [cinema](https://github.com/demerzel1/MCMS/blob/master/README.md#cinema)
@@ -350,22 +353,45 @@ POST `/time/autoAdd`
 "day":"",
 "mid":,  //电影id
 "hid":,  //厅id
-"cost":
+"cost":,
+"cnt": //要排的场数
 }
 ```
 
+![](README/7D6D24BC-BD50-47CF-A267-5E41AE62D648.png)
+
 返回对此厅的排片list
 每个厅每天自动排片只能排3场
-排片前需先调用checkauto检查能否自动排片
+开始时间分别为8:30,12:30,18:30
+从早到晚自动排，比如要排一场，会优先排8:30的。
+排片前需先调用checkauto检查可排片的个数
 #### 检查能否自动排片
 POST  `/time/checkAuto`
 ```
 {
 "day":,
-"hid":
+"hid":,
+"mid":
 }
 ```
-会返回true/false 
+会返回当天剩余场次的个数
+![](README/0280CA18-5ABC-435B-B2B7-954989527BBE.png)
+
+#### 手动排片
+POST `/time/add`
+```
+{
+	"beginTime":"2018-05-15 08:20:00",
+	"endTime":"2018-05-15 09:20:00",
+	"mid":7,
+  "hid":3,
+	"cost":30
+}
+```
+严格按照”yyyy-MM-dd hh:MM:ss”的格式传时间，否则会报错。
+
+![](README/4A5B3633-51CC-4E59-ACF3-348A92162B54.png)
+
 
 ## user
 #### 注册

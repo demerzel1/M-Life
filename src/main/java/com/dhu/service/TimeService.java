@@ -38,4 +38,8 @@ public interface TimeService {
     MovieEntity findMovieById(Integer id);
 
     TimeEntity manualAddTime(Timestamp beginTime,Timestamp endTime,Integer movieId,Integer hallId,Double cost);
+
+    Integer checkRemaining(Date date,Integer hallId,Integer movieId);
+
+    List<TimeEntity> autoAddV2(Date date,Integer movieId,Integer hallId,Double cost,Integer cnt);
 }

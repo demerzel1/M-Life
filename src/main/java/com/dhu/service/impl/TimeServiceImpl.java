@@ -241,5 +241,137 @@ public class TimeServiceImpl implements TimeService {
         return timeRepository.saveAndFlush(timeEntity);
     }
 
+    @Override
+    public Integer checkRemaining(Date date, Integer hallId,Integer movieId) {
+        DateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        String dateStr="";
+        try {
+            dateStr = sdf.format(date);
+            System.out.println(dateStr);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        String timestr1=dateStr+" 08:30:00";
+        String timestr2=dateStr+" 12:30:00";
+        String timestr3=dateStr+" 18:30:00";
+        Timestamp timestamp1=null,timestamp2=null,timestamp3=null;
+        try {
+            timestamp1 = Timestamp.valueOf(timestr1);
+            timestamp2=Timestamp.valueOf(timestr2);
+            timestamp3=Timestamp.valueOf(timestr3);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        MovieEntity movieEntity=movieService.findMovieById(movieId);
+        if(movieEntity==null)
+            return null;
+        Integer res=0;
+        Integer length=movieEntity.getDuration();
+        Timestamp endTime1=new Timestamp((long)timestamp1.getTime()+(long)length*60*1000);
+        System.out.println(endTime1.toString());
+        Timestamp endTime2=new Timestamp((long)timestamp2.getTime()+(long)length*60*1000);
+        Timestamp endTime3=new Timestamp((long)timestamp3.getTime()+(long)length*60*1000);
+        if(timeRepository.findAllByHallIdAndStartTimeLessThanEqualAndEndTimeGreaterThanEqual(hallId,timestamp1,timestamp1).size()==0&&timeRepository.findAllByHallIdAndStartTimeLessThanEqualAndEndTimeGreaterThanEqual(hallId,endTime1,endTime1).size()==0)
+            res+=1;
+        if(timeRepository.findAllByHallIdAndStartTimeLessThanEqualAndEndTimeGreaterThanEqual(hallId,timestamp2,timestamp2).size()==0&&timeRepository.findAllByHallIdAndStartTimeLessThanEqualAndEndTimeGreaterThanEqual(hallId,endTime2,endTime2).size()==0)
+            res+=1;
+        if(timeRepository.findAllByHallIdAndStartTimeLessThanEqualAndEndTimeGreaterThanEqual(hallId,timestamp3,timestamp3).size()==0&&timeRepository.findAllByHallIdAndStartTimeLessThanEqualAndEndTimeGreaterThanEqual(hallId,endTime3,endTime3).size()==0)
+            res+=1;
+        return res;
+    }
+
+
+    @Override
+    public List<TimeEntity> autoAddV2(Date date, Integer movieId, Integer hallId, Double cost, Integer cnt) {
+        DateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        String dateStr="";
+        try {
+            dateStr = sdf.format(date);
+            System.out.println(dateStr);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        String timestr1=dateStr+" 08:30:00";
+        String timestr2=dateStr+" 12:30:00";
+        String timestr3=dateStr+" 18:30:00";
+        Timestamp timestamp1=null,timestamp2=null,timestamp3=null;
+        try {
+            timestamp1 =Timestamp.valueOf(timestr1);
+            timestamp2=Timestamp.valueOf(timestr2);
+            timestamp3=Timestamp.valueOf(timestr3);
+            System.out.println(timestr3);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        MovieEntity movieEntity=movieService.findMovieById(movieId);
+        if(movieEntity==null)
+            return null;
+        Integer length=movieEntity.getDuration();
+        Timestamp endTime1=new Timestamp((long)timestamp1.getTime()+(long)length*60*1000);
+        System.out.println(endTime1.toString());
+        Timestamp endTime2=new Timestamp((long)timestamp2.getTime()+(long)length*60*1000);
+        Timestamp endTime3=new Timestamp((long)timestamp3.getTime()+(long)length*60*1000);
+        List<TimeEntity> timeEntityList=new ArrayList<>();
+        if(cnt<=0)
+            return timeEntityList;
+        Boolean flag=true;
+        if(timeRepository.findAllByHallIdAndStartTimeLessThanEqualAndEndTimeGreaterThanEqual(hallId,timestamp1,timestamp1).size()>0)
+            flag=false;
+        if(timeRepository.findAllByHallIdAndStartTimeLessThanEqualAndEndTimeGreaterThanEqual(hallId,endTime1,endTime1).size()>0)
+            flag=false;
+        if(flag){
+            TimeEntity timeEntity1=new TimeEntity();
+            timeEntity1.setMovieId(movieId);
+            timeEntity1.setStartTime(timestamp1);
+            timeEntity1.setEndTime(endTime1);
+            timeEntity1.setHallId(hallId);
+            timeEntity1.setCost(cost);
+            addTime(timeEntity1);
+            timeEntityList.add(timeEntity1);
+            cnt-=1;
+        }
+        flag=true;
+        if(cnt<=0)
+            return timeEntityList;
+
+        if(timeRepository.findAllByHallIdAndStartTimeLessThanEqualAndEndTimeGreaterThanEqual(hallId,timestamp2,timestamp2).size()>0)
+            flag=false;
+        if(timeRepository.findAllByHallIdAndStartTimeLessThanEqualAndEndTimeGreaterThanEqual(hallId,endTime2,endTime2).size()>0)
+            flag=false;
+        if(flag){
+            TimeEntity timeEntity2=new TimeEntity();
+            timeEntity2.setMovieId(movieId);
+            timeEntity2.setStartTime(timestamp2);
+            timeEntity2.setEndTime(endTime2);
+            timeEntity2.setHallId(hallId);
+            timeEntity2.setCost(cost);
+            addTime(timeEntity2);
+            System.out.println(2);
+            timeEntityList.add(timeEntity2);
+            cnt-=1;
+        }
+        flag=true;
+        if(cnt<=0)
+            return timeEntityList;
+
+        if(timeRepository.findAllByHallIdAndStartTimeLessThanEqualAndEndTimeGreaterThanEqual(hallId,timestamp3,timestamp3).size()>0)
+            flag=false;
+        if(timeRepository.findAllByHallIdAndStartTimeLessThanEqualAndEndTimeGreaterThanEqual(hallId,endTime3,endTime3).size()>0)
+            flag=false;
+        if(flag){
+            TimeEntity timeEntity3=new TimeEntity();
+            timeEntity3.setMovieId(movieId);
+            timeEntity3.setStartTime(timestamp3);
+            timeEntity3.setEndTime(endTime3);
+            timeEntity3.setHallId(hallId);
+            timeEntity3.setCost(cost);
+            addTime(timeEntity3);
+            System.out.println(3);
+            timeEntityList.add(timeEntity3);
+            cnt-=1;
+        }
+        return timeEntityList;
+    }
+
 
 }

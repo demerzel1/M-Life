@@ -4,11 +4,14 @@ import com.dhu.model.ResponseData;
 import com.dhu.service.TimeService;
 import com.dhu.utils.CommonUtils;
 import com.dhu.utils.ResultGenerator;
+import com.sun.tools.corba.se.idl.constExpr.Times;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import sun.security.x509.RDN;
 
+import javax.persistence.criteria.CriteriaBuilder;
 import java.sql.Date;
+import java.sql.Time;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -85,16 +88,25 @@ public class TimeController {
         Integer mid=Integer.valueOf(map.get("mid").toString());
         Integer hid=Integer.valueOf(map.get("hid").toString());
         Double cost=Double.valueOf(map.get("cost").toString());
-        return resultGenerator.getSuccessResult(timeService.autoAddByDateMoiveHall(date,mid,hid,cost));
+        Integer cnt=Integer.valueOf(map.get("cnt").toString());
+        return resultGenerator.getSuccessResult(timeService.autoAddV2(date,mid,hid,cost,cnt));
     }
 
     @RequestMapping(value = "/checkAuto",method = RequestMethod.POST)
     public ResponseData checkAuto(@RequestBody Map map){
         Date date=CommonUtils.me().String2Date(map.get("day").toString());
+        Integer mid=Integer.valueOf(map.get("mid").toString());
         Integer hid=Integer.valueOf(map.get("hid").toString());
-        return resultGenerator.getSuccessResult(timeService.checkCanAuto(date,hid));
+        return resultGenerator.getSuccessResult(timeService.checkRemaining(date,hid,mid));
     }
 
-   // @RequestMapping(value = "/add",method = RequestMethod.POST)
-    //public
+    @RequestMapping(value = "/add",method = RequestMethod.POST)
+    public ResponseData manualAdd(@RequestBody Map map){
+        Timestamp beginTime=Timestamp.valueOf(map.get("beginTime").toString());
+        Timestamp endTime=Timestamp.valueOf(map.get("endTime").toString());
+        Integer movieId=Integer.valueOf(map.get("mid").toString());
+        Integer hallId=Integer.valueOf(map.get("hid").toString());
+        Double cost=Double.valueOf(map.get("cost").toString());
+        return resultGenerator.getSuccessResult(timeService.manualAddTime(beginTime,endTime,movieId,hallId,cost));
+    }
 }
