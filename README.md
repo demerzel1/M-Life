@@ -53,6 +53,14 @@ password: user
 [time](https://github.com/demerzel1/MCMS/blob/master/README.md#time)
 [user](https://github.com/demerzel1/MCMS/blob/master/README.md#user)
 [picture](https://github.com/demerzel1/MCMS/blob/master/README.md#picture)
+## Token
+POST `/token`
+
+头部带token即可
+会返回token状态，以下几种。
+![](README/0DC29015-B75A-416A-898C-8DC7774329D6.png)
+
+
 ## cinema
 #### 获取全部影院信息
 GET  `/cinema/getAll`  
