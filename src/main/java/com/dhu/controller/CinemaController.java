@@ -2,11 +2,10 @@ package com.dhu.controller;
 
 import com.dhu.model.ResponseData;
 import com.dhu.service.CinemaService;
+import com.dhu.service.HallService;
 import com.dhu.utils.CommonUtils;
-import com.dhu.utils.JWTResult;
-import com.dhu.utils.JWTUtils;
-import com.dhu.utils.Jacksons.Jacksons;
 import com.dhu.utils.ResultGenerator;
+import org.omg.CORBA.INTERNAL;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -25,11 +24,13 @@ public class CinemaController {
 
     private ResultGenerator resultGenerator;
 
+    private HallService hallService;
 
     @Autowired
-    public CinemaController(CinemaService cinemaService, ResultGenerator resultGenerator){
+    public CinemaController(CinemaService cinemaService, ResultGenerator resultGenerator, HallService hallService){
         this.cinemaService=cinemaService;
         this.resultGenerator=resultGenerator;
+        this.hallService = hallService;
     }
 
     @RequestMapping(value = "/getAll",method = RequestMethod.GET)
@@ -55,5 +56,11 @@ public class CinemaController {
         Integer cid=Integer.valueOf(map.get("cityid").toString());
         Date date=CommonUtils.me().String2Date(map.get("day").toString());
         return resultGenerator.getSuccessResult(cinemaService.findByMovieAndDateAndCity(mid,date,cid));
+    }
+
+    @RequestMapping(value = "/getHall",method = RequestMethod.POST)
+    public ResponseData getHall(@RequestBody Map map){
+        Integer cid=Integer.valueOf(map.get("cid").toString());
+        return resultGenerator.getSuccessResult(hallService.findByCinemaId(cid));
     }
 }

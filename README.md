@@ -46,7 +46,7 @@ password: user
 添加了手动排片
 
 添加了删除用户
-更改了获取所有用户的内容s
+更改了获取所有用户的内容
 - - - -
 [cinema](https://github.com/demerzel1/MCMS/blob/master/README.md#cinema)
 [comment](https://github.com/demerzel1/MCMS/blob/master/README.md#comment)
@@ -100,6 +100,10 @@ POST `/cinema/getByMovieCityDate`
 输入json属性为 `mid,cityid,day`
 返回影院list
 
+#### 通过影院返回厅信息
+POST `/cinema/getHall`
+`{“cid”:}`
+返回影厅list（包含id和影厅号）
 
 
 ## comment
