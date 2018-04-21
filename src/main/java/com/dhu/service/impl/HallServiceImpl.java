@@ -19,11 +19,13 @@ public class HallServiceImpl implements HallService {
 
     @Override
     public HallEntity add(HallEntity hallEntity) {
+        hallRepository.flush();
         return hallRepository.saveAndFlush(hallEntity);
     }
 
     @Override
     public List<HallEntity> findByCinemaId(Integer cinemaId) {
+        hallRepository.flush();
         return hallRepository.findAllByCinemaId(cinemaId);
     }
 }

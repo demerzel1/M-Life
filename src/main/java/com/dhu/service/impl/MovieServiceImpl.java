@@ -74,11 +74,13 @@ public class MovieServiceImpl implements MovieService {
 
     @Override
     public List<MovieEntity> findAllMovieByDate(Date date) {
+        movieRepository.flush();
         return movieRepository.findAllByBeginTimeLessThanEqualAndEndTimeGreaterThanEqual(date,date);
     }
 
     @Override
     public List<MovieEntity> findWatchedByUserId(Integer user_id) {
+        orderRepository.flush();
         List<OrderEntity> lstOrder=orderRepository.findAllByUserId(user_id);
         Set<Integer> setTime=new HashSet<>();
         for(OrderEntity orderEntity:lstOrder){
@@ -88,6 +90,7 @@ public class MovieServiceImpl implements MovieService {
         if(setTime.size()==0){
             return null;
         }
+        timeRepository.flush();
         List<TimeEntity> timeEntityList=timeRepository.findAllByIdInAndStartTimeLessThan(setTime,timestamp);
         Set<Integer> movieSet=new HashSet<>();
         for(TimeEntity timeEntity:timeEntityList){
@@ -95,6 +98,7 @@ public class MovieServiceImpl implements MovieService {
         }
         if(movieSet.size()==0)
             return null;
+        movieRepository.flush();
         List<MovieEntity> movieEntityList=movieRepository.findAllByIdIn(movieSet);
 
         return movieEntityList;
@@ -103,6 +107,7 @@ public class MovieServiceImpl implements MovieService {
     @Override
     public List<MovieEntity> findNotOn() {
         Date date=new Date(System.currentTimeMillis());
+        movieRepository.flush();
         return movieRepository.findAllByBeginTimeGreaterThan(date);
     }
 
@@ -119,6 +124,7 @@ public class MovieServiceImpl implements MovieService {
 
     @Override
     public List<MovieEntity> findByStrName(String str) {
+        movieRepository.flush();
         return movieRepository.findAllByNameContaining(str);
     }
 }

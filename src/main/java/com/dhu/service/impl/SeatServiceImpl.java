@@ -30,6 +30,7 @@ public class SeatServiceImpl implements SeatService {
 
     @Override
     public SeatEntity findSeat(Integer hall, Integer row, Integer col) {
+        seatRepository.flush();
         return seatRepository.findFirstByHallIdAndRowAndCol(hall,row,col);
     }
 }

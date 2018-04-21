@@ -38,6 +38,7 @@ public class CommentServiceImpl implements CommentService {
 
     @Override
     public CommentEntity findById(Integer id) {
+        commentRepository.flush();
         return commentRepository.findFirstById(id);
     }
 
@@ -50,6 +51,7 @@ public class CommentServiceImpl implements CommentService {
 
     @Override
     public CommentEntity findByMovieAndUser(Integer movie_id, Integer user_id) {
+        commentRepository.flush();
         return commentRepository.findFirstByMovieIdAndUserId(movie_id,user_id);
     }
 

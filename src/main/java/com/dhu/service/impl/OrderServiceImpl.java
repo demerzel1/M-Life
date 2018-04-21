@@ -75,6 +75,7 @@ public class OrderServiceImpl implements OrderService {
         Integer hall_id=timeEntity.getHallId();
         SeatEntity seatEntity=seatService.findSeat(hall_id,row,col);
         Integer seat_id=seatEntity.getId();
+        orderRepository.flush();
         if(orderRepository.findFirstByTimeIdAndSeatId(tid,seat_id)==null)
             return false;
         return true;
@@ -82,6 +83,7 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public List<Map> findByUserId(Integer userId) {
+        orderRepository.flush();
         List<OrderEntity> orderEntityList= orderRepository.findAllByUserIdOrderByOrderTimeDesc(userId);
         List<Map> list=new ArrayList<>();
         list=getFullOrder(orderEntityList, list);
@@ -92,6 +94,7 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public List<Map> findNotWatchByUserId(Integer userId) {
         Timestamp timestamp=new Timestamp(System.currentTimeMillis());
+        orderRepository.flush();
         List<OrderEntity> orderEntityList=  orderRepository.findAllByUserIdAndWatchTimeGreaterThanEqualOrderByOrderTimeDesc(userId,timestamp);
         List<Map> list=new ArrayList<>();
         list=getFullOrder(orderEntityList, list);
@@ -100,6 +103,9 @@ public class OrderServiceImpl implements OrderService {
 
     private List<Map> getFullOrder(List<OrderEntity> orderEntityList, List<Map> list) {
         for(OrderEntity orderEntity:orderEntityList){
+            seatRepository.flush();
+            hallRepository.flush();
+            cinemaRepository.flush();
             MovieEntity movieEntity=timeService.findMovieById(orderEntity.getTimeId());
             TimeEntity timeEntity=timeService.findById(orderEntity.getTimeId());
             SeatEntity seatEntity=seatRepository.findFirstById(orderEntity.getSeatId());

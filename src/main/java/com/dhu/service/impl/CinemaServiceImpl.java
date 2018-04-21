@@ -32,21 +32,25 @@ public class CinemaServiceImpl implements CinemaService {
 
     @Override
     public List<CinemaEntity> findAllCinema(){
+        cinemaRepository.flush();
         return cinemaRepository.findAll();
     }
 
     @Override
     public List<CinemaEntity> findCinemaByCity(Integer city_id){
+        cinemaRepository.flush();
         return cinemaRepository.findAllByCityId(city_id);
     }
 
     @Override
     public CinemaEntity findById(Integer id) {
+        cinemaRepository.flush();
         return cinemaRepository.findFirstById(id);
     }
 
     @Override
     public List<CinemaEntity> findByMovieAndDateAndCity(Integer movie_id, Date date, Integer city_id) {
+        hallRepository.flush();
         List<TimeEntity> listTime=timeService.findByMovieAndDate(movie_id,date);
         System.out.println(Jacksons.me().readAsString(listTime));
         Set<Integer> set=new HashSet<>();
@@ -62,6 +66,7 @@ public class CinemaServiceImpl implements CinemaService {
         System.out.println(Jacksons.me().readAsString(setCinema));
         if(setCinema.size()==0)
             return null;
+        cinemaRepository.flush();
         List<CinemaEntity> cinemaEntityList= cinemaRepository.findAllByIdInAndCityId(setCinema,city_id);
         System.out.println(Jacksons.me().readAsString(cinemaEntityList));
         return cinemaEntityList;

@@ -8,6 +8,7 @@ import com.dhu.utils.CommonUtils;
 import com.dhu.utils.Jacksons.Jacksons;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.sql.Date;
 import java.sql.Timestamp;
@@ -50,6 +51,7 @@ public class TimeServiceImpl implements TimeService {
     @Override
     public List<Object> findByMidCidDate(Integer mid, Integer cid, Date date){
         System.out.println(112414);
+        timeRepository.flush();
         Date date2=commonUtils.getNextDay(date);
         System.out.println(date2.toString());
         return timeRepository.findByMCD(mid,cid,date,date2);
@@ -57,15 +59,18 @@ public class TimeServiceImpl implements TimeService {
 
     @Override
     public TimeEntity findById(Integer id) {
+        timeRepository.flush();
         return timeRepository.findFirstById(id);
     }
 
     @Override
     public List<SeatEntity> findSeatById(Integer id) {
+        orderRepository.flush();
         List<OrderEntity> list=orderRepository.findAllByTimeId(id);
         List<SeatEntity> reslist=new ArrayList<>();
         for(int i=0;i<list.size();++i){
             Integer seat_id=list.get(i).getSeatId();
+            seatRepository.flush();
             SeatEntity seatEntity=seatRepository.findFirstById(seat_id);
             reslist.add(seatEntity);
         }
@@ -73,6 +78,7 @@ public class TimeServiceImpl implements TimeService {
     }
 
     @Override
+    @Transactional
     public List findByCidAndDate(Integer cinema_id, Date date) {
         List<MovieEntity> lstMovie=movieService.findAllMovieByDate(date);
         List<HallEntity> lstHall=hallRepository.findAllByCinemaId(cinema_id);
@@ -94,6 +100,7 @@ public class TimeServiceImpl implements TimeService {
             Integer movie_id = lstMovie.get(i).getId();
             map.put("mid",movie_id);
             map.put("name",lstMovie.get(i).getName());
+            timeRepository.flush();
             List<TimeEntity> listTime = timeRepository.findByMovieIdAndHallIdInAndStartTimeGreaterThanEqualAndStartTimeLessThan(movie_id, lstHallId, date, date1);
             System.out.println(Jacksons.me().readAsString(listTime));
             map.put("timelist",listTime);
@@ -112,10 +119,13 @@ public class TimeServiceImpl implements TimeService {
     @Override
     public Map findMovieAndCinemaById(Integer id) {
         Map<String,Object> map=new HashMap<>();
+        timeRepository.flush();
         TimeEntity timeEntity=timeRepository.findFirstById(id);
         MovieEntity movieEntity= movieService.findMovieById(timeEntity.getMovieId());
         Integer hallId=timeEntity.getHallId();
+        hallRepository.flush();
         HallEntity hallEntity=hallRepository.findFirstById(hallId);
+        timeRepository.flush();
         CinemaEntity cinemaEntity=cinemaRepository.findFirstById(hallEntity.getCinemaId());
         Double cost=timeEntity.getCost();
         map.put("cinema",cinemaEntity);
@@ -165,6 +175,7 @@ public class TimeServiceImpl implements TimeService {
         Timestamp endTime2=new Timestamp((long)timestamp2.getTime()+(long)length*60*1000);
         Timestamp endTime3=new Timestamp((long)timestamp3.getTime()+(long)length*60*1000);
         System.out.println(Jacksons.me().readAsString(timeRepository.findAllByHallIdAndStartTimeLessThanEqualAndEndTimeGreaterThanEqual(hallId,timestamp1,timestamp1)));
+        timeRepository.flush();
         if(timeRepository.findAllByHallIdAndStartTimeLessThanEqualAndEndTimeGreaterThanEqual(hallId,timestamp1,timestamp1).size()>0)
             return null;
         if(timeRepository.findAllByHallIdAndStartTimeLessThanEqualAndEndTimeGreaterThanEqual(hallId,timestamp2,timestamp2).size()>0)
@@ -221,6 +232,7 @@ public class TimeServiceImpl implements TimeService {
 
     @Override
     public MovieEntity findMovieById(Integer id) {
+        timeRepository.flush();
         TimeEntity timeEntity=timeRepository.findFirstById(id);
         MovieEntity movieEntity= movieService.findMovieById(timeEntity.getMovieId());
         return movieEntity;
@@ -228,6 +240,7 @@ public class TimeServiceImpl implements TimeService {
 
     @Override
     public TimeEntity manualAddTime(Timestamp beginTime, Timestamp endTime, Integer movieId, Integer hallId, Double cost) {
+        timeRepository.flush();
         if(timeRepository.findAllByHallIdAndStartTimeLessThanEqualAndEndTimeGreaterThanEqual(hallId,beginTime,beginTime).size()>0)
             return null;
         if(timeRepository.findAllByHallIdAndStartTimeLessThanEqualAndEndTimeGreaterThanEqual(hallId,endTime,endTime).size()>0)
@@ -271,6 +284,7 @@ public class TimeServiceImpl implements TimeService {
         System.out.println(endTime1.toString());
         Timestamp endTime2=new Timestamp((long)timestamp2.getTime()+(long)length*60*1000);
         Timestamp endTime3=new Timestamp((long)timestamp3.getTime()+(long)length*60*1000);
+        timeRepository.flush();
         if(timeRepository.findAllByHallIdAndStartTimeLessThanEqualAndEndTimeGreaterThanEqual(hallId,timestamp1,timestamp1).size()==0&&timeRepository.findAllByHallIdAndStartTimeLessThanEqualAndEndTimeGreaterThanEqual(hallId,endTime1,endTime1).size()==0)
             res+=1;
         if(timeRepository.findAllByHallIdAndStartTimeLessThanEqualAndEndTimeGreaterThanEqual(hallId,timestamp2,timestamp2).size()==0&&timeRepository.findAllByHallIdAndStartTimeLessThanEqualAndEndTimeGreaterThanEqual(hallId,endTime2,endTime2).size()==0)
@@ -315,6 +329,7 @@ public class TimeServiceImpl implements TimeService {
         if(cnt<=0)
             return timeEntityList;
         Boolean flag=true;
+        timeRepository.flush();
         if(timeRepository.findAllByHallIdAndStartTimeLessThanEqualAndEndTimeGreaterThanEqual(hallId,timestamp1,timestamp1).size()>0)
             flag=false;
         if(timeRepository.findAllByHallIdAndStartTimeLessThanEqualAndEndTimeGreaterThanEqual(hallId,endTime1,endTime1).size()>0)
