@@ -4,6 +4,8 @@ import com.dhu.model.UserEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 /**
  * Created by demerzel on 2018/3/31.
  */
@@ -13,4 +15,5 @@ public interface UserRepository extends JpaRepository<UserEntity,Integer> {
     UserEntity findFirstByEmailAndPassword(String email,String password);
     UserEntity findFirstByEmail(String email);
     UserEntity findFirstById(Integer id);
+    List<UserEntity> findAllByIsAdmin(Byte isAdmin);
 }

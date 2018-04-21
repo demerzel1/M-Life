@@ -46,7 +46,20 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public List<UserEntity> getAll() {
-        return userRepository.findAll();
+        Byte b=0;
+        return userRepository.findAllByIsAdmin(b);
+    }
+
+    @Override
+    public Boolean deleteById(Integer id) {
+        UserEntity userEntity=userRepository.findFirstById(id);
+        if(userEntity==null)
+            return false;
+        userRepository.delete(userEntity);
+        userRepository.flush();
+        if(userRepository.findFirstById(id)!=null)
+            return false;
+        return true;
     }
 
 }

@@ -45,6 +45,8 @@ password: user
 更新了自动排片的方式
 添加了手动排片
 
+添加了删除用户
+更改了获取所有用户的内容s
 - - - -
 [cinema](https://github.com/demerzel1/MCMS/blob/master/README.md#cinema)
 [comment](https://github.com/demerzel1/MCMS/blob/master/README.md#comment)
@@ -482,7 +484,16 @@ POST `/user/update`
 
 #### 获取全部用户
 GET `/user/getAll`
-返回list 包含所有用户信息
+返回list 包含所有用户信息（非管理员用户）
+
+#### 删除用户
+POST `/user/delete`
+```
+{
+"uid":1
+}
+```
+返回成功或失败
 
 ## picture
 #### 上传海报

@@ -104,4 +104,13 @@ public class UserController {
     public ResponseData getAll(){
         return resultGenerator.getSuccessResult(userService.getAll());
     }
+
+    @RequestMapping(value = "/delete",method = RequestMethod.POST)
+    public ResponseData delete(@RequestBody Map map){
+        Integer uid=Integer.valueOf(map.get("uid").toString());
+        if(userService.deleteById(uid))
+            return resultGenerator.getSuccessResult();
+        else
+            return resultGenerator.getFailResult("删除失败/用户不存在");
+    }
 }
