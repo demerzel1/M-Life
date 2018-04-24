@@ -10,6 +10,7 @@ import com.dhu.service.TimeService;
 import com.dhu.utils.Jacksons.Jacksons;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.sql.Date;
 import java.util.HashSet;
@@ -49,6 +50,7 @@ public class CinemaServiceImpl implements CinemaService {
     }
 
     @Override
+    @Transactional
     public List<CinemaEntity> findByMovieAndDateAndCity(Integer movie_id, Date date, Integer city_id) {
         hallRepository.flush();
         List<TimeEntity> listTime=timeService.findByMovieAndDate(movie_id,date);

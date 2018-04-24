@@ -12,6 +12,7 @@ import com.dhu.utils.ExcelUtils;
 import com.dhu.utils.Jacksons.Jacksons;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.sql.Date;
@@ -49,11 +50,13 @@ public class MovieServiceImpl implements MovieService {
     }
 
     @Override
+    @Transactional
     public MovieEntity updateMovie(MovieEntity movieEntity) {
         return movieRepository.saveAndFlush(movieEntity);
     }
 
     @Override
+    @Transactional
     public Boolean deleteMovieById(Integer id) {
         MovieEntity movieEntity=movieRepository.findFirstById(id);
         System.out.println(Jacksons.me().readAsString(movieEntity));
@@ -68,17 +71,20 @@ public class MovieServiceImpl implements MovieService {
     }
 
     @Override
+    @Transactional
     public MovieEntity addMovie(MovieEntity movieEntity) {
         return movieRepository.saveAndFlush(movieEntity);
     }
 
     @Override
+    @Transactional
     public List<MovieEntity> findAllMovieByDate(Date date) {
         movieRepository.flush();
         return movieRepository.findAllByBeginTimeLessThanEqualAndEndTimeGreaterThanEqual(date,date);
     }
 
     @Override
+    @Transactional
     public List<MovieEntity> findWatchedByUserId(Integer user_id) {
         orderRepository.flush();
         List<OrderEntity> lstOrder=orderRepository.findAllByUserId(user_id);

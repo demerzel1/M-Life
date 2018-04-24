@@ -108,7 +108,7 @@ public class UserEntity {
     }
 
     @Basic
-    @Column(name = "avatar", nullable = true, length = 50)
+    @Column(name = "avatar", nullable = true, length = 200)
     public String getAvatar() {
         return avatar;
     }

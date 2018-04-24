@@ -49,6 +49,7 @@ public class TimeServiceImpl implements TimeService {
     }
 
     @Override
+    @Transactional
     public List<Object> findByMidCidDate(Integer mid, Integer cid, Date date){
         System.out.println(112414);
         timeRepository.flush();
@@ -58,12 +59,14 @@ public class TimeServiceImpl implements TimeService {
     }
 
     @Override
+    @Transactional
     public TimeEntity findById(Integer id) {
         timeRepository.flush();
         return timeRepository.findFirstById(id);
     }
 
     @Override
+    @Transactional
     public List<SeatEntity> findSeatById(Integer id) {
         orderRepository.flush();
         List<OrderEntity> list=orderRepository.findAllByTimeId(id);
@@ -111,12 +114,14 @@ public class TimeServiceImpl implements TimeService {
     }
 
     @Override
+    @Transactional
     public List<TimeEntity> findByMovieAndDate(Integer movie_id, Date date) {
         Date date1=CommonUtils.me().getNextDay(date);
         return timeRepository.findAllByMovieIdAndStartTimeGreaterThanEqualAndStartTimeLessThan(movie_id,date,date1);
     }
 
     @Override
+    @Transactional
     public Map findMovieAndCinemaById(Integer id) {
         Map<String,Object> map=new HashMap<>();
         timeRepository.flush();
@@ -139,11 +144,13 @@ public class TimeServiceImpl implements TimeService {
 
 
     @Override
+    @Transactional
     public TimeEntity addTime(TimeEntity timeEntity) {
         return timeRepository.saveAndFlush(timeEntity);
     }
 
     @Override
+    @Transactional
     public List<TimeEntity> autoAddByDateMoiveHall(Date date, Integer movieId, Integer hallId,Double cost) {
         DateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         String dateStr="";
@@ -223,6 +230,7 @@ public class TimeServiceImpl implements TimeService {
     }
 
     @Override
+    @Transactional
     public Boolean checkCanAuto(Date date, Integer hallId) {
         Date date1=CommonUtils.me().getNextDay(date);
         if(timeRepository.findAllByHallIdAndStartTimeGreaterThanAndStartTimeLessThanEqual(hallId,date,date1).size()>0)
@@ -231,6 +239,7 @@ public class TimeServiceImpl implements TimeService {
     }
 
     @Override
+    @Transactional
     public MovieEntity findMovieById(Integer id) {
         timeRepository.flush();
         TimeEntity timeEntity=timeRepository.findFirstById(id);
@@ -239,6 +248,7 @@ public class TimeServiceImpl implements TimeService {
     }
 
     @Override
+    @Transactional
     public TimeEntity manualAddTime(Timestamp beginTime, Timestamp endTime, Integer movieId, Integer hallId, Double cost) {
         timeRepository.flush();
         if(timeRepository.findAllByHallIdAndStartTimeLessThanEqualAndEndTimeGreaterThanEqual(hallId,beginTime,beginTime).size()>0)
@@ -255,6 +265,7 @@ public class TimeServiceImpl implements TimeService {
     }
 
     @Override
+    @Transactional
     public Integer checkRemaining(Date date, Integer hallId,Integer movieId) {
         DateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         String dateStr="";
@@ -296,6 +307,7 @@ public class TimeServiceImpl implements TimeService {
 
 
     @Override
+    @Transactional
     public List<TimeEntity> autoAddV2(Date date, Integer movieId, Integer hallId, Double cost, Integer cnt) {
         DateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         String dateStr="";

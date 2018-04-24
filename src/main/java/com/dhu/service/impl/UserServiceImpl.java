@@ -6,6 +6,7 @@ import com.dhu.service.UserService;
 import com.dhu.utils.Jacksons.Jacksons;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -18,18 +19,21 @@ public class UserServiceImpl implements UserService {
     UserRepository userRepository;
 
     @Override
+    @Transactional
     public UserEntity saveUser(UserEntity userEntity){
         System.out.println(Jacksons.me().readAsString(userEntity));
         return userRepository.saveAndFlush(userEntity);
     }
 
     @Override
+    @Transactional
     public UserEntity checkLogin(String email,String password) {
         userRepository.flush();
         return userRepository.findFirstByEmailAndPassword(email, password);
     }
 
     @Override
+    @Transactional
     public UserEntity findUserByEmail(String email)
     {
         userRepository.flush();
@@ -37,6 +41,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    @Transactional
     public UserEntity findUserById(Integer id) {
         userRepository.flush();
         return userRepository.findFirstById(id);

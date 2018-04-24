@@ -11,6 +11,7 @@ import com.dhu.service.TimeService;
 import com.dhu.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.sql.Timestamp;
 import java.util.ArrayList;
@@ -45,6 +46,7 @@ public class OrderServiceImpl implements OrderService {
     CinemaRepository cinemaRepository;
 
     @Override
+    @Transactional
     public OrderEntity addOrder(Integer tid, Integer row, Integer col, Integer user_id) {
         TimeEntity timeEntity=timeService.findById(tid);
       //  System.out.println(timeEntity.getStartTime());
@@ -70,6 +72,7 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
+    @Transactional
     public Boolean checkSaled(Integer tid, Integer row, Integer col) {
         TimeEntity timeEntity=timeService.findById(tid);
         Integer hall_id=timeEntity.getHallId();
@@ -82,6 +85,7 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
+    @Transactional
     public List<Map> findByUserId(Integer userId) {
         orderRepository.flush();
         List<OrderEntity> orderEntityList= orderRepository.findAllByUserIdOrderByOrderTimeDesc(userId);
@@ -92,6 +96,7 @@ public class OrderServiceImpl implements OrderService {
 
 
     @Override
+
     public List<Map> findNotWatchByUserId(Integer userId) {
         Timestamp timestamp=new Timestamp(System.currentTimeMillis());
         orderRepository.flush();

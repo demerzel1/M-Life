@@ -30,6 +30,7 @@ public class PictureController {
     @RequestMapping(value = "/uploadPost")
     public ResponseData uploadPost(@RequestParam(value = "img") MultipartFile img, HttpServletRequest request) throws Exception{
         //获得物理路径webapp所在路径
+       // System.out.println(Jacksons.me().readAsString(img));
         String pathRoot = request.getSession().getServletContext().getRealPath("");
         String path="";
         if(!img.isEmpty()){

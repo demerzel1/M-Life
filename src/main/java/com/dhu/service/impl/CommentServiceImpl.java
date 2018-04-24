@@ -5,6 +5,7 @@ import com.dhu.repository.CommentRepository;
 import com.dhu.service.CommentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -20,6 +21,7 @@ public class CommentServiceImpl implements CommentService {
     CommentRepository commentRepository;
 
     @Override
+    @Transactional
     public List<Map> findByMovieId(Integer mid){
 
         List<Object> lst=commentRepository.findByMovie(mid);
@@ -37,6 +39,7 @@ public class CommentServiceImpl implements CommentService {
     }
 
     @Override
+    @Transactional
     public CommentEntity findById(Integer id) {
         commentRepository.flush();
         return commentRepository.findFirstById(id);
@@ -44,23 +47,27 @@ public class CommentServiceImpl implements CommentService {
 
 
     @Override
+    @Transactional
     public CommentEntity add(CommentEntity commentEntity) {
 
         return commentRepository.saveAndFlush(commentEntity);
     }
 
     @Override
+    @Transactional
     public CommentEntity findByMovieAndUser(Integer movie_id, Integer user_id) {
         commentRepository.flush();
         return commentRepository.findFirstByMovieIdAndUserId(movie_id,user_id);
     }
 
     @Override
+    @Transactional
     public CommentEntity update(CommentEntity commentEntity) {
         return commentRepository.saveAndFlush(commentEntity);
     }
 
     @Override
+    @Transactional
     public Boolean delete(CommentEntity commentEntity) {
         Integer id=commentEntity.getId();
         commentRepository.delete(commentEntity);

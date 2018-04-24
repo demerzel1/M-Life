@@ -61,7 +61,8 @@ public class MovieController {
 
     @RequestMapping(value = "/add",method = RequestMethod.POST)
     public ResponseData addMovie(@RequestBody MovieEntity movieEntity){
-        movieEntity.setPoster("/static/images/posts/post.jpg");
+        if(movieEntity.getPoster()==null)
+            movieEntity.setPoster("/static/images/posts/post.jpg");
         return resultGenerator.getSuccessResult( movieService.addMovie(movieEntity));
     }
 
