@@ -127,8 +127,15 @@ POST `/comment/add`
 #### 更改
 #### 删除
 传入参数为添加评论的参数加上评论id（评论id会在查询时返回）
-
-
+#### 根据电影和用户返回评论
+POST `/comment/getByMovieAndUser`
+```
+{
+"mid":,
+"uid":
+}
+```
+如果有会返回评论本身，没有理论上返回null。
 ## movie
 #### 获取全部电影信息
 GET 	`/movie/getAll`
@@ -406,6 +413,7 @@ POST `/time/add`
 ```
 {
 	"beginTime":"2018-05-15 08:20:00",
+	"endTime":"2018-05-15 09:20:00",
 	"mid":7,
   "hid":3,
 	"cost":30

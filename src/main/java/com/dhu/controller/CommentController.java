@@ -4,6 +4,7 @@ import com.dhu.model.CommentEntity;
 import com.dhu.model.ResponseData;
 import com.dhu.service.CommentService;
 import com.dhu.utils.ResultGenerator;
+import org.omg.CORBA.INTERNAL;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -65,5 +66,12 @@ public class CommentController {
             return resultGenerator.getFailResult("此评论不存在");
         }
         return resultGenerator.getSuccessResult(commentService.update(commentEntity));
+    }
+
+    @RequestMapping(value = "/getByMovieAndUser",method = RequestMethod.POST)
+    public ResponseData getByMovieAndUser(@RequestBody Map map){
+        Integer mid=Integer.valueOf(map.get("mid").toString());
+        Integer uid=Integer.valueOf(map.get("uid").toString());
+        return resultGenerator.getSuccessResult(commentService.findByMovieAndUser(mid,uid));
     }
 }
