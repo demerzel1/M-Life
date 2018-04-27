@@ -5,49 +5,23 @@
       <artifact name="MCMS:war exploded" />
     </artifacts-to-build>
   </component>
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/com/dhu/service/impl/TimeServiceImpl.java" description="List&lt;MovieEntity&gt; lstMovie=movieService.findAllMov..." line="85" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="9556ce2d-4a4e-4c2e-b590-285687b5c2fb" name="Default" comment="update jwt and other">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/12c38048-8583-47d1-95c3-ac7f08c9aa28.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/12c38048-8583-47d1-95c3-ac7f08c9aa28.xml" afterDir="false" />
+    <list default="true" id="9556ce2d-4a4e-4c2e-b590-285687b5c2fb" name="Default" comment="update delete user">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/posts/370f69e08ec6401286a5da68ebfe396e.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/posts/47b3ccca6c3a4411afbbc0cca66e2322.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/posts/5e695ac9af80424abfd0490718909821.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/posts/807a9dfa6a314892a852bb87b0de5164.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/posts/9c5530bbb7924508b69e65a1d6306731.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/posts/cf852e23a661439597c1f1c71f0da3d8.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/posts/d3279a8b8d5141c49b93ba869cbc026d.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/MCMS_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/MCMS_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/controller/CinemaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/controller/CinemaController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/controller/CommentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/controller/CommentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/controller/TimeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/controller/TimeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/model/MovieEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/model/MovieEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/repository/CinemaRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/repository/CinemaRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/repository/CommentRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/repository/CommentRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/repository/HallRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/repository/HallRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/repository/HallRepositoryImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/repository/TimeRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/repository/TimeRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/service/CinemaService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/service/CinemaService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/service/CommentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/service/CommentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/service/MovieService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/service/MovieService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/service/TimeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/service/TimeService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/service/impl/CinemaServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/service/impl/CinemaServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/service/impl/CommentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/service/impl/CommentServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/service/impl/MovieServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/service/impl/MovieServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/service/impl/TimeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/MCMS/WEB-INF/classes/com/dhu/service/impl/TimeServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MCMS/WEB-INF/lib/commons-codec-1.11.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MCMS/WEB-INF/lib/java-jwt-3.3.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MCMS/api_test.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/MCMS/api_test.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dhu/controller/CinemaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dhu/controller/CinemaController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dhu/controller/CommentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dhu/controller/CommentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dhu/controller/TimeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dhu/controller/TimeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dhu/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dhu/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dhu/model/MovieEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dhu/model/MovieEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dhu/repository/CinemaRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dhu/repository/CinemaRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dhu/repository/CommentRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dhu/repository/CommentRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dhu/repository/HallRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dhu/repository/HallRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dhu/repository/HallRepositoryImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dhu/repository/TimeRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dhu/repository/TimeRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dhu/service/CinemaService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dhu/service/CinemaService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dhu/service/CommentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dhu/service/CommentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dhu/service/MovieService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dhu/service/MovieService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dhu/service/TimeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dhu/service/TimeService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dhu/service/impl/CinemaServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dhu/service/impl/CinemaServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dhu/service/impl/CommentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dhu/service/impl/CommentServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dhu/service/impl/MovieServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dhu/service/impl/MovieServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dhu/service/impl/TimeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dhu/service/impl/TimeServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MCMS.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MCMS.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dhu/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dhu/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/dist/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -76,6 +50,17 @@
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MCMS@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MCMS@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="MCMS: schema" type="c314c289:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="defaultPersistenceUnit/Hibernate" type="feb32156:DbDataSourceImpl" />
       </path>
     </expand>
@@ -83,71 +68,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TimeServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/service/impl/TimeServiceImpl.java">
+      <file leaf-file-name="MainController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/controller/MainController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-51">
-              <caret line="62" column="27" selection-start-line="62" selection-start-column="27" selection-end-line="62" selection-end-column="27" />
+            <state relative-caret-position="330">
+              <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MovieController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/controller/MovieController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="383">
-              <caret line="87" column="5" lean-forward="true" selection-start-line="87" selection-start-column="5" selection-end-line="87" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#977#978#0" expanded="true" />
-                <element signature="e#1071#1072#0" expanded="true" />
-                <element signature="e#3508#3509#0" expanded="true" />
-                <element signature="e#3564#3565#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MovieService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/service/MovieService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MovieServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/service/impl/MovieServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="369">
-              <caret line="80" column="73" lean-forward="true" selection-start-line="80" selection-start-column="73" selection-end-line="80" selection-end-column="73" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/service/impl/UserServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7">
-              <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#479#480#0" expanded="true" />
-                <element signature="e#541#542#0" expanded="true" />
-                <element signature="e#772#773#0" expanded="true" />
-                <element signature="e#833#834#0" expanded="true" />
-                <element signature="e#897#898#0" expanded="true" />
-                <element signature="e#952#953#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -156,39 +83,8 @@
       <file leaf-file-name="OrderController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/controller/OrderController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="88" column="39" lean-forward="true" selection-start-line="88" selection-start-column="39" selection-end-line="88" selection-end-column="39" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="-36" />
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AuthenticateAPIController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/controller/AuthenticateAPIController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/controller/UserController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="73" column="6" selection-start-line="73" selection-start-column="6" selection-end-line="73" selection-end-column="6" />
+            <state relative-caret-position="184">
+              <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -199,11 +95,86 @@
       <file leaf-file-name="PictureController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/controller/PictureController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+            <state relative-caret-position="240">
+              <caret line="16" column="36" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SeatController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/controller/SeatController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TimeController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/controller/TimeController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/controller/UserController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-160">
+              <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TimeService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/service/TimeService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="148">
+              <caret line="15" column="8" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AuthenticateAPIController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/controller/AuthenticateAPIController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="24" column="29" lean-forward="true" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/service/impl/UserServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="958">
+              <caret line="74" column="5" lean-forward="true" selection-start-line="74" selection-start-column="5" selection-end-line="74" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AddNameTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/AddNameTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="585">
+              <caret line="49" column="75" lean-forward="true" selection-start-line="49" selection-start-column="75" selection-end-line="49" selection-end-column="75" />
             </state>
           </provider>
         </entry>
@@ -224,6 +195,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>TODO</find>
+      <find>transa</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -233,57 +205,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/dhu/model/HallEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dhu/model/MovieEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dhu/model/TimeEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dhu/model/UserEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dhu/service/SeatService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dhu/service/impl/SeatServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dhu/repository/UserRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dhu/service/impl/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dhu/repository/SeatRepository.java" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/src/test/java/testSeat.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dhu/utils/SimpleCORSFilter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dhu/controller/MainController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dhu/controller/SeatController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dhu/service/PictureService.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dhu/service/impl/PictureServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dhu/service/UserService.java" />
         <option value="$PROJECT_DIR$/target/MCMS/api_test.html" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/dhu/service/CinemaService.java" />
         <option value="$PROJECT_DIR$/src/test/java/tokenTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dhu/utils/JWTUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dhu/utils/JWTResult.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dhu/repository/HallRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dhu/repository/CinemaRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dhu/service/impl/CinemaServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dhu/controller/CinemaController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/api_test.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dhu/controller/PictureController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dhu/service/TimeService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dhu/service/impl/TimeServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dhu/controller/TimeController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dhu/repository/CommentRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dhu/service/CommentService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dhu/controller/CommentController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dhu/service/impl/CommentServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dhu/controller/UserController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dhu/repository/TimeRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dhu/model/OrderEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dhu/repository/OrderRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dhu/utils/CommonUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dhu/service/OrderService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dhu/service/impl/OrderServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/test/java/orderTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dhu/repository/MovieRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dhu/service/impl/MovieServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dhu/service/MovieService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dhu/controller/MovieController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dhu/controller/OrderController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dhu/service/SeatService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dhu/repository/SeatRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dhu/service/OrderService.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dhu/service/ExcelService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dhu/controller/ExcelController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/api_test.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dhu/utils/ExcelUtils.java" />
+        <option value="$PROJECT_DIR$/src/test/java/testSeat.java" />
+        <option value="$PROJECT_DIR$/src/test/java/AddNameTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dhu/repository/TimeRepository.java" />
+        <option value="$PROJECT_DIR$/src/test/java/orderTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/TimeTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dhu/service/TimeService.java" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dhu/controller/AuthenticateAPIController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dhu/service/HallService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dhu/controller/CinemaController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dhu/service/MovieService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dhu/repository/MovieRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dhu/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dhu/controller/TimeController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dhu/service/impl/HallServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dhu/controller/PictureController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dhu/model/MovieEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dhu/model/UserEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dhu/service/impl/CommentServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dhu/model/SeatEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dhu/controller/MovieController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dhu/service/impl/SeatServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dhu/service/impl/OrderServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dhu/service/impl/MovieServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dhu/service/impl/CinemaServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dhu/service/UserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dhu/repository/UserRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dhu/controller/CommentController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dhu/service/impl/TimeServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dhu/service/impl/UserServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -347,7 +319,6 @@
     </navigator>
     <panes>
       <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -389,44 +360,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="dhu" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MCMS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MCMS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="dhu" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MCMS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MCMS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="dhu" type="462c0819:PsiDirectoryNode" />
-              <item name="repository" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MCMS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MCMS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="dhu" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MCMS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MCMS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="dhu" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MCMS" type="b2602c69:ProjectViewProjectNode" />
@@ -442,10 +376,15 @@
               <item name="MCMS" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="dhu" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-              <item name="Jacksons" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MCMS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MCMS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MCMS" type="b2602c69:ProjectViewProjectNode" />
@@ -475,6 +414,34 @@
               <item name="MCMS" type="b2602c69:ProjectViewProjectNode" />
               <item name="MCMS" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="avatars" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MCMS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MCMS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="posts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MCMS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MCMS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MCMS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MCMS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -484,10 +451,37 @@
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="MCMS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MCMS" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MCMS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MCMS" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="MCMS" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MCMS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MCMS" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="MCMS" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MCMS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MCMS" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="MCMS" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -512,27 +506,29 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="DDL Data Source&#10;MySQL" />
+    <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.32413793" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/static/images/posts" />
+      <recent name="$PROJECT_DIR$/target/MCMS" />
+    </key>
+    <key name="ImportMappingsDialog.RecentPackages">
+      <recent name="com.dhu.model" />
+      <recent name="" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/main/webapp" />
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages" />
-    </key>
-    <key name="ImportMappingsDialog.RecentPackages">
-      <recent name="com.dhu.model" />
-      <recent name="" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/target/MCMS" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -553,6 +549,40 @@
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="AddNameTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MCMS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="AddNameTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="TimeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MCMS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TimeTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -587,6 +617,23 @@
       </option>
       <patterns />
     </configuration>
+    <configuration name="orderTest.main" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MCMS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="orderTest" />
+      <option name="METHOD_NAME" value="main" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
     <configuration name="testSeat" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MCMS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -603,52 +650,6 @@
         <value defaultName="singleModule" />
       </option>
       <patterns />
-    </configuration>
-    <configuration name="tokenTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MCMS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="tokenTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="TimeServiceImpl.findByMidCidDate" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="MCMS" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.dhu.service.impl.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" value="com.dhu.service.impl" />
-      <option name="MAIN_CLASS_NAME" value="com.dhu.service.impl.TimeServiceImpl" />
-      <option name="METHOD_NAME" value="findByMidCidDate" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <properties />
-      <listeners />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -672,31 +673,9 @@
       <properties />
       <listeners />
     </configuration>
-    <configuration name="testSeat.main" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="MCMS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="testSeat" />
-      <option name="METHOD_NAME" value="main" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <properties />
-      <listeners />
-    </configuration>
     <configuration name="Unnamed" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.28" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="UPDATING_POLICY" value="restart-server" />
+      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
       <deployment>
         <artifact name="MCMS:war exploded">
           <settings>
@@ -781,19 +760,19 @@
     </configuration>
     <list>
       <item itemvalue="Tomcat Server.Unnamed" />
-      <item itemvalue="TestNG.TimeServiceImpl.findByMidCidDate" />
-      <item itemvalue="TestNG.testSeat.main" />
       <item itemvalue="JUnit.testSeat" />
       <item itemvalue="JUnit.orderTest" />
-      <item itemvalue="JUnit.tokenTest" />
+      <item itemvalue="JUnit.AddNameTest" />
+      <item itemvalue="JUnit.TimeTest" />
+      <item itemvalue="JUnit.orderTest.main" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.orderTest.main" />
         <item itemvalue="JUnit.orderTest" />
-        <item itemvalue="JUnit.tokenTest" />
+        <item itemvalue="JUnit.TimeTest" />
+        <item itemvalue="JUnit.AddNameTest" />
         <item itemvalue="JUnit.testSeat" />
-        <item itemvalue="TestNG.testSeat.main" />
-        <item itemvalue="TestNG.TimeServiceImpl.findByMidCidDate" />
       </list>
     </recent_temporary>
   </component>
@@ -823,7 +802,8 @@
       <workItem from="1523380359709" duration="10188000" />
       <workItem from="1523497478611" duration="21529000" />
       <workItem from="1523598465665" duration="97377000" />
-      <workItem from="1524011521917" duration="22632000" />
+      <workItem from="1524011521917" duration="116994000" />
+      <workItem from="1524571174262" duration="3564000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1523794522715</created>
@@ -951,43 +931,197 @@
       <option name="project" value="LOCAL" />
       <updated>1524052643668</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="delete target">
+      <created>1524052726610</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1524052726610</updated>
+    </task>
+    <task id="LOCAL-00020" summary="add getUserById and update orderService">
+      <created>1524107554126</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1524107554126</updated>
+    </task>
+    <task id="LOCAL-00021" summary="update readme.md">
+      <created>1524107641292</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1524107641292</updated>
+    </task>
+    <task id="LOCAL-00022" summary="update">
+      <created>1524118107669</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1524118107669</updated>
+    </task>
+    <task id="LOCAL-00023" summary="update">
+      <created>1524118249182</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1524118249182</updated>
+    </task>
+    <task id="LOCAL-00024" summary="update">
+      <created>1524121877200</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1524121877201</updated>
+    </task>
+    <task id="LOCAL-00025" summary="update">
+      <created>1524146827896</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1524146827896</updated>
+    </task>
+    <task id="LOCAL-00026" summary="update">
+      <created>1524146908367</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1524146908367</updated>
+    </task>
+    <task id="LOCAL-00027" summary="update excel">
+      <created>1524161312089</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1524161312089</updated>
+    </task>
+    <task id="LOCAL-00028" summary="update timeService">
+      <created>1524191778052</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1524191778052</updated>
+    </task>
+    <task id="LOCAL-00029" summary="update database and other">
+      <created>1524214128375</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1524214128376</updated>
+    </task>
+    <task id="LOCAL-00030" summary="update bug">
+      <created>1524219695046</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1524219695046</updated>
+    </task>
+    <task id="LOCAL-00031" summary="update">
+      <created>1524235506621</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1524235506621</updated>
+    </task>
+    <task id="LOCAL-00032" summary="update">
+      <created>1524280634215</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1524280634215</updated>
+    </task>
+    <task id="LOCAL-00033" summary="update">
+      <created>1524281841288</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1524281841288</updated>
+    </task>
+    <task id="LOCAL-00034" summary="update delete user">
+      <created>1524289251716</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1524289251716</updated>
+    </task>
+    <task id="LOCAL-00035" summary="update">
+      <created>1524291490467</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1524291490467</updated>
+    </task>
+    <task id="LOCAL-00036" summary="update search">
+      <created>1524297292948</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1524297292949</updated>
+    </task>
+    <task id="LOCAL-00037" summary="update">
+      <created>1524308014273</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1524308014273</updated>
+    </task>
+    <task id="LOCAL-00038" summary="update delete user">
+      <created>1524327081950</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1524327081950</updated>
+    </task>
+    <task id="LOCAL-00039" summary="update">
+      <created>1524549203785</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1524549203785</updated>
+    </task>
+    <task id="LOCAL-00040" summary="update">
+      <created>1524556269768</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1524556269768</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="tokenTest - 2018.04.18 at 00h 20m 09s.xml">
-      <configuration name="tokenTest" configurationId="JUnit" />
+    <history-entry file="TimeTest - 2018.04.20 at 14h 52m 11s.xml">
+      <configuration name="TimeTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="orderTest - 2018.04.18 at 01h 06m 12s.xml">
+    <history-entry file="TimeTest - 2018.04.20 at 14h 56m 56s.xml">
+      <configuration name="TimeTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TimeTest - 2018.04.20 at 15h 02m 48s.xml">
+      <configuration name="TimeTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TimeTest - 2018.04.20 at 15h 03m 16s.xml">
+      <configuration name="TimeTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TimeTest - 2018.04.20 at 15h 05m 10s.xml">
+      <configuration name="TimeTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="orderTest - 2018.04.20 at 15h 15m 09s.xml">
       <configuration name="orderTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="orderTest - 2018.04.18 at 01h 06m 47s.xml">
+    <history-entry file="orderTest_main - 2018.04.20 at 15h 17m 53s.xml">
+      <configuration name="orderTest.main" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="orderTest - 2018.04.20 at 15h 19m 21s.xml">
       <configuration name="orderTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="orderTest - 2018.04.18 at 01h 07m 51s.xml">
+    <history-entry file="orderTest - 2018.04.20 at 15h 23m 19s.xml">
       <configuration name="orderTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="orderTest - 2018.04.18 at 01h 08m 22s.xml">
-      <configuration name="orderTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="orderTest - 2018.04.18 at 01h 12m 20s.xml">
-      <configuration name="orderTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="orderTest - 2018.04.18 at 01h 12m 40s.xml">
-      <configuration name="orderTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="orderTest - 2018.04.18 at 19h 12m 35s.xml">
-      <configuration name="orderTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="orderTest - 2018.04.18 at 19h 31m 37s.xml">
-      <configuration name="orderTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="orderTest - 2018.04.18 at 19h 47m 28s.xml">
-      <configuration name="orderTest" configurationId="JUnit" />
+    <history-entry file="orderTest_main - 2018.04.20 at 15h 25m 39s.xml">
+      <configuration name="orderTest.main" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="196588000" />
+    <option name="totallyTimeSpent" value="294514000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1000,7 +1134,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5013889" side_tool="true" weight="0.31603774" />
@@ -1021,14 +1154,13 @@
       <window_info anchor="bottom" id="Java Enterprise" order="7" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32900944" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49861112" visible="true" weight="0.31603774" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49861112" weight="0.31603774" />
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info id="Persistence" order="3" sideWeight="0.50344825" side_tool="true" visible="true" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49655172" visible="true" weight="0.25" />
-      <window_info anchor="right" id="Bean Validation" order="4" />
+      <window_info id="Persistence" order="3" sideWeight="0.5137931" side_tool="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4862069" visible="true" weight="0.25" />
+      <window_info anchor="right" id="Bean Validation" order="4" weight="0.3298611" />
       <window_info id="Web" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32900944" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1037,6 +1169,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32900944" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1077,40 +1210,75 @@
     <MESSAGE value="add CORS" />
     <MESSAGE value="add picture" />
     <MESSAGE value="update jwt and other" />
+    <MESSAGE value="delete target" />
+    <MESSAGE value="add getUserById and update orderService" />
+    <MESSAGE value="update readme.md" />
+    <MESSAGE value="update excel" />
+    <MESSAGE value="update timeService" />
+    <MESSAGE value="update database and other" />
+    <MESSAGE value="update bug" />
+    <MESSAGE value="update search" />
+    <MESSAGE value="update delete user" />
     <MESSAGE value="update" />
     <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="7" />
+      <option name="time" value="10" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/service/impl/PictureServiceImpl.java" />
-    <entry file="file://$PROJECT_DIR$/target/MCMS/api_test.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/controller/PictureController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="582">
-          <caret line="109" column="54" selection-start-line="109" selection-start-column="54" selection-end-line="109" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/model/UserEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        <state relative-caret-position="75">
+          <caret line="16" column="36" lean-forward="true" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
           <folding>
-            <element signature="e#1420#1421#0" expanded="true" />
-            <element signature="e#1454#1455#0" expanded="true" />
-            <element signature="e#2195#2196#0" expanded="true" />
-            <element signature="e#2271#2272#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MCMS.iml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/controller/SeatController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="76" lean-forward="true" selection-start-line="19" selection-start-column="76" selection-end-line="19" selection-end-column="76" />
+        <state relative-caret-position="150">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/controller/TimeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/controller/CinemaController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/controller/AuthenticateAPIController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="26" column="35" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1121,348 +1289,139 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/target/MCMS/api_test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="110" column="27" selection-start-line="110" selection-start-column="27" selection-end-line="110" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1322">
-          <caret line="142" column="17" selection-start-line="142" selection-start-column="17" selection-end-line="142" selection-end-column="17" />
+        <state relative-caret-position="-1483">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/tokenTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="32" lean-forward="true" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="180">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/repository/HallRepository.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
+        <state relative-caret-position="462">
+          <caret line="40" column="8" lean-forward="true" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/repository/CinemaRepository.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/model/CinemaEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="16" column="71" selection-start-line="16" selection-start-column="71" selection-end-line="16" selection-end-column="71" />
+        <state relative-caret-position="825">
+          <caret line="72" column="1" lean-forward="true" selection-start-line="8" selection-end-line="72" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/testSeat.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/model/CityEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-37">
-          <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="500">
+          <caret line="50" lean-forward="true" selection-start-line="8" selection-end-line="50" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/utils/Jacksons/Jacksons.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/model/HallEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        <state relative-caret-position="350">
+          <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/model/SeatEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="73" lean-forward="true" selection-start-line="8" selection-end-line="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/model/TimeEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="97" selection-start-line="9" selection-end-line="97" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/service/impl/CinemaServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
+        <state relative-caret-position="-295">
+          <caret line="27" column="14" lean-forward="true" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/model/HallEntity.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/service/impl/HallServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="6" lean-forward="true" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/model/MovieEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="103" column="58" selection-start-line="103" selection-start-column="58" selection-end-line="103" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/model/OrderEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/model/UserEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="395">
+          <caret line="114" lean-forward="true" selection-start-line="114" selection-end-line="114" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/service/OrderService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/repository/UserRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/model/CommentEntity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/model/CommentEntity.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/service/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-65">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/api_test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="105" column="10" lean-forward="true" selection-start-line="105" selection-start-column="10" selection-end-line="105" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/repository/UserRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/controller/SeatController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/repository/CommentRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="44" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/controller/CinemaController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="51" column="27" selection-start-line="51" selection-start-column="27" selection-end-line="51" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/service/impl/CommentServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="52" column="24" lean-forward="true" selection-start-line="52" selection-start-column="24" selection-end-line="52" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1129#1130#0" expanded="true" />
-            <element signature="e#1187#1188#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/controller/MainController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/controller/CommentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="56" column="57" selection-start-line="56" selection-start-column="57" selection-end-line="56" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/utils/ResultGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="26" column="14" lean-forward="true" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/utils/JWTUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="51" column="33" lean-forward="true" selection-start-line="51" selection-start-column="33" selection-end-line="51" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/utils/JWTResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/controller/TimeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="63" column="70" lean-forward="true" selection-start-line="63" selection-start-column="70" selection-end-line="63" selection-end-column="70" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/service/impl/SeatServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/repository/TimeRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/service/SeatService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/service/CommentService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="23" lean-forward="true" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/service/CinemaService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="17" column="48" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/repository/SeatRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/model/OrderEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
-          <folding>
-            <element signature="e#1154#1155#0" expanded="true" />
-            <element signature="e#1196#1197#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/utils/CommonUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="28" column="49" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="49" />
-          <folding>
-            <element signature="e#313#314#0" expanded="true" />
-            <element signature="e#353#354#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/repository/OrderRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="27" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/service/OrderService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="59" selection-start-line="18" selection-start-column="59" selection-end-line="18" selection-end-column="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="380">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/service/impl/OrderServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="82" column="5" lean-forward="true" selection-start-line="82" selection-start-column="5" selection-end-line="82" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/orderTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="52" column="88" selection-start-line="52" selection-start-column="88" selection-end-line="52" selection-end-column="88" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/service/TimeService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="20" lean-forward="true" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="60" selection-start-line="14" selection-start-column="60" selection-end-line="14" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/repository/MovieRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="20" column="63" selection-start-line="20" selection-start-column="63" selection-end-line="20" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/service/impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#479#480#0" expanded="true" />
-            <element signature="e#541#542#0" expanded="true" />
-            <element signature="e#772#773#0" expanded="true" />
-            <element signature="e#833#834#0" expanded="true" />
-            <element signature="e#897#898#0" expanded="true" />
-            <element signature="e#952#953#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/service/impl/TimeServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-51">
-          <caret line="62" column="27" selection-start-line="62" selection-start-column="27" selection-end-line="62" selection-end-column="27" />
+        <state relative-caret-position="15">
+          <caret line="98" selection-start-line="98" selection-end-line="98" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1471,18 +1430,71 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/service/impl/MovieServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="80" column="73" lean-forward="true" selection-start-line="80" selection-start-column="73" selection-end-line="80" selection-end-column="73" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="-419">
+          <caret line="52" column="18" selection-start-line="52" selection-start-column="18" selection-end-line="52" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/repository/CommentRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/service/impl/CommentServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="58" column="26" selection-start-line="58" selection-start-column="26" selection-end-line="58" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/utils/JWTUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="41" column="4" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/service/CommentService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="16" column="28" lean-forward="true" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/service/HallService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="54" selection-start-line="13" selection-start-column="54" selection-end-line="13" selection-end-column="54" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/service/MovieService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+        <state relative-caret-position="120">
+          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/service/SeatService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="31" lean-forward="true" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/service/impl/SeatServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="33" column="18" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/service/impl/TimeServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-737">
+          <caret line="79" column="23" selection-start-line="79" selection-start-column="23" selection-end-line="79" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1491,32 +1503,63 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/controller/MovieController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="87" column="5" lean-forward="true" selection-start-line="87" selection-start-column="5" selection-end-line="87" selection-end-column="5" />
+        <state relative-caret-position="750">
+          <caret line="64" column="45" selection-start-line="64" selection-start-column="45" selection-end-line="64" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#977#978#0" expanded="true" />
             <element signature="e#1071#1072#0" expanded="true" />
-            <element signature="e#3508#3509#0" expanded="true" />
-            <element signature="e#3564#3565#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/controller/UserController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/controller/ExcelController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="73" column="6" selection-start-line="73" selection-start-column="6" selection-end-line="73" selection-end-column="6" />
+        <state relative-caret-position="120">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/controller/PictureController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/controller/CommentController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        <state relative-caret-position="960">
+          <caret line="74" column="92" selection-start-line="74" selection-start-column="92" selection-end-line="74" selection-end-column="92" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/controller/CinemaController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/dist/index.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/service/TimeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="15" column="8" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/controller/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1525,26 +1568,72 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/controller/OrderController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="88" column="39" lean-forward="true" selection-start-line="88" selection-start-column="39" selection-end-line="88" selection-end-column="39" />
+        <state relative-caret-position="184">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-36" />
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/controller/PictureController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="36" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/controller/SeatController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/controller/TimeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-160">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/controller/AuthenticateAPIController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        <state relative-caret-position="210">
+          <caret line="24" column="29" lean-forward="true" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dhu/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="958">
+          <caret line="74" column="5" lean-forward="true" selection-start-line="74" selection-start-column="5" selection-end-line="74" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/AddNameTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="49" column="75" lean-forward="true" selection-start-line="49" selection-start-column="75" selection-end-line="49" selection-end-column="75" />
         </state>
       </provider>
     </entry>
@@ -1554,7 +1643,7 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>MCMS:war</last-edited>
+          <last-edited>MCMS:war exploded</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

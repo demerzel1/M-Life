@@ -61,6 +61,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    @Transactional
     public Boolean deleteById(Integer id) {
         userRepository.flush();
         UserEntity userEntity=userRepository.findFirstById(id);
@@ -74,6 +75,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    @Transactional
     public List<UserEntity> findByString(String str, Integer type) {
         userRepository.flush();
         Byte b=0;
