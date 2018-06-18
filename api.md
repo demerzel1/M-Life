@@ -57,7 +57,11 @@ password: user
 返回年度前X的电影名及其票房
 - - - -
 添加excel导出
-
+- - - -
+添加了统计接口：返回最受欢迎的X个类型及票房
+更新了统计接口：统计接口会返回movieName了
+添加了上传excel的描述
+- - - -
 
 [cinema](https://github.com/demerzel1/MCMS/blob/master/README.md#cinema)
 [comment](https://github.com/demerzel1/MCMS/blob/master/README.md#comment)
@@ -93,48 +97,56 @@ return:
                 "cntOrder": 7,
                 "movieId": 9,
                 "boxOffice": 280,
+                "movieName": "唐伯虎点秋香",
                 "cntTime": 27
             },
             {
                 "cntOrder": 23,
                 "movieId": 15,
                 "boxOffice": 920,
+                "movieName": "大话西游之大圣娶亲",
                 "cntTime": 27
             },
             {
                 "cntOrder": 15,
                 "movieId": 17,
                 "boxOffice": 600,
+                "movieName": "天堂电影院",
                 "cntTime": 27
             },
             {
                 "cntOrder": 12,
                 "movieId": 35,
                 "boxOffice": 480,
+                "movieName": "触不可及",
                 "cntTime": 27
             },
             {
                 "cntOrder": 8,
                 "movieId": 44,
                 "boxOffice": 240,
+                "movieName": "教父",
                 "cntTime": 27
             },
             {
                 "cntOrder": 0,
                 "movieId": 49,
                 "boxOffice": 0,
+                "movieName": "大闹天宫",
                 "cntTime": 0
             },
             {
                 "cntOrder": 0,
                 "movieId": 61,
                 "boxOffice": 0,
+                "movieName": "巴黎淘气帮",
                 "cntTime": 0
             },
             {
                 "cntOrder": 10,
                 "movieId": 64,
                 "boxOffice": 300,
+                "movieName": "谍影重重",
                 "cntTime": 27
             }
         ]
@@ -143,7 +155,7 @@ return:
 ```
 
 
-#### 返回年度前X的电影名及其票房
+#### 返回年度前X的电影名及其票房（会返回电影名了，同上，这个就不改了）
 POST `/movie/getTopX`
 ```
 {
@@ -192,6 +204,45 @@ return:(默认按票房从高到低排序）
 }
 ```
 
+#### 返回类型及票房
+POST `/movie/getTopType`
+```
+{
+"top":5
+}
+```
+return:
+```
+{
+    "message": "success",
+    "code": 200,
+    "data": {
+        "data": [
+            {
+                "剧情": 12000
+            },
+            {
+                "爱情": 4360
+            },
+            {
+                "奇幻": 3520
+            },
+            {
+                "冒险": 3330
+            },
+            {
+                "喜剧": 3210
+            }
+        ]
+    }
+}
+```
+
+#### excel导入
+POST `/excel/uploadMovieExcel`
+传入一个MultipartFile格式的excel
+会自动导入
+具体excel里面应该怎么写不太记得了..回头看一下
 
 #### excel导出
 GET `/excel/getCinema`

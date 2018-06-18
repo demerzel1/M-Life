@@ -41,9 +41,6 @@ public class movieTest {
 
     @Test
     public void main() {
-       List<Map> mapList= movieService.findTopXMoney(5);
-       for(Map map:mapList){
-           System.out.println(Jacksons.me().readAsString(map));
-       }
+       movieService.findTopXType(5);
     }
 }

@@ -150,6 +150,7 @@ public class MovieServiceImpl implements MovieService {
         }
         Integer cntOrder=orderEntityList.size();
         Map map=new HashMap<>();
+        map.put("movieName",movieEntity.getName());
         map.put("movieId",movieId);
         map.put("cntTime",cntTime);
         map.put("cntOrder",cntOrder);
@@ -195,4 +196,41 @@ public class MovieServiceImpl implements MovieService {
         }
         return mapList1;
     }
+
+    @Override
+    public List<Map> findTopXType(Integer X) {
+        List<MovieEntity> movieEntityList=movieRepository.findAll();
+        Map<String,Double> typeMap=new HashMap<>();
+        for(MovieEntity movieEntity:movieEntityList){
+            String movieType=movieEntity.getMovieType();
+            List<String> splitType = Arrays.asList(movieType.split(","));
+            System.out.println(Jacksons.me().readAsString(splitType));
+            Map map=findNumberOfTimesAndNumerOfWatchedByMovie(movieEntity.getId());
+            Double boxOffice=Double.valueOf(map.get("boxOffice").toString());
+            for(String str:splitType){
+                Double cnt=0.0;
+                if(typeMap.get(str)!=null){
+                    cnt=typeMap.get(str);
+                }
+                typeMap.put(str,boxOffice+cnt);
+            }
+        }
+        List<Map.Entry<String,Double>> list = new ArrayList<Map.Entry<String,Double>>(typeMap.entrySet());
+        Collections.sort(list,new Comparator<Map.Entry<String,Double>>() {
+            //升序排序
+            public int compare(Map.Entry<String, Double> o1,
+                               Map.Entry<String, Double> o2) {
+                return o2.getValue().compareTo(o1.getValue());
+            }
+        });
+        List<Map> mapList=new ArrayList<>();
+        for(int i=0;i<X;++i){
+            Map<String,Double> map=new HashMap<>();
+            map.put(list.get(i).getKey(),list.get(i).getValue());
+            mapList.add(map);
+        }
+        return mapList;
+    }
+
+
 }

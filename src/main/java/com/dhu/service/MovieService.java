@@ -28,4 +28,5 @@ public interface MovieService {
     Map  findNumberOfTimesAndNumerOfWatchedByMovie(Integer movieId);
     List<Map> findNumberOfTimesAndNumerOfWatchedByDate(Date date);
     List<Map> findTopXMoney(Integer X);
+    List<Map> findTopXType(Integer X);
 }

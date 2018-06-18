@@ -117,4 +117,10 @@ public class MovieController {
         Integer X=Integer.valueOf(map.get("top").toString());
         return resultGenerator.getSuccessResult(movieService.findTopXMoney(X));
     }
+
+    @RequestMapping(value = "/getTopType",method = RequestMethod.POST)
+    public ResponseData getTopXType(@RequestBody Map map){
+        Integer X=Integer.valueOf(map.get("top").toString());
+        return resultGenerator.getSuccessResult(movieService.findTopXType(X));
+    }
 }
