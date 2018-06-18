@@ -13,6 +13,10 @@ public class CinemaEntity {
     private String name;
     private String address;
     private int cityId;
+    private String lat;
+    private String lng;
+    private String latNow;
+    private String lngNow;
 
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -69,5 +73,45 @@ public class CinemaEntity {
 
     public void setCityId(int cityId) {
         this.cityId = cityId;
+    }
+
+    @Basic
+    @Column(name = "lat", nullable = true, length = 50)
+    public String getLat() {
+        return lat;
+    }
+
+    public void setLat(String lat) {
+        this.lat = lat;
+    }
+
+    @Basic
+    @Column(name = "lng", nullable = true, length = 50)
+    public String getLng() {
+        return lng;
+    }
+
+    public void setLng(String lng) {
+        this.lng = lng;
+    }
+
+    @Basic
+    @Column(name = "lat_now", nullable = true, length = 50)
+    public String getLatNow() {
+        return latNow;
+    }
+
+    public void setLatNow(String latNow) {
+        this.latNow = latNow;
+    }
+
+    @Basic
+    @Column(name = "lng_now", nullable = true, length = 50)
+    public String getLngNow() {
+        return lngNow;
+    }
+
+    public void setLngNow(String lngNow) {
+        this.lngNow = lngNow;
     }
 }
