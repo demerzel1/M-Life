@@ -1,4 +1,4 @@
-# API
+# README
 #数据库课设&企业java#
 如无特殊说明，return的属性名称和数据库中属性名称相同
 所有链接都有前缀`http://localhost:8080`
@@ -50,6 +50,13 @@ password: user
 - - - -
 添加了模糊查询（用户/电影）
 - - - -
+添加了影院经纬度标记
+
+添加了统计接口：
+返回正在上映影片的排片量和观看量
+返回年度前X的电影名及其票房
+
+
 [cinema](https://github.com/demerzel1/MCMS/blob/master/README.md#cinema)
 [comment](https://github.com/demerzel1/MCMS/blob/master/README.md#comment)
 [movie](https://github.com/demerzel1/MCMS/blob/master/README.md#movie)
@@ -62,8 +69,126 @@ POST `/token`
 
 头部带token即可
 会返回token状态，以下几种。
-![](README/0DC29015-B75A-416A-898C-8DC7774329D6.png)
+![](api/0DC29015-B75A-416A-898C-8DC7774329D6.png)
 
+
+## 统计
+#### 获取正在上映影片的排片量和观看量
+POST `/movie/getCntListAndOrder`
+```
+{
+"date":"2018-06-18"
+}
+```
+return:
+```
+{
+    "message": "success",
+    "code": 200,
+    "data": {
+        "data": [
+            {
+                "cntOrder": 7,
+                "movieId": 9,
+                "boxOffice": 280,
+                "cntTime": 27
+            },
+            {
+                "cntOrder": 23,
+                "movieId": 15,
+                "boxOffice": 920,
+                "cntTime": 27
+            },
+            {
+                "cntOrder": 15,
+                "movieId": 17,
+                "boxOffice": 600,
+                "cntTime": 27
+            },
+            {
+                "cntOrder": 12,
+                "movieId": 35,
+                "boxOffice": 480,
+                "cntTime": 27
+            },
+            {
+                "cntOrder": 8,
+                "movieId": 44,
+                "boxOffice": 240,
+                "cntTime": 27
+            },
+            {
+                "cntOrder": 0,
+                "movieId": 49,
+                "boxOffice": 0,
+                "cntTime": 0
+            },
+            {
+                "cntOrder": 0,
+                "movieId": 61,
+                "boxOffice": 0,
+                "cntTime": 0
+            },
+            {
+                "cntOrder": 10,
+                "movieId": 64,
+                "boxOffice": 300,
+                "cntTime": 27
+            }
+        ]
+    }
+}
+```
+
+
+#### 返回年度前X的电影名及其票房
+POST `/movie/getTopX`
+```
+{
+"top":"5"
+}
+```
+return:(默认按票房从高到低排序）
+```
+{
+    "message": "success",
+    "code": 200,
+    "data": {
+        "data": [
+            {
+                "cntOrder": 23,
+                "movieId": 15,
+                "boxOffice": 920,
+                "cntTime": 27
+            },
+            {
+                "cntOrder": 17,
+                "movieId": 63,
+                "boxOffice": 680,
+                "cntTime": 27
+            },
+            {
+                "cntOrder": 17,
+                "movieId": 13,
+                "boxOffice": 680,
+                "cntTime": 31
+            },
+            {
+                "cntOrder": 16,
+                "movieId": 41,
+                "boxOffice": 640,
+                "cntTime": 27
+            },
+            {
+                "cntOrder": 15,
+                "movieId": 28,
+                "boxOffice": 600,
+                "cntTime": 27
+            }
+        ]
+    }
+}
+```
 
 ## cinema
 #### 获取全部影院信息
@@ -149,7 +274,7 @@ POST `/movie/getByDate` {“day”:”2018-04-12”}
 #### 添加影片
 POST   `/movie/add`  {“name”:”xx”,”englishname”:”xx”,…}属性和数据库名称相同
 
-![](README/748867F2-E7EC-40A2-8814-650FC0EB61C4.png)
+![](api/748867F2-E7EC-40A2-8814-650FC0EB61C4.png)
 不需要全部有，只有name也可添加
 
 #### 更新影片
@@ -173,7 +298,7 @@ POST `/movie/getByStr`
 `{"str":""}`
 返回模糊查询得到的结果
 查询 “心”
-![](README/1A6F5302-2A6F-434B-AF91-927652FEDEAD.png)
+![](api/1A6F5302-2A6F-434B-AF91-927652FEDEAD.png)
 
 
 ## order
@@ -240,7 +365,7 @@ id为票编号，ordertime为毫秒数表示的时间，watchtime为电影上映
 POST `/order/getByUserId`
 {“uid”:1}
 返回格式如
-![](README/00726660-6DD8-4A60-833E-FF471086BD81.png)
+![](api/00726660-6DD8-4A60-833E-FF471086BD81.png)
 key值就是上面的字符串
 
 
@@ -374,7 +499,7 @@ POST `/time/getMovieByTimeId`
 {“tid”:1}
 
 返回信息为
-![](README/20177F5B-D3F7-40E6-A6C1-B7D04F374422.png)
+![](api/20177F5B-D3F7-40E6-A6C1-B7D04F374422.png)
 
 
 #### 自动排片
@@ -389,7 +514,7 @@ POST `/time/autoAdd`
 }
 ```
 
-![](README/7D6D24BC-BD50-47CF-A267-5E41AE62D648.png)
+![](api/7D6D24BC-BD50-47CF-A267-5E41AE62D648.png)
 
 返回对此厅的排片list
 每个厅每天自动排片只能排3场
@@ -406,7 +531,7 @@ POST  `/time/checkAuto`
 }
 ```
 会返回当天剩余场次的个数
-![](README/0280CA18-5ABC-435B-B2B7-954989527BBE.png)
+![](api/0280CA18-5ABC-435B-B2B7-954989527BBE.png)
 
 #### 手动排片
 POST `/time/add`
@@ -421,7 +546,7 @@ POST `/time/add`
 ```
 严格按照”yyyy-MM-dd hh:MM:ss”的格式传时间，否则会报错。
 
-![](README/4A5B3633-51CC-4E59-ACF3-348A92162B54.png)
+![](api/4A5B3633-51CC-4E59-ACF3-348A92162B54.png)
 
 
 ## user
@@ -530,7 +655,7 @@ type
 2 邮箱
 3 电话
 
-![](README/F5B09ACE-40E3-4226-88EE-C74175BEF571.png)
+![](api/F5B09ACE-40E3-4226-88EE-C74175BEF571.png)
 
 
 ## picture

@@ -30,4 +30,6 @@ public interface TimeRepository extends JpaRepository<TimeEntity,Integer> {
     List<TimeEntity> findAllByHallIdAndStartTimeLessThanEqualAndEndTimeGreaterThanEqual(Integer hallId,Timestamp timestamp1,Timestamp timestamp2);
 
     List<TimeEntity> findAllByHallIdAndStartTimeGreaterThanAndStartTimeLessThanEqual(Integer hallId,Date date1,Date date2);
+
+    List<TimeEntity> findAllByMovieId(Integer movieId);
 }

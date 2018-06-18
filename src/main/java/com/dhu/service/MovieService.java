@@ -7,6 +7,7 @@ import org.springframework.web.multipart.MultipartFile;
 import javax.lang.model.type.IntersectionType;
 import java.sql.Date;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by demerzel on 2018/4/12.
@@ -24,4 +25,7 @@ public interface MovieService {
     List<MovieEntity> findNotOn();
     List<MovieEntity> addFromExcel(MultipartFile file);
     List<MovieEntity> findByStrName(String str);
+    Map  findNumberOfTimesAndNumerOfWatchedByMovie(Integer movieId);
+    List<Map> findNumberOfTimesAndNumerOfWatchedByDate(Date date);
+    List<Map> findTopXMoney(Integer X);
 }

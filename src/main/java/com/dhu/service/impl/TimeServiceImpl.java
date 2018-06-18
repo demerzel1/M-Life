@@ -400,5 +400,10 @@ public class TimeServiceImpl implements TimeService {
         return timeEntityList;
     }
 
+    @Override
+    public List<TimeEntity> findByMovie(Integer movieId) {
+        return timeRepository.findAllByMovieId(movieId);
+    }
+
 
 }

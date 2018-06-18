@@ -40,4 +40,6 @@ public interface TimeService {
     Integer checkRemaining(Date date,Integer hallId,Integer movieId);
 
     List<TimeEntity> autoAddV2(Date date,Integer movieId,Integer hallId,Double cost,Integer cnt);
+
+    List<TimeEntity> findByMovie(Integer movieId);
 }

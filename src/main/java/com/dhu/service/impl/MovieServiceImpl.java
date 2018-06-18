@@ -10,6 +10,7 @@ import com.dhu.service.MovieService;
 import com.dhu.utils.CommonUtils;
 import com.dhu.utils.ExcelUtils;
 import com.dhu.utils.Jacksons.Jacksons;
+import org.apache.xmlbeans.impl.jam.mutable.MElement;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -17,9 +18,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.sql.Date;
 import java.sql.Timestamp;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Created by demerzel on 2018/4/12.
@@ -132,5 +131,68 @@ public class MovieServiceImpl implements MovieService {
     public List<MovieEntity> findByStrName(String str) {
         movieRepository.flush();
         return movieRepository.findAllByNameContaining(str);
+    }
+
+    @Override
+    public Map findNumberOfTimesAndNumerOfWatchedByMovie(Integer movieId) {
+        MovieEntity movieEntity=movieRepository.findFirstById(movieId);
+        List<TimeEntity> timeEntityList=timeRepository.findAllByMovieId(movieId);
+        Integer cntTime=timeEntityList.size();
+        List<OrderEntity> orderEntityList=new ArrayList<>();
+        Double money=0.0;
+        for(TimeEntity timeEntity:timeEntityList){
+            Integer timeId=timeEntity.getId();
+            List<OrderEntity> orderEntityList1=orderRepository.findAllByTimeId(timeId);
+            money+=orderEntityList1.size()*timeEntity.getCost();
+            for(OrderEntity orderEntity:orderEntityList1){
+                orderEntityList.add(orderEntity);
+            }
+        }
+        Integer cntOrder=orderEntityList.size();
+        Map map=new HashMap<>();
+        map.put("movieId",movieId);
+        map.put("cntTime",cntTime);
+        map.put("cntOrder",cntOrder);
+        map.put("boxOffice",money);
+        return map;
+    }
+
+    @Override
+    public List<Map> findNumberOfTimesAndNumerOfWatchedByDate(Date date) {
+        List<MovieEntity> movieEntityList=findAllMovieByDate(date);
+        List<Map> mapList=new ArrayList<>();
+        for(MovieEntity movieEntity:movieEntityList){
+            Integer movieId=movieEntity.getId();
+            Map map=findNumberOfTimesAndNumerOfWatchedByMovie(movieId);
+            mapList.add(map);
+        }
+        return mapList;
+    }
+
+    Comparator<Map> comparator = new Comparator<Map>() {
+        public int compare(Map o1, Map o2) {
+           Double c1=Double.valueOf(o1.get("boxOffice").toString());
+           Double c2=Double.valueOf(o2.get("boxOffice").toString());
+           if(c1<c2)
+               return 1;
+           else
+               return -1;
+        }
+    };
+
+    @Override
+    public List<Map> findTopXMoney(Integer X) {
+        List<MovieEntity> movieEntityList=findAllMovie();
+        List<Map> mapList=new ArrayList<>();
+        for(MovieEntity movieEntity:movieEntityList){
+            Map map=findNumberOfTimesAndNumerOfWatchedByMovie(movieEntity.getId());
+            mapList.add(map);
+        }
+        Collections.sort(mapList,comparator);
+        List<Map> mapList1=new ArrayList<>();
+        for(int i=0;i<X;i++){
+            mapList1.add(mapList.get(i));
+        }
+        return mapList1;
     }
 }

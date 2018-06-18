@@ -3,6 +3,7 @@ package com.dhu.controller;
 import com.dhu.model.MovieEntity;
 import com.dhu.model.ResponseData;
 import com.dhu.service.MovieService;
+import com.dhu.utils.CommonUtils;
 import com.dhu.utils.Jacksons.Jacksons;
 import com.dhu.utils.ResultGenerator;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -102,5 +103,18 @@ public class MovieController {
     public ResponseData getByStr(@RequestBody Map map){
         String str=map.get("str").toString();
         return resultGenerator.getSuccessResult(movieService.findByStrName(str));
+    }
+
+    @RequestMapping(value = "/getCntListAndOrder",method = RequestMethod.POST)
+    public ResponseData getCntListAndOrderByDate(@RequestBody Map map){
+        String datestr=map.get("date").toString();
+        Date date=CommonUtils.me().String2Date(datestr);
+        return resultGenerator.getSuccessResult(movieService.findNumberOfTimesAndNumerOfWatchedByDate(date));
+    }
+
+    @RequestMapping(value = "/getTopX",method = RequestMethod.POST)
+    public ResponseData getTopXMovie(@RequestBody Map map){
+        Integer X=Integer.valueOf(map.get("top").toString());
+        return resultGenerator.getSuccessResult(movieService.findTopXMoney(X));
     }
 }
