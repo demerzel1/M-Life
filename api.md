@@ -55,6 +55,8 @@ password: user
 添加了统计接口：
 返回正在上映影片的排片量和观看量
 返回年度前X的电影名及其票房
+- - - -
+添加excel导出
 
 
 [cinema](https://github.com/demerzel1/MCMS/blob/master/README.md#cinema)
@@ -189,6 +191,28 @@ return:(默认按票房从高到低排序）
     }
 }
 ```
+
+
+#### excel导出
+GET `/excel/getCinema`
+`/excel/getUser`
+`/excel/getMovie`
+`/excel/getTime`
+四个同理
+return:
+```
+{
+    "message": "success",
+    "code": 200,
+    "data": {
+        "data": "/static/0141d88748dc4c46a25eb9b1424aceae.xls"
+    }
+}
+```
+直接将返回值前加loaclhost:8080即可下载
+在用户点击导出后，直接将用户跳转到如
+`localhost:8080/static/0141d88748dc4c46a25eb9b1424aceae.xls`
+即可下载
 
 ## cinema
 #### 获取全部影院信息
