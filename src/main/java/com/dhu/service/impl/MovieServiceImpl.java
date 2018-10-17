@@ -231,6 +231,4 @@ public class MovieServiceImpl implements MovieService {
         }
         return mapList;
     }
-
-
 }

@@ -13,16 +13,13 @@ import java.util.List;
  */
 @Service
 public class HallServiceImpl implements HallService {
-
     @Autowired
     HallRepository hallRepository;
-
     @Override
     public HallEntity add(HallEntity hallEntity) {
         hallRepository.flush();
         return hallRepository.saveAndFlush(hallEntity);
     }
-
     @Override
     public List<HallEntity> findByCinemaId(Integer cinemaId) {
         hallRepository.flush();

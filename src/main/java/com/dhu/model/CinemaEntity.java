@@ -17,7 +17,6 @@ public class CinemaEntity {
     private String lng;
     private String latNow;
     private String lngNow;
-
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)

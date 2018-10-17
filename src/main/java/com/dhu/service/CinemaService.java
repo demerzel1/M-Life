@@ -16,5 +16,4 @@ public interface CinemaService {
     List<CinemaEntity> findCinemaByCity(Integer city_id);
     CinemaEntity findById(Integer id);
     List<CinemaEntity> findByMovieAndDateAndCity(Integer movie_id, Date date,Integer City_id);
-
 }

@@ -404,6 +404,4 @@ public class TimeServiceImpl implements TimeService {
     public List<TimeEntity> findByMovie(Integer movieId) {
         return timeRepository.findAllByMovieId(movieId);
     }
-
-
 }

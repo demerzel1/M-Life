@@ -17,21 +17,18 @@ import java.util.List;
 public class UserServiceImpl implements UserService {
     @Autowired
     UserRepository userRepository;
-
     @Override
     @Transactional
     public UserEntity saveUser(UserEntity userEntity){
         System.out.println(Jacksons.me().readAsString(userEntity));
         return userRepository.saveAndFlush(userEntity);
     }
-
     @Override
     @Transactional
     public UserEntity checkLogin(String email,String password) {
         userRepository.flush();
         return userRepository.findFirstByEmailAndPassword(email, password);
     }
-
     @Override
     @Transactional
     public UserEntity findUserByEmail(String email)
@@ -39,27 +36,23 @@ public class UserServiceImpl implements UserService {
         userRepository.flush();
         return userRepository.findFirstByEmail(email);
     }
-
     @Override
     @Transactional
     public UserEntity findUserById(Integer id) {
         userRepository.flush();
         return userRepository.findFirstById(id);
     }
-
     @Override
     public UserEntity setMoney(UserEntity userEntity, Double money) {
         userEntity.setMoney(money);
         return userRepository.saveAndFlush(userEntity);
     }
-
     @Override
     public List<UserEntity> getAll() {
         Byte b=0;
         userRepository.flush();
         return userRepository.findAllByIsAdmin(b);
     }
-
     @Override
     @Transactional
     public Boolean deleteById(Integer id) {
@@ -73,7 +66,6 @@ public class UserServiceImpl implements UserService {
             return false;
         return true;
     }
-
     @Override
     @Transactional
     public List<UserEntity> findByString(String str, Integer type) {
@@ -88,5 +80,4 @@ public class UserServiceImpl implements UserService {
         }
         return null;
     }
-
 }
